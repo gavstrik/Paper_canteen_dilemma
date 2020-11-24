@@ -7,3 +7,4 @@ Data, code and materials for manuscript on the canteen dilemma by Thomas Bolande
 - images/ - screenshots from the experiments
 - plots/ - figures generated in the paper
 - Data/ - anonymized data files
+- python/ - scripts for generating the plots
