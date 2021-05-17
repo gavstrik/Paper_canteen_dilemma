@@ -5,3 +5,4 @@ latex/*.log
 latex/*.docx
 latex/*.gz
 python/.ipynb_checkpoints/
+literature/
