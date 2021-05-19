@@ -2,30 +2,28 @@
 
 \usepackage{graphicx}
 \usepackage{tikz}
+\usepackage{xcolor}
 
 \title{Responses to review of @@}
 \author{@@}
 
-\newenvironment{response}{\smallskip \noindent \color{red}}{\color{black}\smallskip}
+\newenvironment{response}{\smallskip \noindent \color{blue}}{\color{black}\smallskip}
+\newenvironment{robin}{\smallskip \noindent \color{red!10!green!50!blue}}{\color{black}\smallskip}
 
 \begin{document}
 
-
 \maketitle
 \begin{abstract}
-This document includes the received reviewers and editor comments  (in black) as well as our responses (in red). 
+This document includes the received reviews and editor comments  (in black) as well as our responses (in red). 
 \end{abstract}
-
-
 
 %Thank you for submitting your manuscript to Cognitive Science. My sincere apologies for the delay in getting this action letter to you. This delay was caused in part by pandemic circumstances but also because it was not straightforward to come to a decision on your submission, as will become clear below. 
 
 I have received comments from reviewers with expertise in this area and also read your paper carefully myself. The reviewers’ comments are appended below. As you can see, the reviewers are quite mixed in their assessment of your submission. Reviewer 2 is highly critical of the work and recommends rejection, Reviewer 3 is overall positive and recommends acceptance with minor revision, and Reviewer 1’s assessment is somewhere in between. Let me also highlight that Reviewer 2 comments that their review should probably be discounted; I trust that you can weigh their feedback accordingly (I do think they raise some important issues, more on this below).
 
-\begin{response}
-We will, but we will still also comment on aspects of the review, see below.
-\end{response}
-
+%\begin{response}
+%We will, but we will still also comment on aspects of the review, see below.
+%\end{response}
 
 I, myself, much enjoyed reading your paper.
 
@@ -33,11 +31,13 @@ I, myself, much enjoyed reading your paper.
 Thanks a lot!
 \end{response}
 
- I agree with Reviewer 3 that your paper is well written, well organized and that the experimental design is clever (also noted by Reviewer 1). I much appreciate the (meta-)theoretical points raised in your introduction, analysis, and interpretation, as well as the rigour of the mathematical treatment/proofs, the open data, and supplementary materials. I believe that your observation that people behave as if they have common knowledge even when they only have shared knowledge (and seem unable to improve their strategy) is of theoretical interest and relevance (even if not surprising, as noted by Reviewer 1)
- 
-\begin{response}
-Yes, indeed it maybe doesn't seem surprising, however several papers come to the opposite conclusion that we \emph{do} act differently depending on whether we have shared or common knowledge~\cite{papers by the usual suspects}. We have strengthened @@@
-\end{response} 
+I agree with Reviewer 3 that your paper is well written, well organized and that the experimental design is clever (also noted by Reviewer 1). I much appreciate the (meta-)theoretical points raised in your introduction, analysis, and interpretation, as well as the rigour of the mathematical treatment/proofs, the open data, and supplementary materials. I believe that your observation that people behave as if they have common knowledge even when they only have shared knowledge (and seem unable to improve their strategy) is of theoretical interest and relevance (even if not surprising, as noted by Reviewer 1)
+
+\begin{robin}
+Yes, indeed it may not seem surprising. However, several papers come to the opposite conclusion: they claim that we \emph{do} act differently depending on whether we have shared or common knowledge~\cite{rubinstein1989electronic, lee2010rationales, thomas2014psychology, thomas2016recursive, thomas2018common, de2019common, de2019maimonides} as cited in section 2 in our manuscript (pages 4-5). The difference between their and our results, we argue, is a difference in the experimental design: While the previous studies rely on a detailed explanation of the level of common or shared knowlege among participants in their group, our study does not make any such explications. Instead, in our design, the level of knowledge needs to be \emph{deduced} by the participants. This, we believe, is an ecologically more valid approach, because people in real life situations seldomly have a clear understanding of what is known by whom. Our methodology of using arrival times thus opens up the possibility to investigate more rigorously the vast space of shared knowledge dynamics among coordinating humans. 
+
+We have strengthened this point in the conclusion of the paper on page XX @@@
+\end{robin} 
  
   and the manuscript is in my opinion, in principle, well-suited for a multidisciplinary cognitive science audience. The work productively combines logic, philosophy, and psychology to bring new theoretical insights with potentially wider implications for social cognition in real-world contexts.
 
@@ -46,6 +46,19 @@ That all said, all three reviewers also raise very important critical issues tha
 (1)    Ecological validity: the approach taken raises the question to what extent the results are due to the artificiality of the task instructions. For instance, in real world settings coordination in the canteen would naturally be the preferred outcome, and one could argue that the payoff structure is artificially constructed to make this ecologically relevant outcome get less payoff in the experimental set-up. Also, to what extent is part of the computational overload due to the complexity of the payoff structure? 
 \end{quote}
 In a revision, I would like to invite you to address this major concern. How you wish to satisfactorily address this point, I will leave up to you. This could include collecting new data (as some reviewers suggest), but possibly additional analyses or adding clarifications and argumentation could suffice. However, you choose to address it, keep in mind that your audience will include readers who are highly skeptical that these kinds of artificial scenarios can teach us anything important about reasoning and coordination as it occurs ‘in the wild’. My advice is therefore to spell out your argumentation as clearly as possible.  
+
+\begin{robin}
+We thank the reviewers and the editor for stressing this important point and for making us work harder to be much more clear and precise about the aspect of ecological validity. We have done so via four improvements:
+
+1) We have improved the description of the expermental design in section 3, stressing that coordination into the canteen indeed is the naturally prefered outcome and also is the outcome that has the \emph{highest payoff} (i.e. lowest penalty) associated to it (see blue text in section 3 @@@). We understand that our logarithmic scoring rule which uses penalties instead of bonuses may confuse reviewers as well as players as to what is the prefered outcome (i.e. has the highest payoff). But as it is clearly visible in actual player choices, any remaining confusion among players wanes off quickly after a few rounds, after which the players have a clear understanding of the pecuniary consequences of their actions. In addition, as also noted in section 2, players can see examples of actions \& their payoffs on every single page of the experimental interface.  
+
+2) In regard to the question of a potential computational overload due to the complexity of the payoff structure, we found no such overload in our data. As seen in figure 4, the mean frequencly of canteen choices in the first couple of rounds do not form outliers, indicating that players indeed did understand the payoff rules well enough even in the first couple of rounds. One exception to this observation can be made for the arrival times 9:00 and 9:10, which show a slightly larger fraction of players chosing the canteen in early rounds compared to later rounds, even though the instructions clearly stipulate that they always should go to their offices when arriving at 9 am or later. Therefore, we can conclude that some players in the beginning of the game indeed did not understand the rules about when they should go to the office. This, however, does not change any of the results nor conclusions in our paper relating to the player's willingness to chose the canteen at early arrival times, and thus being pray to a 'curse of shared knowledge'. Of course we clearly acknowledge that a small fraction of players did not understand the rules about when to go to their office, and accordingly we have included a sentence about this in the conclusion. ( @@@)
+
+3) Our choice of a logarithmic scoring rule may be unfamiliar to a lot of people, but in fact, it has been shown that logarithmic scoring rules are the best choice for ensuring that the player's actual actions represent their beliefs~\cite{seidenfeld1985calibration, palfrey2009eliciting}. As noted in appendix B, 
+we accordingly find a good match between estimates of what their colleague may do and their actual choices at arrival times different from those that are prone to miscoordination. This corroborates that loss minimization remained a central concern for the players and that they made their choices and estimates as honestly as possible.
+
+4) Still, we wish to emphasize that ecological validity was one our of main reasons to develop the game. We believe that the canteen dilemma demonstrates a novel mechanism by which researchers can experimentally investigate shared knowledge dynamics, omitting the tedious (and artifical) explications of who knows what when. Suspecting that this point was not made clear enough in our initial manuscript, we have clarified it with an additional paragraph at the end of section 2. ( @@@)
+\end{robin} 
 
 A second point that I think is crucial to improve upon is the following:
 \begin{quote}
@@ -148,6 +161,12 @@ $\Rightarrow$ A few final points:
 \item In the formal analysis in the appendix, I was not able to follow at the end of page 20 why the demonstration required the assumption of two subsets of arrival pairs, T1 and T2.
 \item I found the end of the paper (the discussion/conclusion section) a little weak and I think it would benefit from a more in-depth or concrete (although not necessarily very long) discussion of the implications of the experimental results for existing theories of private/shared/common knowledge. Do they suggest any revisions to existing models? How are they compatible with previous results? In short, how should these results be situated, by the reader, within the current body of research?
 \end{itemize}
+
+
+\bibliographystyle{plain} 
+%\bibliographystyle{ormsv080}  % taken from http://www.iro.umontreal.ca/~lecuyer/tex/latex/macros/Management-Science-template/Style-Instructions.pdf (ssems too old)
+\bibliography{cd}
+
 
 \end{document}
 
