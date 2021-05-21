@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{de2019maimonides}
 Julian De~Freitas, Peter DeScioli, Kyle~A Thomas, and Steven Pinker.
@@ -17,6 +17,11 @@ Julian De~Freitas, Kyle Thomas, Peter DeScioli, and Steven Pinker.
 James~J Lee and Steven Pinker.
 \newblock Rationales for indirect speech: The theory of the strategic speaker.
 \newblock {\em Psychological review}, 117(3):785, 2010.
+
+\bibitem{littlewood1953mathematician}
+John~Edensor Littlewood.
+\newblock {\em A mathematician's miscellany}.
+\newblock Meuthen and Company, 1953.
 
 \bibitem{palfrey2009eliciting}
 Thomas~R Palfrey and Stephanie~W Wang.
@@ -50,5 +55,22 @@ Kyle~A Thomas, Peter DeScioli, and Steven Pinker.
 \newblock Common knowledge, coordination, and the logic of self-conscious
   emotions.
 \newblock {\em Evol Hum Behav}, 39:179--190, 2018.
+
+\bibitem{van2015one}
+Hans van Ditmarsch and Barteld Kooi.
+\newblock One hundred prisoners and a light bulb.
+\newblock In {\em One Hundred Prisoners and a Light Bulb}, pages 83--94.
+  Springer, 2015.
+
+\bibitem{ditmarsch2008dynamic}
+Hans {van Ditmarsch}, Wiebe {van der Hoek}, and Barteld {Kooi}.
+\newblock {\em Dynamic Epistemic Logic}.
+\newblock Springer, Dordecht, 2008.
+
+\bibitem{van1980conway}
+Peter van Emde~Boas, Jeroen Groenendijk, and Martin Stokhof.
+\newblock The conway paradox: Its solution in an epistemic framework.
+\newblock In {\em Proceedings of the third Amsterdam Montague Symposion}, pages
+  159--182, 1980.
 
 \end{thebibliography}

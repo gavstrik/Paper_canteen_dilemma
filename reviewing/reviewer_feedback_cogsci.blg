@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: reviewer_feedback_cogsci.aux
 The style file: plain.bst
 Database file #1: cd.bib
-You've used 9 entries,
+You've used 13 entries,
             2118 wiz_defined-function locations,
-            564 strings with 5703 characters,
-and the built_in function-call counts, 3145 in all, are:
-= -- 310
-> -- 150
-< -- 1
-+ -- 61
-- -- 50
-* -- 246
-:= -- 535
-add.period$ -- 27
-call.type$ -- 9
-change.case$ -- 52
+            587 strings with 6265 characters,
+and the built_in function-call counts, 4562 in all, are:
+= -- 450
+> -- 206
+< -- 3
++ -- 85
+- -- 68
+* -- 324
+:= -- 755
+add.period$ -- 40
+call.type$ -- 13
+change.case$ -- 71
 chr.to.int$ -- 0
-cite$ -- 9
-duplicate$ -- 108
-empty$ -- 235
-format.name$ -- 50
-if$ -- 638
+cite$ -- 13
+duplicate$ -- 177
+empty$ -- 358
+format.name$ -- 68
+if$ -- 955
 int.to.chr$ -- 0
-int.to.str$ -- 9
-missing$ -- 9
-newline$ -- 48
-num.names$ -- 18
-pop$ -- 36
+int.to.str$ -- 13
+missing$ -- 15
+newline$ -- 68
+num.names$ -- 26
+pop$ -- 70
 preamble$ -- 1
-purify$ -- 43
+purify$ -- 60
 quote$ -- 0
-skip$ -- 77
+skip$ -- 124
 stack$ -- 0
-substring$ -- 224
-swap$ -- 18
-text.length$ -- 1
+substring$ -- 302
+swap$ -- 39
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 36
+type$ -- 48
 warning$ -- 0
-while$ -- 33
-width$ -- 10
-write$ -- 101
+while$ -- 47
+width$ -- 15
+write$ -- 145
