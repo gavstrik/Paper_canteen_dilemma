@@ -6,3 +6,7 @@ latex/*.docx
 latex/*.gz
 python/.ipynb_checkpoints/
 literature/
+latex/*.pdf
+latex/*.end
+latex/*.bak
+.Rproj.user
