@@ -11,7 +11,7 @@
 \newenvironment{response}{\smallskip \noindent \color{blue}}{\color{black}\smallskip}
 \newenvironment{robin}{\smallskip \noindent \color{red!10!green!50!blue}}{\color{black}\smallskip}
 \newenvironment{tsn}{\smallskip \noindent \color{purple}}{\color{black}\smallskip}
-\newenvironment{tobo}{\smallskip \noindent \color{black!60!green!70}}{\color{black}\smallskip}
+\newenvironment{tobo}{\smallskip \noindent \color{yellow!80!black!80}}{\color{black}\smallskip}
 
 
 \begin{document}
@@ -238,7 +238,7 @@ The point that there might be a motivation towards canteen rather than office du
 
 The results were repeated as strongly when initially tested on people using integers instead of arrival times, and having them coordinate an answer if both got a number below some integer. We decided against this formal version in favor of the canteen formulation, exactly for reasons of ecologoical validity. The question remains of of ecologoical validity: Can the difference between shared knowledge and common knowledge make a difference in the real world? \\
 \begin{tobo}
-Jeg foreslår at vi i selve artiklen diskuterer de tidligere varianter af spillet, og så refererer vi her i stedet til disse nye tilføjede diskussioner. Altså: Det som Nicolet skriver ovenfor skal ekspanderes og gøres til en del af den reviderede submission.
+Jeg foreslår at vi i selve artiklen diskuterer de tidligere varianter af spillet, og så refererer vi her i stedet til disse nye tilføjede diskussioner. Altså: Det som Nicolet skriver ovenfor skal ekspanderes og gøres til en del af den reviderede submission. Jeg kan se at Robin længere nede faktisk har ekspanderet beskrivelsen af eksemplet. Så vi kan evt tage Robins version af eksemplet og proppe ind i artiklen og så både referere til det her og længere nede. 
 \end{tobo}
 
 
@@ -287,18 +287,25 @@ Ja, det er fedt. Det skal klart være med i artiklen, hvis vi kan blive enige om
 
 I found the paper to be overall well written and well organized (the theoretical discussion, in particular, was presented in an engaging way). The experimental design was clever and clearly described, and I believe the results will be of interest to a diverse audience. Nonetheless, I shall raise in what follows a few issues (mainly regarding the interpretation of the experiment) which I believe it would be beneficial for the authors to address.
 
-\begin{response}
-We thank you very much.
-\end{response}
-
 $\Rightarrow$ Regarding the experiment and its interpretation:
 \begin{itemize}
   \item One possible interpretation of the results, which was not discussed in the paper, is that "meeting for coffee" was seen by participants as the desired goal (both because it's intuitively more pleasurable and because the cover story suggests that the colleagues actually want to meet for coffee). This could be confounding their apparent disregard for the fact that cooperation under shared knowledge is unsafe: they could be accepting the risks associated with unsafe cooperation because it seems to be outweighed by the benefits of the social and enjoyable coffee meeting. 
 
-\begin{robin}Answer: This is an important point, also noted by the second reviewer. We believe that an 'intrinsic desire' to meet in the canteen is not a confounding factor to the observed behaviors. We see two main resons for this: 1) the logarithmic scoring (being a \emph{proper} scoring rule~\cite{seidenfeld1985calibration, palfrey2009eliciting}) secures that loss minimization is the primary concern for the participants, which can be corroborated by the strong coupling between participant belief (measured via their certainty estimates) and their actions (their actual choices), see figures 1 and 2 in the paper. 2) Other versions of our game exist in the literature, and they have been shown to recreate the same tendency by players not to think deeply about what their partner thinks. More specifically (also shortly noted in the experimental design section), our game is inspired by the structure of the consecutive number riddle, also called the Conway paradox, see e.g.~\cite{van1980conway, van2015one}. It exists in many different formulations, going back at least to Littlewood \cite{littlewood1953mathematician}. Assume two players receive a card with a number between $1$ and $10$ (both included). They can only see their own card, but are informed that the two numbers are consecutive, e.g.\ one player gets 3 and the other 4. Now it can either be a game concerning whether the two agents know if they have the highest card, it can be a game concerning guessing the card of the other player, or it can be a game to determine whether both cards have a value strictly below 10. In most versions of the game or riddle, the point is that there is a lack of common knowledge between the two agents. Independent of the numbers received, there is no common knowledge that both numbers are strictly below 10~\cite{ditmarsch2008dynamic}. If player $a$ receives a 1, she knows that player $b$ will have received a $2$, but then player $b$ needs to consider it possible that $a$ received a $3$, and if $a$ received a $3$, $a$ will consider it possible that $b$ received a $4$, etc. This alternating chain of each agent reasoning about what the other considers possible is of course structurally similar to what we observed in the mount trekking example as well as in the canteen dilemma. There have not been any systematic experimental investigations of how normal people play the consecutive number riddle, but informal tests and games in classrooms (personal communication) clearly show that a vast majority of students only engage in the required recursive reasoning to the most shallow depths. Note that, in this formulation of the game, there is no intrinsic desire to reach one number rather than the other. In our game, the card numbers have been replaced by arrival times at a workplace, and instead of trying to assess whether both cards are below 10, the goal is to assess whether both colleagues have arrived before 9 am, in time for a cup of coffee.
+\begin{robin}Answer: This is an important point, also noted by the second reviewer. We believe that an 'intrinsic desire' to meet in the canteen is not a confounding factor to the observed behaviors. We see two main resons for this: 1) the logarithmic scoring (being a \emph{proper} scoring rule~\cite{seidenfeld1985calibration, palfrey2009eliciting}) secures that loss minimization is the primary concern for the participants, which can be corroborated by the strong coupling between participant belief (measured via their certainty estimates) and their actions (their actual choices), see figures 1 and 2 in the paper. 
+\begin{tobo}
+Jeg kan ikke se hvordan dette kan være et argument imod at de ``accept the risks associated with unsafe cooperation because it seems to be outweighed by the benefits of the social and enjoyable coffee meeting.'' Jeg tænker reviewerens påstand her er at de ikke klart kan skelne deres scoring rule fra deres hverdagsforståelse for hvad der er et godt udfald. Ingen scoring rule kan være et argument imod den påstand.  
+\end{tobo}
+2) Other versions of our game exist in the literature, and they have been shown to recreate the same tendency by players not to think deeply about what their partner thinks. More specifically (also shortly noted in the experimental design section), our game is inspired by the structure of the consecutive number riddle, also called the Conway paradox, see e.g.~\cite{van1980conway, van2015one}. It exists in many different formulations, going back at least to Littlewood \cite{littlewood1953mathematician}. Assume two players receive a card with a number between $1$ and $10$ (both included). They can only see their own card, but are informed that the two numbers are consecutive, e.g.\ one player gets 3 and the other 4. Now it can either be a game concerning whether the two agents know if they have the highest card, it can be a game concerning guessing the card of the other player, or it can be a game to determine whether both cards have a value strictly below 10. In most versions of the game or riddle, the point is that there is a lack of common knowledge between the two agents. Independent of the numbers received, there is no common knowledge that both numbers are strictly below 10~\cite{ditmarsch2008dynamic}. If player $a$ receives a 1, she knows that player $b$ will have received a $2$, but then player $b$ needs to consider it possible that $a$ received a $3$, and if $a$ received a $3$, $a$ will consider it possible that $b$ received a $4$, etc. This alternating chain of each agent reasoning about what the other considers possible is of course structurally similar to what we observed in the mount trekking example as well as in the canteen dilemma. There have not been any systematic experimental investigations of how normal people play the consecutive number riddle, but informal tests and games in classrooms (personal communication) clearly show that a vast majority of students only engage in the required recursive reasoning to the most shallow depths. Note that, in this formulation of the game, there is no intrinsic desire to reach one number rather than the other. In our game, the card numbers have been replaced by arrival times at a workplace, and instead of trying to assess whether both cards are below 10, the goal is to assess whether both colleagues have arrived before 9 am, in time for a cup of coffee.
 \end{robin}
 
  \item The authors discuss (and demonstrate in the appendix) that the two best strategies are the "all office" and "cafeteria before 9am" strategies. They also point out that none of these strategies were adopted by players. However, it was not clear to me, and not discussed in enough detail, how the strategy adopted by participants was different from the "cafeteria before 9am" strategy. It seemed to me that participants' behavior was fairly close to such a cutoff strategy, so I would appreciate some further discussion in the paper to ward off any misinterpretations.
+ \begin{response}
+ The players' behaviour is indeed close to a cutoff strategy, just not a cutoff strategy with the cutoff at 8:55. 
+ \end{response}
+ \begin{tobo}
+ Skal vi tilføje et par sætninger om det? Jeg synes det burde være klart i artiklen. Lad os holde øje med det når vi læser artiklen igennem, og så tilføje en sætning om nødvendigt.
+ \end{tobo}
+ 
 \end{itemize}
 
 $\Rightarrow$ A few comments regarding the statistical analyses and visualisation of the data:
@@ -313,6 +320,9 @@ $\Rightarrow$ A few comments regarding the statistical analyses and visualisatio
 
 \begin{robin}Answer: Yes, we intend to include more detailed comments in the scripts and codes when the paper is about to be finalized for publishing. \end{robin}
 \item I would recommend qualifying somewhat the discussion of figure 2, as the trends in the figure are much more subtle than the textual description suggests. (Or, alternatively, it could be better supported by a quantitative analysis).
+\begin{tobo}
+Jeg har ikke så meget erfaring med violin-plots, så jeg har svært ved at vurdere det. Vi skriver: "It clearly shows that it is exceedingly rare for any of the participants to consider it problematic to go to the canteen when arriving early. Arriving at 8:30 or earlier is deemed sufficiently early to visit the canteen with very high confidence." Men jeg ved fx ikke hvor "exceedingly rare" det er, det ved jeg ikke hvordan man aflæser af et violin-plot. Så spørgsmålet er her: Er vores konklusioner for dramatiske, eller er det fordi vi bør rapportere i et andet format end et violin-plot, hvor vores konklusioner bliver mere tydelige? Vi har sikkert haft noget andet end violin-plots på et tidligere tidspunkt.
+\end{tobo}
 \item The readability of Fig. 3 could be improved, maybe by normalizing all bars to 100\%, and maybe rethinking the order of the stacks (or the stacking altogether), because the red section are difficult to compare. The readability of Fig. 4 also could be improved somewhat, maybe by using a gradient color scale?
 
 \begin{robin}Answer: This is a good suggestion and has been changed in the resubmitted version of the paper. (@@@@) \end{robin}
@@ -322,13 +332,23 @@ $\Rightarrow$ A few final points:
 \begin{itemize}
 \item  There is on page 3 a reference to Johnson-Laird's theory of mental models that is somewhat misleading. To my knowledge, Johson-Laird's theory uses the notion of mental models not to refer to models we might construct of other people's minds but instead to refer to the mental representation of possible worlds. As such, I don't think the reference is relevant to the discussion of higher order beliefs.
 
-\begin{response} Answer: Thank you for pointing out our misrepresentation of Johnson-Laird's theory. We have removed the reference.\end{response}
+\begin{response} Thank you for pointing out our misrepresentation of Johnson-Laird's theory. We have removed the reference.\end{response}
  
 \item In the formal analysis in the appendix, I was not able to follow at the end of page 20 why the demonstration required the assumption of two subsets of arrival pairs, T1 and T2.
+\begin{tobo}
+Jeg kigger på det. Det er for at kunne dele op i to uafhængige delspil, men om det er strengt nødvendigt må jeg lige tjekke igennem mine beviser for at afgøre. Jeg husker det som at det gjorde tingene simplere, man skal lige være sikker. 
+\end{tobo}
+
+
+
 \item I found the end of the paper (the discussion/conclusion section) a little weak and I think it would benefit from a more in-depth or concrete (although not necessarily very long) discussion of the implications of the experimental results for existing theories of private/shared/common knowledge. Do they suggest any revisions to existing models? How are they compatible with previous results? In short, how should these results be situated, by the reader, within the current body of research?
 
 \begin{response} Answer: We agree and have improved substantially upon the concluding section of the paper with discussions about impications, limits, and perspectives. See also the answer given to the editor's point 2. (@@@@) \end{response}
 \end{itemize}
+\begin{tobo}
+Kunne man overveje at gemme romantik-eksemplet til diskussion/konklusion som en del af diskussionerne af ecological validity? Hvis vi alligevel skal udvide afslutningen var det måske et passende sted at adresser både ecological validity og wider implications? 
+\end{tobo}
+
 
 \section{RESUBMISSION CHECKLIST:}
 
