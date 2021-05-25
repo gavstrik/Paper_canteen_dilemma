@@ -1,8 +1,9 @@
-\documentclass{article}
+\documentclass[a4paper]{article}
 
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{xcolor}
+\usepackage[utf8]{inputenc}
 
 \title{Responses to review of @@}
 \author{@@}
@@ -10,12 +11,14 @@
 \newenvironment{response}{\smallskip \noindent \color{blue}}{\color{black}\smallskip}
 \newenvironment{robin}{\smallskip \noindent \color{red!10!green!50!blue}}{\color{black}\smallskip}
 \newenvironment{tsn}{\smallskip \noindent \color{purple}}{\color{black}\smallskip}
+\newenvironment{tobo}{\smallskip \noindent \color{magenta}}{\color{black}\smallskip}
+
 
 \begin{document}
 
 \maketitle
 \begin{abstract}
-\begin{response}This document includes the received reviews and editor comments  (in black) as well as our responses (in blue). Changes made in the new version of the paper are listed in the responses.\end{response}
+\begin{response}This document includes the received reviews and editor comments  (in black) as well as our responses (in blue). Changes made in the new version of the paper are listed in the responses.\end{response} 
 \end{abstract}
 
 %Thank you for submitting your manuscript to Cognitive Science. My sincere apologies for the delay in getting this action letter to you. This delay was caused in part by pandemic circumstances but also because it was not straightforward to come to a decision on your submission, as will become clear below. 
@@ -42,7 +45,7 @@ We have strengthened this point in the conclusion of the paper on page XX @@@
  
   and the manuscript is in my opinion, in principle, well-suited for a multidisciplinary cognitive science audience. The work productively combines logic, philosophy, and psychology to bring new theoretical insights with potentially wider implications for social cognition in real-world contexts.
 
-That all said, all three reviewers also raise very important critical issues that make the manuscript not yet suitable for publication. I won’t repeat all the reviewers' points here and refer to their reviews for more details. The most pressing issue in my opinion is the following:
+That all said, all three reviewers also raise very important critical issues that make the manuscript not yet suitable for publication. I won't repeat all the reviewers' points here and refer to their reviews for more details. The most pressing issue in my opinion is the following:
 \begin{quote}
 (1)    Ecological validity: the approach taken raises the question to what extent the results are due to the artificiality of the task instructions. For instance, in real world settings coordination in the canteen would naturally be the preferred outcome, and one could argue that the payoff structure is artificially constructed to make this ecologically relevant outcome get less payoff in the experimental set-up. Also, to what extent is part of the computational overload due to the complexity of the payoff structure? 
 \end{quote}
@@ -51,15 +54,27 @@ In a revision, I would like to invite you to address this major concern. How you
 \begin{robin}
 Answer: We thank the reviewers and the editor for stressing this important point and for making us work harder to be much more clear and precise about the aspect of ecological validity. We have done so via four improvements and clarifications:
 
-1) We have improved the description of the expermental design in section 3, stressing that coordination into the canteen indeed is the naturally prefered outcome and also is the outcome that has the \emph{highest payoff} (i.e. lowest penalty) associated to it (see blue text in section 3 @@@). We understand that our logarithmic scoring rule which uses penalties (substracted from an initial endowment of \$10 to each player) instead of bonuses may confuse reviewers as well as players as to what is the prefered outcome (i.e. has the highest payoff). But as it is clearly visible in actual player choices, any remaining confusion among players wanes off quickly after a few rounds, after which the players have a clear understanding of the pecuniary consequences of their actions. In addition, as also noted in section 2, players can see examples of actions \& their payoffs on every single page of the experimental interface.  
+1) We have improved the description of the expermental design in section 3, stressing that coordination into the canteen indeed is the naturally prefered outcome and also is the outcome that has the \emph{highest payoff} (i.e. lowest penalty) associated to it (see blue text in section 3 @@@). We understand that our logarithmic scoring rule which uses penalties (substracted from an initial endowment of \$10 to each player) instead of bonuses may confuse reviewers as well as players as to what is the prefered outcome (i.e. has the highest payoff). 
+\begin{tobo} Lægger vi ikke ordet i munden på folk? Vi kan jo ikke være sikker på hvad der ligger bag kommentaren? \end{tobo}
+But as it is clearly visible in actual player choices, any remaining confusion among players wanes off quickly after a few rounds, after which the players have a clear understanding of the pecuniary consequences of their actions. In addition, as also noted in section 2, players can see examples of actions \& their payoffs on every single page of the experimental interface.  
 
 2) In regard to the question of a potential computational overload due to the complexity of the payoff structure, we found no such overload in our data. As seen in figure 4, the mean frequencly of canteen choices in the first couple of rounds do not form outliers, indicating that players indeed did understand the payoff rules well enough even in the first couple of rounds. One exception to this observation can be made for the arrival times 9:00 and 9:10, which show a slightly larger fraction of players chosing the canteen in early rounds compared to later rounds, even though the instructions clearly stipulate that they always should go to their offices when arriving at 9 am or later. Therefore, we can conclude that some players in the beginning of the game indeed did not understand the rules about when they should go to the office. This, however, does not change any of the results nor conclusions in our paper relating to the player's willingness to chose the canteen at early arrival times, and thus being pray to a 'curse of shared knowledge'. Of course we clearly acknowledge the fact that a small fraction of players did not understand the rules about when to go to their office, and accordingly we have included a sentence about this in a paragraph about experimental limitations in the conclusion. ( @@@)
+\begin{tobo}
+Jeg tror ikke du kan bruge resultaterne til at modbevise at spillerne skulle lide under et computational overload. Grunden til at de ikke vælger en optimal strategi kan jo sagtens stadig være pga et computational overload. Jeg mener ikke at du kan bruge fravær af outliers til at bevise noget. Det kan stadig være at de stabilisere på en ikke-optimal strategi fordi de ikke helt kan gennemskue scoringen godt nok til at se hvad der skal til for at spille optimalt. 
+\end{tobo}
 
 3) Our choice of a logarithmic scoring rule may be unfamiliar to a lot of people, but in fact, it has been shown that logarithmic scoring rules are the best choice for ensuring that the player's actual actions represent their beliefs~\cite{seidenfeld1985calibration, palfrey2009eliciting}. As noted in appendix B, 
 we accordingly find a good match between estimates of what their colleague may do and their actual choices at arrival times different from those that are prone to miscoordination. This corroborates that loss minimization remained a central concern for the players and that they made their choices and estimates as honestly as possible.
+\begin{tobo}
+Og måske her og i artiklen: Vi har tidligere eksperimenteret med andre scoring rules som leder til samme udfald. 
+\end{tobo}
 
 4) Still, we wish to emphasize that ecological validity was one our of main reasons to develop the game. We believe that the canteen dilemma demonstrates a novel mechanism by which researchers can experimentally investigate shared knowledge dynamics, omitting the tedious (and artifical) explications of who knows what when. Suspecting that this point was not made clear enough in our initial manuscript, we have clarified this with an additional paragraph at the end of section 2. ( @@@)
+\begin{tobo}
+Selvom det vi gør måske er bedre end hvad mange andre gør, så tror jeg stadig mange vil have det svært med vores ecological validity. Og vi kan nok desværre heller ikke argumentere for vores ecological validity bare ved at sige at vi er bedre end visse andre. Jeg mener stadig vi har et problem her med at argumenere for at de fænomener vi studerer i eksemplet kan overføres til nogen som helst situationer i den virkelige verden. 
+\end{tobo}
 \end{robin} 
+
 
 A second point that I think is crucial to improve upon is the following:
 \begin{quote}
@@ -97,28 +112,33 @@ Thank you very much.
 
 --Minor points:
 \begin{enumerate}
-   \item[1.]    “The fact that humans are able to adopt [adapt?] their actions to whether they are …” \begin{response} corrected \end{response}
-   \item[2.]    “Because of this, coordinating species typically use heuristic shortcuts in order to work with nested knowledge states like common [shared?] knowledge, such as joint perceptual cues and broadcasted signals …" \begin{response}Changed to "Because of this, coordinating species typically use heuristic shortcuts in order to reduce complex shared knowledge states, such as..."\end{response}
-  \item[4.]    “… common knowledge is the [normatively?] preferred informational state for all members of the group …” \begin{response}included\end{response}
+   \item[1.]    “The fact that humans are able to adopt [adapt?] their actions to whether they are …” \begin{response} Corrected. \end{response}
+   \item[2.]    “Because of this, coordinating species typically use heuristic shortcuts in order to work with nested knowledge states like common [shared?] knowledge, such as joint perceptual cues and broadcasted signals …" \begin{response}Changed to "Because of this, coordinating species typically use heuristic shortcuts in order to reduce complex shared knowledge states, such as..."\end{response} \begin{tobo} Den nye formulering er mindre klar. Hvad betyder det at reducere en kompleks shared knowledge state? Var den oprindelige formulering ikke korrekt?  \end{tobo}
+  \item[4.]    “… common knowledge is the [normatively?] preferred informational state for all members of the group …” \begin{response} Included. \end{response}
   \item[5.]    “We find it interesting to dig deeper into how humans would play and reason about such games in practice.” – Articulate why this is of interest, scientifically. Personal interests aren’t that informative. \begin{response}Changed to "However, it is important to understand how humans in fact reason in such a situation as it may provide profound insights into human abilities to coordinate without communication." \end{response}
-  \item[6.]    Throughout it seems the word “group” is used to refer to a pair of participants. Maybe it is clearer to just use “pair”?  \begin{response}changed in all appropriate places\end{response}
-  \item[7.]    “Penalties are tiered in such a way that a small penalty is deducted for successful coordination into the canteen …” – It seems unnatural that successful coordination would result in a ‘penalty’.  \begin{response}As noted in the comments above, our logarithmic scoring uses penalties substracted from an initial endowment of \$10 instead of bonuses added to an initial endowment of \$0. Therefore, a low penalty corresponds to a high payoff, while a high penalty corresponds to a smaller payoff.\end{response}
-  \item[8.]    In Table 1, would the number of pairs not be more informative than N? \begin{response}added\end{response}
+  \item[6.]    Throughout it seems the word “group” is used to refer to a pair of participants. Maybe it is clearer to just use “pair”?  \begin{response} Changed in all appropriate places. \end{response}
+  \item[7.]    “Penalties are tiered in such a way that a small penalty is deducted for successful coordination into the canteen …” – It seems unnatural that successful coordination would result in a ‘penalty’.  \begin{response}As noted in the comments above, our logarithmic scoring uses penalties substracted from an initial endowment of \$10 instead of bonuses added to an initial endowment of \$0. Therefore, a low penalty corresponds to a high payoff, while a high penalty corresponds to a smaller payoff.\end{response} \begin{tobo} Ja, men hvis Iris ikke engang forstår det, hvor mange af vores testpersoner forstår det så måske heller ikke? Påstanden kunne her være at det for gennemsnitsmennesker kan være sværere at forstå et spil hvor man starter med max point og trækker fra, og dermed får en straf uanset hvilket træk man vælger. Negative point/straf/penalty er alle ord som antyder at man har gjort noget ikke-optimalt. Jeg var også meget længe skeptisk overfor scoring-funktionen. Jeg tror jeg ville føle mig mere tryg hvis der var en lang række referencer til steder hvor det bliver brugt med succes i meget højt respekterede artikler/tidsskrifter. Jeg tror ikke vi skal gøre dette til vores eget private forsvar for en scoring rule som vi ikke selv har udviklet. Vi må pege på at det er der dels nogen der har forsket i, dels er der masser af andre eksperimenter som bruger denne scoring-rule uden at det skaber problemer med forvirring, cognitive overload osv. \end{tobo} 
+  \item[8.]    In Table 1, would the number of pairs not be more informative than N? \begin{response}Added. \end{response}
 \end{enumerate}  
 
-\medskip
- \hrule
-\medskip
 
-Reviewer \#1: This paper explores people's behavior in a coordination game in which players have to decide which of two actions to take. The ideal strategy in the coordination game requires understanding that an Nth order recursive definition of common knowledge would indicate that participants can never be sure what their partner is going to do. Thus, the ideal strategy is to always opt for the option that yields the best joint payoff and accept that there will be a few cases in which they will not get that ideal payoff. The experimental paradigm is clever, but I am left feeling unsatisfied with the contribution of the manuscript overall for a few reasons.
+\section*{Reviewer \#1}
+This paper explores people's behavior in a coordination game in which players have to decide which of two actions to take. The ideal strategy in the coordination game requires understanding that an Nth order recursive definition of common knowledge would indicate that participants can never be sure what their partner is going to do. Thus, the ideal strategy is to always opt for the option that yields the best joint payoff and accept that there will be a few cases in which they will not get that ideal payoff. 
 
-\begin{robin} Answer: The ideal strategy is to always go to the office, which is \emph{not} the strategy that yields the best joint payoff. However, it removes the risk of miscoordination. As noted on page 8 in the manuscript, if both players were fortunate enough to never arrive at 9 am or later, the ideal strategy would indeed be always to go to the canteen as this yields the highest possible payoff of \$$9.90$ in ten rounds (provided that the player gives maximum certainty for successful coordination into the canteen). However, an all-office strategy would yield an almost as high payoff of \$$9.80$ for ten rounds (provided that the player gives maximum certainty for successful coordination into the office), while simultaneously removing the risk of costly miscoordination. Thus, the always-canteen strategy is a high risk strategy not worth the extra ten cents.
-\end{robin}
+\begin{response} 
+The ideal strategy is to always go to the office, which is \emph{not} the option that yields the best joint payoff. However, it removes the risk of miscoordination. The alternative strategy of always opting for the ideal payoff---and accepting a few cases where you don't receive it due to miscoordination---leads to very low expected payoff due to the high penalty of miscoordination (see pages @@@). As noted on page 8 in the manuscript, if both players were fortunate enough to never arrive at 9 am or later, the ideal strategy would indeed be always to go to the canteen as this yields the highest possible payoff of \$$9.90$ in ten rounds (provided that the player gives maximum certainty for successful coordination into the canteen). However, an all-office strategy would yield an almost as high payoff of \$$9.80$ for ten rounds (provided that the player gives maximum certainty for successful coordination into the office), while simultaneously removing the risk of costly miscoordination. Thus, the always-canteen strategy is a high risk strategy not worth the extra ten cents.
+\end{response}
+
+The experimental paradigm is clever, but I am left feeling unsatisfied with the contribution of the manuscript overall for a few reasons.
 
 The idea that people will not always reflect on the degree of shared knowledge emerges from some of the referenced studies. Keysar's "illusory transparency of intention" studies suggest that participants often fail to take into account what various characters in a narrative know. Gerrig's extensions of these studies suggests that people can sometimes be coerced into putting more effort into determining what other people know when the context and task require it. So, the mere fact that people are suboptimal in tasks like this is not surprising.
 
 \begin{robin} Answer: We agree that it is not surprising that people have difficulties in determining what others know. The fact that our game is recursive compounds this problem. We thank the reviewer for pointing out to us to the paper by Keysar (1994) and the extensions by Gerrig.
 \end{robin}
+
+\begin{tobo}
+Each game consists of many rounds. A player might ignore the issue of shared knowledge in the first rounds, but when miscoordination arises, a player certainly has to reflect on how and why that miscoordination could occur. So playing many rounds of our game ought to coerce players into putting more effort into determining what other people know, since indeed our context and task requires it. You might then argue that players potentially don't understand that it is degrees of shared knowledge they should be reasoning about in order to avoid miscoordination and high penalties. But the answers to our post-game question in Figure 6A clearly indicate that players \emph{do} reflect on the degree of shared knowledge. If they didn't, nobody could have a reason to state a cutoff point earlier than 8:50.
+\end{tobo}
 
 A task like this one is interesting, because it yields the possibility of trying to model how much information participants are taking into account or to do manipulations to see whether that affects people's strategy. This study demonstrates that the methods can be used, but I don't feel like any strong conclusions can be drawn just from this work. Cognitive Science is not a journal that focuses on purely methodological advances, so the existence of the experimental procedure alone doesn't seem sufficient to warrant publication.
 
@@ -130,11 +150,7 @@ I do think this method would need to be extended in some way to support stronger
 \begin{robin} Answer: We profoundly agree with the reviewer that the method needs to be investigated further and, if possible, extended to support additional conclusion about human abilities to navigate shared knowledge spaces. We are intrigued by the reviewer suggestion to create variants in which different orders of shared knowledge are required to reach a certain goal. This would be very interesting to look at in future work. We include a paragraph about these possibilities in our conclusion  of the paper (page @@@@).
 \end{robin}
 
-\medskip
- \hrule
-\medskip
-
-Reviewer \#2:
+\section*{Reviewer \#2}
 This review is a thoroughly dyspeptic one. It seems to me that the game scenarios are not capturing the important motivations behind the decisions. I encounter social coordinations problems in my own work, but I think it is crucial to focus on issues which can be well captured in one's scenarios and formalisms.
 
 So the review should probably be discounted, but might be a useful warning to the researchers that perhaps these iterated problems have little demonstrated ecological validity—-we are evolved to design them out perhaps?
