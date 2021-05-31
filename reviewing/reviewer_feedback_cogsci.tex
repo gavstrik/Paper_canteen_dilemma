@@ -5,10 +5,13 @@
 \usepackage{xcolor}
 \usepackage[utf8]{inputenc}
 
-\title{Responses to review of @@}
-\author{@@}
+\title{Responses to review of \\ ``The Curse of Shared Knowledge: Recursive Belief Reasoning in a Coordination Game with Imperfect Information''}
+%\author{@@}
 
-\newenvironment{response}{\smallskip \noindent \color{blue}}{\color{black}\smallskip}
+\usepackage{amsthm}
+\newtheorem{response}{Response}
+
+%\newenvironment{response}{\smallskip \noindent \color{blue}}{\color{black}\smallskip}
 \newenvironment{robin}{\smallskip \noindent \color{red!10!green!50!blue}}{\color{black}\smallskip}
 \newenvironment{tsn}{\smallskip \noindent \color{purple}}{\color{black}\smallskip}
 \newenvironment{tobo}{\smallskip \noindent \color{yellow!80!black!80}}{\color{black}\smallskip}
@@ -18,7 +21,9 @@
 
 \maketitle
 \begin{abstract}
-\begin{response}This document includes the received reviews and editor comments  (in black) as well as our responses (in blue). Changes made in the new version of the paper are listed in the responses.\end{response} 
+%\begin{response}
+This document includes the received reviews and editor comments as well as our responses (in italics). Changes made in the new version of the paper are listed in the responses.
+%\end{response} 
 \end{abstract}
 
 %Thank you for submitting your manuscript to Cognitive Science. My sincere apologies for the delay in getting this action letter to you. This delay was caused in part by pandemic circumstances but also because it was not straightforward to come to a decision on your submission, as will become clear below. 
@@ -31,10 +36,15 @@ I have received comments from reviewers with expertise in this area and also rea
 
 I, myself, much enjoyed reading your paper.
 
-\begin{response}
-Thanks a lot!
-\end{response}
+%\begin{response}
 
+\medskip
+{\noindent \itshape
+Thanks a lot!
+%\end{response}
+}
+
+\medskip
 I agree with Reviewer 3 that your paper is well written, well organized and that the experimental design is clever (also noted by Reviewer 1). I much appreciate the (meta-)theoretical points raised in your introduction, analysis, and interpretation, as well as the rigour of the mathematical treatment/proofs, the open data, and supplementary materials. I believe that your observation that people behave as if they have common knowledge even when they only have shared knowledge (and seem unable to improve their strategy) is of theoretical interest and relevance (even if not surprising, as noted by Reviewer 1)
 
 \begin{robin}
@@ -51,26 +61,28 @@ PLAN: Robin makes the first attempt to address this in the conclusion: That you 
 That all said, all three reviewers also raise very important critical issues that make the manuscript not yet suitable for publication. I won't repeat all the reviewers' points here and refer to their reviews for more details. The most pressing issue in my opinion is the following:
 \begin{quote}
 (1)    Ecological validity: the approach taken raises the question to what extent the results are due to the artificiality of the task instructions.
-\begin{robin}
-We thank the reviewers and the editor for stressing this important point and for making us work harder to be much more clear and precise about the aspect of ecological validity. 
-\end{robin}
- For instance, in real world settings coordination in the canteen would naturally be the preferred outcome, and one could argue that the payoff structure is artificially constructed to make this ecologically relevant outcome get less payoff in the experimental set-up. 
- 
-\begin{response}
-We are not sure what is meant here. In our experimental set-up, coordinating in the canteen \emph{does} give the highest payoff. Page 6 of the original submission: ``Penalties are tiered in such a way that a small penalty is deducted for successful coordination into the canteen (achieving the highest payoff), which is doubled for coordination into the offices (achieving the second-highest payoff), while the penalty for miscoordination or forbidden choices, i.e. going to the canteen at 9 am or after, is much larger (up to 921 times larger, meaning a significantly lower payoff than the previous two).'' 
+%\begin{robin}
+%We thank the reviewers and the editor for stressing this important point and for making us work harder to be much more clear and precise about the aspect of ecological validity. 
+%\end{robin}
+ For instance, in real world settings coordination in the canteen would naturally be the preferred outcome, and one could argue that the payoff structure is artificially constructed to make this ecologically relevant outcome get less payoff in the experimental set-up. Also, to what extent is part of the computational overload due to the complexity of the payoff structure?  
+\end{quote}
+In a revision, I would like to invite you to address this major concern. How you wish to satisfactorily address this point, I will leave up to you. This could include collecting new data (as some reviewers suggest), but possibly additional analyses or adding clarifications and argumentation could suffice. However, you choose to address it, keep in mind that your audience will include readers who are highly skeptical that these kinds of artificial scenarios can teach us anything important about reasoning and coordination as it occurs ‘in the wild’. My advice is therefore to spell out your argumentation as clearly as possible. 
+
+\begin{response}\label{payoff1}
+{\bfseries Ecological validity/Artificiality of the payoff structure}: We are not sure what is meant here. In our experimental set-up, coordinating in the canteen \emph{does} give the highest payoff. Page 6 of the original submission: ``Penalties are tiered in such a way that a small penalty is deducted for successful coordination into the canteen (achieving the highest payoff), which is doubled for coordination into the offices (achieving the second-highest payoff), while the penalty for miscoordination or forbidden choices, i.e. going to the canteen at 9 am or after, is much larger (up to 921 times larger, meaning a significantly lower payoff than the previous two).'' See Response~\ref{payoff2} for further discussion.
 \end{response}
- 
- Also, to what extent is part of the computational overload due to the complexity of the payoff structure? 
- \begin{response}
-   We aren't certain whether the ``complexity of the payoff structure'' refers to the use of logarithmic scoring rule or the fact that there are three different payoffs to keep track off: successful coordination in the canteen $>$ successful coordination in office $>$ miscoordination. Concerning the use of the logarithmic scoring rule, we address this in more detail below (in response to reviewer \#1). Concerning the general question of computational overload from not understanding the rules of the game (including the payoff structure), we have the following comments. If computational overload was sufficient to distract our participants, we would expect more participants making either random or completely uniform choices. While we do see some nonsensically choosing canteen at 9:00, the vast majority choose office at 9:00 and 9:10, and canteen at earlier arrival times, with many still choosing office at 8:50. Besides this, we see participants be much less certain of their canteen choices at 8:50 or 8:40 than at later arrival times. Thus nothing suggests computational overload, though of course no experimental results would be able to prove that with certainty. 
+\begin{response}\label{overload1}
+{\bfseries Ecological validity/Computational overload}: We aren't certain whether the ``complexity of the payoff structure'' refers to the use of logarithmic scoring rule or the fact that there are three different payoffs to keep track off: successful coordination in the canteen $>$ successful coordination in office $>$ miscoordination. Concerning the use of the logarithmic scoring rule, we address this in more detail below (in response to reviewer \#1). Concerning the general question of computational overload from not understanding the rules of the game (including the payoff structure), we have the following comments. If computational overload was sufficient to distract our participants, we would expect more participants making either random or completely uniform choices. While we do see some nonsensically choosing canteen at 9:00, the vast majority choose office at 9:00 and 9:10, and canteen at earlier arrival times, with many still choosing office at 8:50. Besides this, we see participants be much less certain of their canteen choices at 8:50 or 8:40 than at later arrival times. Thus nothing suggests computational overload, though of course no experimental results would be able to prove that with certainty. 
    
    PLAN: Nicolet integrates discussion of the possibility of ``computational overload'' in the paper where relevant (in discussion, before conclusion). Perhaps integrate this sentence: ``This, however, does not change any of the results nor conclusions in our paper relating to the player's willingness to choose the canteen at early arrival times, and thus being pray to a 'curse of shared knowledge.''
  \end{response}
+ \begin{response}
+{\bfseries Ecological validity/Reasoning in the wild}: Ecological validity of our game obviously depends crucially on how common it is to experience situations in which there is shared knowledge to some degree, but not common knowledge---and where falsely assuming common knowledge leads to a bad outcome. As we address in Response~\ref{reliable_communication}, due to unreliabilities in attention, communication and interpretation, many every-day situations lead to shared knowledge in the disguise of common knowledge. In most every-day situations, the penalty for confusing shared knowledge for common knowledge is of course much lower than what is represented in our payoff structure. However, our payoff structure should then lead humans to pay \emph{more} attention to the difference between shared and common knowledge in the game than in the wild. In other words, we should expect the confusion to be even more prominent in the wild. In the revised submission, we discuss this in much more detail in @@.
+
+PLAN: Make sure to address all this in the ``Ecological validity'' (sub)section.  
+ \end{response}
+
  
- START HERE ON MONDAY 31 MAY 2021!!!!
- 
-\end{quote}
-In a revision, I would like to invite you to address this major concern. How you wish to satisfactorily address this point, I will leave up to you. This could include collecting new data (as some reviewers suggest), but possibly additional analyses or adding clarifications and argumentation could suffice. However, you choose to address it, keep in mind that your audience will include readers who are highly skeptical that these kinds of artificial scenarios can teach us anything important about reasoning and coordination as it occurs ‘in the wild’. My advice is therefore to spell out your argumentation as clearly as possible.  
 
 \begin{robin}
 Answer: 
@@ -133,13 +145,13 @@ Thank you very much.
 --Minor points:
 \begin{enumerate}
    \item[1.]    “The fact that humans are able to adopt [adapt?] their actions to whether they are …” \begin{response} Corrected. \end{response}
-   \item[2.]    “Because of this, coordinating species typically use heuristic shortcuts in order to work with nested knowledge states like common [shared?] knowledge, such as joint perceptual cues and broadcasted signals …" \begin{response}Changed to "Because of this, coordinating species typically use heuristic shortcuts in order to reduce complex shared knowledge states, such as..."\end{response} \begin{tobo} Den nye formulering er mindre klar. Hvad betyder det at reducere en kompleks shared knowledge state? Var den oprindelige formulering ikke korrekt?  \end{tobo}
+   \item[2.]    “Because of this, coordinating species typically use heuristic shortcuts in order to work with nested knowledge states like common [shared?] knowledge, such as joint perceptual cues and broadcasted signals …" \begin{response}Changed to "Because of this, coordinating species typically use heuristic shortcuts in order to reduce complex shared knowledge states, such as..."\end{response} 
   \item[4.]    “… common knowledge is the [normatively?] preferred informational state for all members of the group …” \begin{response} Included. \end{response}
   \item[5.]    “We find it interesting to dig deeper into how humans would play and reason about such games in practice.” – Articulate why this is of interest, scientifically. Personal interests aren’t that informative. \begin{response}Changed to "However, it is important to understand how humans in fact reason in such a situation as it may provide profound insights into human abilities to coordinate without communication." \end{response}
   \item[6.]    Throughout it seems the word “group” is used to refer to a pair of participants. Maybe it is clearer to just use “pair”?  \begin{response} Changed in all appropriate places. \end{response}
   \item[7.]    “Penalties are tiered in such a way that a small penalty is deducted for successful coordination into the canteen …” – It seems unnatural that successful coordination would result in a ‘penalty’.  
   
-  \begin{response}
+  \begin{response}\label{payoff2} 
   We understand that our logarithmic scoring rule may confuse as to what is the preferred outcome (i.e.\ has the highest payoff). Our logarithmic scoring uses penalties subtracted from an initial endowment of \$10 instead of bonuses added to an initial endowment of \$0. Therefore, a low penalty corresponds to a high payoff, while a high penalty corresponds to a smaller payoff. But as it is clearly visible in actual player choices, any remaining confusion among players wanes off quickly after a few rounds, after which the players have a clear understanding of the pecuniary consequences of their actions. In addition, as also noted in Section 2, players can see examples of actions \& their payoffs on every single page of the experimental interface.  
   
 PLAN: Here and in the paper itself we add a lot of references to succesful uses of logarithmic scoring. Robin does this. Here we then say: This is standard and usually works. It doesn't usually create a cognitive overload. Robin also tries to integrate the following formulation above, depending on relevance: ``Our choice of a logarithmic scoring rule may be unfamiliar to a lot of people, but in fact, it has been shown that logarithmic scoring rules are the best choice for ensuring that the player's actual actions represent their beliefs~\cite{seidenfeld1985calibration, palfrey2009eliciting}. As noted in appendix B, we accordingly find a good match between estimates of what their colleague may do and their actual choices at arrival times different from those that are prone to miscoordination. This corroborates that loss minimization remained a central concern for the players and that they made their choices and estimates as honestly as possible.''
@@ -155,76 +167,81 @@ PLAN: Here and in the paper itself we add a lot of references to succesful uses 
 This paper explores people's behavior in a coordination game in which players have to decide which of two actions to take. The ideal strategy in the coordination game requires understanding that an Nth order recursive definition of common knowledge would indicate that participants can never be sure what their partner is going to do. Thus, the ideal strategy is to always opt for the option that yields the best joint payoff and accept that there will be a few cases in which they will not get that ideal payoff. 
 
 \begin{response} 
-The ideal strategy is to always go to the office, which is \emph{not} the option that yields the best joint payoff. However, it removes the risk of miscoordination. The alternative strategy of always opting for the ideal payoff---and accepting a few cases where you don't receive it due to miscoordination---leads to very low expected payoff due to the high penalty of miscoordination (see pages @@@). As noted on page 8 in the manuscript, if both players were fortunate enough to never arrive at 9 am or later, the ideal strategy would indeed be always to go to the canteen as this yields the highest possible payoff of \$$9.90$ in ten rounds (provided that the player gives maximum certainty for successful coordination into the canteen). However, an all-office strategy would yield an almost as high payoff of \$$9.80$ for ten rounds (provided that the player gives maximum certainty for successful coordination into the office), while simultaneously removing the risk of costly miscoordination. Thus, the always-canteen strategy is a high risk strategy not worth the extra ten cents.
+We are a bit uncertain about what is meant. Does ``ideal strategy'' in both places refer to the game-theoretical optimal strategy? Or to what you would expect to see if you take into account that players are in general not able to understand the required higher-order reasoning? We take it that it means the first, except we are not completely certain. We also take it that ``best joint payoff'' refers to the payoff received when both go to the canteen before 9am (the highest payoff possible in any round of the game). Given those assumptions, the ideal strategy is to always go to the office, which is \emph{not} the option that yields the best joint payoff.  However, it removes the risk of miscoordination. The alternative strategy of always opting for the best joint payoff---and accepting a few cases where you don't receive it due to miscoordination---leads to very low expected payoff due to the high penalty of miscoordination (see pages @@@). As noted on page 8 in the manuscript, if both players were fortunate enough to never arrive at 9 am or later, the ideal strategy would indeed be always to go to the canteen as this yields the highest possible payoff of \$$9.90$ in ten rounds (provided that the player gives maximum certainty for successful coordination into the canteen). However, an all-office strategy would yield an almost as high payoff of \$$9.80$ for ten rounds (provided that the player gives maximum certainty for successful coordination into the office), while simultaneously removing the risk of costly miscoordination. Thus, the always-canteen strategy is a high risk strategy not worth the extra ten cents.
+
+PLAN: Insert page references above. 
 \end{response}
 
 The experimental paradigm is clever, but I am left feeling unsatisfied with the contribution of the manuscript overall for a few reasons.
 
 The idea that people will not always reflect on the degree of shared knowledge emerges from some of the referenced studies. Keysar's "illusory transparency of intention" studies suggest that participants often fail to take into account what various characters in a narrative know. Gerrig's extensions of these studies suggests that people can sometimes be coerced into putting more effort into determining what other people know when the context and task require it. So, the mere fact that people are suboptimal in tasks like this is not surprising.
 
-\begin{robin} Answer: We agree that it is not surprising that people have difficulties in determining what others know. The fact that our game is recursive compounds this problem. We thank the reviewer for pointing out to us to the paper by Keysar (1994) and the extensions by Gerrig.
-\end{robin}
-
-\begin{tobo}
-Each game consists of many rounds. A player might ignore the issue of shared knowledge in the first rounds, but when miscoordination arises, a player certainly has to reflect on how and why that miscoordination could occur. So playing many rounds of our game ought to coerce players into putting more effort into determining what other people know, since indeed our context and task requires it. You might then argue that players potentially don't understand that it is degrees of shared knowledge they should be reasoning about in order to avoid miscoordination and high penalties. But the answers to our post-game question in Figure 6A clearly indicate that players \emph{do} reflect on the degree of shared knowledge. If they didn't, nobody could have a reason to state a cutoff point earlier than 8:50.
-\end{tobo}
+\begin{response}
+We thank the reviewer for pointing out to us to the paper by Keysar (1994) and the extensions by Gerrig. We agree that it is not surprising that people have difficulties in determining what others know. The argument we make in our paper is however stronger. In our game, the players actually \emph{do} reflect on the degrees of shared knowledge, but they just fail to understand the implications. So, we believe, in our case it is actually not about ``participants failing to take into account what others know'', and that they would have to be coerced into putting more effort into it. They are already putting a lot of effort into it, but still fail to separate shared knowledge of some degree from common knowledge. Let's explain this in a bit more detail. Each game consists of many rounds. A player might ignore the issue of shared knowledge in the first rounds, but when miscoordination arises, a player certainly has to reflect on how and why that miscoordination could occur. So playing many rounds of our game ought to coerce players into putting more effort into determining what other people know, since indeed our context and task requires it. You might then argue that players potentially don't understand that it is degrees of shared knowledge they should be reasoning about in order to avoid miscoordination and high penalties. But the answers to our post-game question in Figure 6A clearly indicate that players \emph{do} reflect on the degree of shared knowledge. If they didn't, nobody could have a reason to state a cutoff point earlier than 8:50.
+\end{response}
 
 A task like this one is interesting, because it yields the possibility of trying to model how much information participants are taking into account or to do manipulations to see whether that affects people's strategy. This study demonstrates that the methods can be used, but I don't feel like any strong conclusions can be drawn just from this work. Cognitive Science is not a journal that focuses on purely methodological advances, so the existence of the experimental procedure alone doesn't seem sufficient to warrant publication.
 
-\begin{robin} Answer: We believe that our contribution goes far beyond a methodological advance. Our main theoretical contribution is that non-explicated higher order shared knowledge is treated like common knowledge in any realistic setting where humans can't communicate and need to \emph{deduce} the level of knowledge of others. This means, informally, that induction beats deduction: bottom-up sensory stimuli ("the time is before 9 am") \emph{wins the perception battle} over top-down conceptual knowledge ("she could think that I think that she thinks ..."). And this is the case despite repeated error signals. We think this is of theoretical importance for various subfields within the cognitive sciences such as predictive processing, theory of mind, and artificial intelligence (HCI etc.), and needs to be investigated further. We have included our arguments for why our paper is of theoretical interest into the conclusion (@@@).
-\end{robin}
+\begin{response}
+We believe that our contribution goes far beyond a methodological advance. Our main theoretical contribution is that non-explicated higher order shared knowledge is treated like common knowledge in any realistic setting where humans can't communicate and need to \emph{deduce} the level of knowledge of others. This means, informally, that bottom-up sensory stimuli ("the time is before 9 am") \emph{wins the perception battle} over top-down conceptual knowledge ("she could think that I think that she thinks ..."). And this is the case despite repeated error signals. We think this is of theoretical importance for various subfields within the cognitive sciences such as predictive processing, theory of mind, and artificial intelligence (HCI etc.), and needs to be investigated further. We have included our arguments for why our paper is of theoretical interest into the conclusion (@@@).
+
+PLAN: All these will be addressed in the conclusion (Robin looks at this first), and then we should check this response again, and perhaps adapt. 
+\end{response}
 
 I do think this method would need to be extended in some way to support stronger conclusions than just that people do not unpack the recursive game completely. It would be interesting to create variants in which different orders of shared knowledge would be required to succeed to determine both how far people typically unpack shared knowledge as well as what kinds of contextual manipulations might lead people to be more or less likely to consider this recursive structure more deeply.
 
-\begin{robin} Answer: We profoundly agree with the reviewer that the method needs to be investigated further and, if possible, extended to support additional conclusion about human abilities to navigate shared knowledge spaces. We are intrigued by the reviewer suggestion to create variants in which different orders of shared knowledge are required to reach a certain goal. This would be very interesting to look at in future work. We include a paragraph about these possibilities in our conclusion  of the paper (page @@@@).
-\end{robin}
+\begin{response} 
+Recursive games designed to determine how far people typically unpack shared knowledge already exist (citations@@@). The purpose of our paper is somewhat different. The purpose is not to determine whether players can for instance distinguish $n$th order and $(n+1)$th order shared knowledge, but whether they can in general distinguish shared knowledge (of some order) from common knowledge. In our revised submission, we clarify the relation to this other research that specifically looks at the depths of shared knowledge employed by human agents (refer to section/page@@@). 
+
+%We profoundly agree with the reviewer that the method needs to be investigated further and, if possible, extended to support additional conclusion about human abilities to navigate shared knowledge spaces. We are intrigued by the reviewer suggestion to create variants in which different orders of shared knowledge are required to reach a certain goal. This would be very interesting to look at in future work. We include a paragraph about these possibilities in our conclusion  of the paper (page @@@@).
+
+PLAN: Nicolet finds and inserts references. Bolander afterwards sees if he can find additional papers (e.g. within computer games). Robin relates to it in the conclusion.
+\end{response}
 
 \section*{Reviewer \#2}
 This review is a thoroughly dyspeptic one. It seems to me that the game scenarios are not capturing the important motivations behind the decisions. I encounter social coordinations problems in my own work, but I think it is crucial to focus on issues which can be well captured in one's scenarios and formalisms.
 
 So the review should probably be discounted, but might be a useful warning to the researchers that perhaps these iterated problems have little demonstrated ecological validity---we are evolved to design them out perhaps?
 
-\begin{robin} Answer: We appreciate this honest assessment, and point to our previous answer regarding the ecological validity of our experiments.
-\end{robin}
+\begin{response}
+  @@@ecological validity to be addressed in more detail here, perhaps? 
+  
+  PLAN: We might indeed have evolved to do our best to avoid situations with shared-but-not-common-knowledge (e.g.\ via co-presence). We might here want to refer to the discussion of the revised conclusion, when done. 
+  
+  Nicolet: Skelnen mellem common og shared er svær. Formodentlig derfor har vi forsøgt at ``kompilere'' det ud, således at det ikke bliver nødvendigt at lave den skelnen. Måske derfor ser vi det ikke så ofte i praksis. Men vi *ser* det, for det er ikke muligt helt at slippe af med. Bla... Dette skal integreres i diskussion/konklusion.
+\end{response}
+
+%\begin{robin} Answer: We appreciate this honest assessment, and point to our previous answer regarding the ecological validity of our experiments.
+%\end{robin}
 
 Reading notes:
 
-``On the way to the top, they both observe a thunderstorm approaching, but are uncertain about whether the other person has seen it. At this point they both know the fact that "a thunderstorm approaches", but don't know whether the other knows. In this situation, we would say that Agnes and Bertram both have private knowledge that a thunderstorm approaches, and since they both know it, it is also shared knowledge between them.''
+``On the way to the top, they both observe a thunderstorm approaching, but are uncertain about whether the other person has seen it. At this point they both know the fact that ``a thunderstorm approaches", but don't know whether the other knows. In this situation, we would say that Agnes and Bertram both have private knowledge that a thunderstorm approaches, and since they both know it, it is also shared knowledge between them.''
 [ Shared knowledge is exactly what it isn't. It may be knowledge they share (unknowingly), but that is different. The terminology seems peculiarly ill-chosen?]
 
-\begin{robin} Answer: Terminologies are always debated and we agree that they can be ill-suited for their task. In fact, definitions of private and shared knowledge in the literature are not consistent. Therefore, we go to great length in the manuscript to tease apart the various understandings, and we also carefully define private, shared, and common knowledge in the introduction as well as in appendix C, and give a formal definition in the supplementary material. After lengthy discussions among the authors, we decided to choose the definition of shared knowledge that is standard in both (epistemic) logic and many of the sources in economy that we have been looking at. According to these, we have 
-\end{robin}
-
-\begin{tobo}
-Jeg kan ikke se at vi definerer det i appendix C?
-\end{tobo}
-
-\begin{tobo}
-Alternative response: Terminologies are always debated and we agree that they can be ill-suited for their task. In fact, definitions of private and shared knowledge in the literature are not consistent. After lengthy discussions among the authors, we decided to choose the definition of shared knowledge that is standard in both (epistemic) logic and many of the sources in economy that we have been looking at. We also already addressed this in the supplementary material of the submission, as referred to in the introduction:  ``The exact border between private and shared knowledge vary significantly between different papers. De Freitas et al. [6] consider the case $Ep$ to still only be private knowledge, and for p to be considered shared knowledge furthermore requires that there is at least one agent $i$ knowing $Ep$ to be true (that is, requires $K_i Ep$ to be true for some $i \in G$). The point of De Freitas et al. is that if only $Ep$ is true, it is not really shared knowledge, but only private knowledge held by everyone in $G$. In our paper, we have sought a compromise between the terminology by De Freitas et al. and the standard terminology in epistemic logic, and hence we have the overlap between private and shared knowledge.''
-\end{tobo}
-
+\begin{response}
+Terminologies are always debated and we agree that they can be ill-suited for their task. In fact, definitions of private and shared knowledge in the literature are not consistent. After lengthy discussions among the authors, we decided to choose the definition of shared knowledge that is standard in both (epistemic) logic and many of the sources in economy that we have been looking at. We also already addressed this in the supplementary material of the submission, as referred to in the introduction:  ``The exact border between private and shared knowledge vary significantly between different papers. De Freitas et al. [6] consider the case $Ep$ to still only be private knowledge, and for $p$ to be considered shared knowledge furthermore requires that there is at least one agent $i$ knowing $Ep$ to be true (that is, requires $K_i Ep$ to be true for some $i \in G$). The point of De Freitas et al. is that if only $Ep$ is true, it is not really shared knowledge, but only private knowledge held by everyone in $G$. In our paper, we have sought a compromise between the terminology by De Freitas et al. and the standard terminology in epistemic logic, and hence we have the overlap between private and shared knowledge.''
+\end{response}
 
 ``This argument can be generalised to prove that even nth-order shared knowledge for any arbitrary large number of confirmations is insufficient for safe coordination." [This depends what policy has been agreed (or intuited). If they agree that any observation of bad weather which has been confirmed both ways is acted upon without further messages (no changes of mind) then they both turn for the bottom after the first exchange (with double +1 confirmation). And it would be reasonable to call it shared knowledge. They both know that they have agreed to abandon the climb, and they know they both know it. If the thunderstorm, suddenly gives way to bright sun, and they decide to try again, with double +1 confirmation, then they could do that. The knowledge would be different (of sun rather than thunder and at a different time) but it could be shared. There maybe needs to be an agreement about how long to wait for completing confirmation? 10 Minutes? Depending on the volatility of the contact? I don't see the `little did he know about the little that she knew' iterations as adding anything to the decision making. I'm not sure that we should regard it as changing anything we care about. It sounds to me like paranoia. Or formalphilia?]
 
-\begin{robin} Answer: This argument relies upon 100\% certain transmission and reception of the message. Without this, the suggested protocol would be risky,  e.g. "I go down if and only if I get a confirmation reply to my message". Then you get a confirmation, send yourself one back, and go down, hoping that the other gets your message. The other then survives with a probability $p\neq1$ which is equal to the probability that the other gets the same message correctly. 
-\end{robin}
-\begin{tsn}
-There might have been a misunderstanding here. Assume we try and solve the mountaineering example by the pre-agreement that observation of bad weather, with confirmation both ways, warrants going to the bottom. Assume we take the place of Bob, communicating with Anne. Bob tells Anne that he sees the bad weather, and receives a confirmation message. He also receives the message that Anne sees the bad weather, and sends a confirmation message. Now he turns for the bottom. But giving the unreliability of signals, Anne did not get the confirmation message and stays alone at the top, not surviving. This cannot be solved by adding the requirement for another layer of confirmation messages, since the uncertainty of the second message could result in the same issue. So, the issue lies in the uncertainty of communication in the example. But this only shows that the example warrants a problematic epistemic structure, and does indeed not show that this is realistic communication, which we touch upon below.
-\end{tsn}
-
-\begin{tobo}
-Jeg kan godt lide Nicolets variant og ville tilføje: As the paper explains, the example is analogous to the coordinated attack problem (Byzantine generals problem), a famous example from distributed systems within computer science. There is a wealth of literature studying the formal properties and proving that coordination is not possible, see e.g. [Fagin, Halpern, Moses \& Vardi, 1995]. It has been widely studied exactly because it has real, practical implications for distributed computer systems: that certain properties can not be guaranteed when communication channels between computers are unreliable (messages might not arrive, and communication is not synchronous).
-\end{tobo}
+\begin{response}
+There is a misunderstanding here, the argument above relies on a $100\% $ certain transmission and reception of messages. Assume we try to solve the mountaineering example by the pre-agreement that observation of bad weather, with confirmation both ways, warrants going to the bottom. Assume we take the place of Bertram, communicating with Agnes. Bertram tells Agnes that he sees the bad weather, and receives a confirmation message. He also receives the message that Agnes sees the bad weather, and sends a confirmation message. Now he turns for the bottom. But giving the unreliability of signals, Agnes did not get the confirmation message and stays alone at the top, not surviving. This cannot be solved by adding the requirement for another layer of confirmation messages, since the uncertainty of the second message could result in the same issue. So, the issue lies in the uncertainty of communication in the example. But this only shows that the example warrants a problematic epistemic structure, and does indeed not show that this is realistic communication, which we touch upon below. As our submission explains, the example is analogous to the coordinated attack problem (Byzantine generals problem), a famous example from distributed systems within computer science. There is a wealth of literature studying the formal properties and proving that coordination is not possible, see e.g. [Fagin, Halpern, Moses \& Vardi, 1995]. It has been widely studied exactly because it has real, practical implications for distributed computer systems: that certain properties can not be guaranteed when communication channels between computers are unreliable (messages might not arrive, and communication is not synchronous).
+\end{response}
 
 I'm not saying that could never be important but it seems to me they need to work harder to show a case where it is. Yes, it's all good academic fun, but leaves me unconvinced. Maybe there are some nice lights to be thrown about what is realistically part of communication? Communication doesn't seem to be transmission of knowledge of the truth values of arbitrary propositions: if anyone ever thought that? With each of their iterations, the propositions concerned change, and it seems to me we are not interested in them after the first round of confirmations. There might be some other purpose for them, but it remains to be shown.
 
-\begin{tsn}
-That communication is not transmission of truth values of propositions is a salient point in the interplay of logical analysis and cognitive science. Even if it was, it would not be a complete account of communication, since the lack of logical omniscience would still make real communication fall short of formalized analysis. That communication involves non-propositional embodied knowledge complicates this further. Continuing from this, we can look at the problem in the paragraphs above, which might have misunderstood that the communication in the mountaineering example involves unreliable signaling. The argument then goes that this is unrealistic, due to reliableness of real face-to-face communication or even modern cell signalling. This is true, that we can in most real cases assume that our signal (whether face-to-face or online) has reached the recipient. But, while the signal itself might reliably reach them, this is not sufficient for establishing common knowledge about it. They must also reliably interpret it AND this reliableness must be common knowledge.  So, depending on the context and complexity of the intentionality involved, I might not be sure that my communicated intention becomes common knowledge. The complexity might consist in the fact that the entities making up signals can be multifaceted too, i.e. choice of words, tonality, body language et cetera, besides propositional content as the reviewer points out. In other words, much like we are not robots in terms of passing propositional truth values around, and deducing from these, we are not robots in terms of interpreting the complex signaling of others, and as such, even face to face communication is technically unreliable, and does not necessarily warrant common knowledge, outside stylized examples. 
-\begin{tobo}
+\begin{response}\label{reliable_communication}
+%That communication is not transmission of truth values of propositions is a salient point in the interplay of logical analysis and cognitive science. Even if it was, it would not be a complete account of communication, since the lack of logical omniscience would still make real communication fall short of formalized analysis. That communication involves non-propositional embodied knowledge complicates this further. Continuing from this, we can look at the problem in the paragraphs above, which might have misunderstood that the communication in the mountaineering example involves unreliable signaling. The argument then goes that this is unrealistic, due to reliableness of real face-to-face communication or even modern cell signalling. This is true, that we can in most real cases assume that our signal (whether face-to-face or online) has reached the recipient. But, while the signal itself might reliably reach them, this is not sufficient for establishing common knowledge about it. They must also reliably interpret it AND this reliableness must be common knowledge.  So, depending on the context and complexity of the intentionality involved, I might not be sure that my communicated intention becomes common knowledge. The complexity might consist in the fact that the entities making up signals can be multifaceted too, i.e. choice of words, tonality, body language et cetera, besides propositional content as the reviewer points out. In other words, much like we are not robots in terms of passing propositional truth values around, and deducing from these, we are not robots in terms of interpreting the complex signaling of others, and as such, even face to face communication is technically unreliable, and does not necessarily warrant common knowledge, outside stylized examples. 
+
+We can perhaps in most real cases assume that our signal or message (whether face-to-face or online) has reached the recipient. But, while the signal itself might reliably reach them, this is not sufficient for establishing common knowledge about it. They must also reliably interpret it \emph{and} this reliableness must be common knowledge.  So, depending on the context and complexity of the intentionality involved, I might not be sure that my communicated intention becomes common knowledge. 
+
 Public broadcasting of messages, e.g.\ instructions given in a classroom to a class of students or an email sent by the department head to everybody in a university department, will also in practice not necessarily lead to common knowledge. Some of the students might not be paying attention at the moment, and some of the department employees might not have checked their email, or it might have ended up in their spam filter. Suppose that the message was regarding to all meet at a certain place at a certain time. Can we then be sure that everyone will meet at that place at that time? Obviously, no. Then the reply might be that we can just ask everybody to confirm that they received the message. Well, yes, but then the same argument repeats for the confirmation messages: the recipient of the confirmations might not receive all of them or might briefly not pay attention. (kunne måske også bruges som eksempel i selve artiklen?)
-\end{tobo}
-Note that, as we mention humans are specialized in navigating real social situations, in fact so good that it might be unrealistic for robots to emulate it.
-\end{tsn}
+
+PLAN: Slightly revise formulations above. Make sure to address these points in ``Ecological Validity'' section, including the examples.
+\end{response}
+%Note that, as we mention humans are specialized in navigating real social situations, in fact so good that it might be unrealistic for robots to emulate it.
+%\end{tsn}
 
 footnote 1 "in the sense of guaranteeing that the other person will also go there" [it will take a lot more than proof to guarantee any such thing.]
 
@@ -241,43 +258,34 @@ Top para 3: they seem to have met me before, but I remain unconvinced. As I said
 
 Section 3: I don't see why we're doing an experiment on a so called coordination game, which has no messaging. It doesn't seem accurately analogous to the intro example. 
 
-\begin{robin} Answer: Coordination without messaging is a serious field of research in, for instance, human-computer interaction, artificial intelligence, in animal behaviour (stigmergic coordination), and in other multi-agent system. 
-\end{robin}
-
-\begin{tobo}
-Robin's svar adresserer ikke direkte reviewerens kommentar. Alternativt forslag: The canteen dillema is not ``accurately analogous'' to the intro example, no. We also don't claim that it is. But the intro example is very well-known (at least in the coordinated attack version), so that's why we started out with it. If formalising the two examples in (dynamic) epistemic logic, the difference becomes this: In the intro example, the initial model is simple, but a complex nested model is achieved via a number of message passings. In the canteen dillema, the complex nested model is already present in the initial state. So, indeed, the difference comes down to whether we have messaging or not, but our paper is not about the role of messaging for coordination, it is about the role of degrees of shared knowledge for coordination. And those degrees of shared knowledge can then be achieved in different ways. We don't necessarily regard message passing as any particularly priviliged way to achieve shared knowledge of a certain degree. As we stated in the paper: ``The electronic mail game and the mountain trekking example are complicated in terms of the dynamics of iterated message passing. In this paper, we devise a novel game in which the higher orders of shared knowledge are not achieved dynamically via actions, but are already present at the beginning of the game, using uncertainty about arrival times. This, we believe, makes the game easier to understand.'' 
-\end{tobo}
+\begin{response}
+Coordination without messaging is a serious field of research in, for instance, human-computer interaction, artificial intelligence, in animal behaviour (stigmergic coordination), and in other multi-agent system. But it is true that the canteen dillema is not ``accurately analogous'' to the intro example. We also don't claim that it is. But the intro example is very well-known (at least in the coordinated attack version), so that's why we started out with it. If formalising the two examples in (dynamic) epistemic logic, the difference becomes this: In the intro example, the initial model is simple, but a complex nested model is achieved via a number of message passings. In the canteen dillema, the complex nested model is already present in the initial state. So, indeed, the difference comes down to whether we have messaging or not, but our paper is not about the role of messaging for coordination, it is about the role of degrees of shared knowledge for coordination. And those degrees of shared knowledge can then be achieved in different ways. We don't necessarily regard message passing as any particularly priviliged way to achieve shared knowledge of a certain degree. As we stated in the paper: ``The electronic mail game and the mountain trekking example are complicated in terms of the dynamics of iterated message passing. In this paper, we devise a novel game in which the higher orders of shared knowledge are not achieved dynamically via actions, but are already present at the beginning of the game, using uncertainty about arrival times. This, we believe, makes the game easier to understand.'' 
+\end{response}
 
 
 There is no consideration of the fact there is presumably motivation towards the canteen (other than monetary)—whether constant or not. Perhaps the `all office' solution is boring—or a victory for the North Korean bosses? 
 
-\begin{robin} Answer: This is a good point, also made by reviewer 3. Propensities towards going to the canteen may confound the results showing large fractions of players who choose the canteen. We refer to our response to reviewer 3 below.
+\begin{robin} Answer: This is a good point, also made by reviewer 3. Propensities towards going to the canteen may confound the results showing large fractions of players who choose the canteen. We refer to our response to reviewer 3 below. @@@Replace by exact reference to Response number.
 \end{robin}
 
 Even without cell phones it should be possible to arrange for a signal to be placed in the entrance about arrival time, and an agreement on a cut-off point.
 
-\begin{robin} Answer: This is a counterfactual. We look at situations where no broadcasting of signals is possible. The agreement on a cut-off point is insufficient, as noted in the paper.
-\end{robin}
+\begin{response} 
+This is a counterfactual. We look at situations where no broadcasting of signals is possible. The agreement on a cut-off point is insufficient, as noted in the paper. As described above, the experimental results are important in cases where shared knowledge exists but not common knowledge. And such situations can occur if we have unreliable signalling such as in the mountaineering example. Unreliable signalling is now further discussed in Section @@ecological validity.
 
-\begin{tsn}
-A coordination game without messaging allows us to test how humans try to coordinate with each other when they have some level of shared knowledge, but not common knowledge. It might be relevant to notice, if our conclusion holds, the relevance of the fact that shared knowledge is hard to discern form common knowledge, is obfuscated by this very fact. That is, the relevance of the difference can be hard to see, because the difference is so hard to make out in the first place. And our experiment shows that we do not intuitively see the difference, even when it makes an operative difference. \\
+%A coordination game without messaging allows us to test how humans try to coordinate with each other when they have some level of shared knowledge, but not common knowledge. It might be relevant to notice, if our conclusion holds, the relevance of the fact that shared knowledge is hard to discern form common knowledge, is obfuscated by this very fact. That is, the relevance of the difference can be hard to see, because the difference is so hard to make out in the first place. And our experiment shows that we do not intuitively see the difference, even when it makes an operative difference. \\
 
-The point that there might be a motivation towards canteen rather than office due to word connotation could be a confounding issue, and will be discussed . 
+%The point that there might be a motivation towards canteen rather than office due to word connotation could be a confounding issue, and will be discussed . 
 
-The results were repeated as strongly when initially tested on people using integers instead of arrival times, and having them coordinate an answer if both got a number below some integer. We decided against this formal version in favor of the canteen formulation, exactly for reasons of ecologoical validity. The question remains of of ecologoical validity: Can the difference between shared knowledge and common knowledge make a difference in the real world? \\
-\begin{tobo}
-Jeg foreslår at vi i selve artiklen diskuterer de tidligere varianter af spillet, og så refererer vi her i stedet til disse nye tilføjede diskussioner. Altså: Det som Nicolet skriver ovenfor skal ekspanderes og gøres til en del af den reviderede submission. Jeg kan se at Robin længere nede faktisk har ekspanderet beskrivelsen af eksemplet. Så vi kan evt tage Robins version af eksemplet og proppe ind i artiklen og så både referere til det her og længere nede. 
-\end{tobo}
+%We argued above that reliable signaling is not enough for common knowledge (since after all, even if our signals reach their recipients reliably, people are not computers which our signals simply stream into to). That is, we both require reliable signaling and reliable interpretation (and in fact recall too, but that is generally not an issue in short time spans. In other words, common knowledge might fade away due to limited memory). And reliable (i.e perfect) interpretation is an idealized view of reality, just as much as logical omniscience is. The question still holds if this theoretical possibility is an actuality. Cases where this is especially pertinent are situations where parties communicate but dont "play with open cards" as it were, and could include situations such as diplomatic negotiations and romantic communication.  I will describe such a situation below: \\
 
+%\begin{tobo}
+%Hvis vi skal inkludere lange udregninger i vores svar, så skal det hellere være tilføjelser til selve artiklen. Et langt svar på et review uden tilsvarende ændringer af artiklen er et dårligt tegn, for det betyder at det som man forklarer til revieweren åbenbart ikke er en del af selve artiklen, og så hjælper det jo ikke. Ergo: Hvis meget af dette skal beholdes, så skal det i stedet integreres i artiklen og vi skal herfra blot referere til den pågældende nye diskussion. Selve reviewer-svarene bør ikke være alt for lange.
+%\end{tobo}
 
+PLAN: Bolander integrates a version of the example below into Ecological Validity.
 
-As described above, the experimental results are important in cases where shared knowledge exists but not common knowledge. And such situations can occur if we have unreliable signalling such as in the mountaineering example. We argued above that reliable signaling is not enough for common knowledge (since after all, even if our signals reach their recipients reliably, people are not computers which our signals simply stream into to). That is, we both require reliable signaling and reliable interpretation (and in fact recall too, but that is generally not an issue in short time spans. In other words, common knowledge might fade away due to limited memory). And reliable (i.e perfect) interpretation is an idealized view of reality, just as much as logical omniscience is. The question still holds if this theoretical possibility is an actuality. Cases where this is especially pertinent are situations where parties communicate but dont "play with open cards" as it were, and could include situations such as diplomatic negotiations and romantic communication.  I will describe such a situation below: \\
-
-\begin{tobo}
-Hvis vi skal inkludere lange udregninger i vores svar, så skal det hellere være tilføjelser til selve artiklen. Et langt svar på et review uden tilsvarende ændringer af artiklen er et dårligt tegn, for det betyder at det som man forklarer til revieweren åbenbart ikke er en del af selve artiklen, og så hjælper det jo ikke. Ergo: Hvis meget af dette skal beholdes, så skal det i stedet integreres i artiklen og vi skal herfra blot referere til den pågældende nye diskussion. Selve reviewer-svarene bør ikke være alt for lange.
-\end{tobo}
-
-Suppose the following case of romantic interaction between Anne and Bob. Suppose that either can make an advance towards the other, and we might categorize that both doing this is a 'succesfuld coordination' and that if only one does it, its a form of 'miscoordination'.
+TO BE MOVED TO BE ECOLOGICAL VALIDITY:  Suppose the following case of romantic interaction between Anne and Bob. Suppose that either can make an advance towards the other, and we might categorize that both doing this is a 'succesfuld coordination' and that if only one does it, its a form of 'miscoordination'.
 
 \begin{tobo}
 Måske skulle man gøre det mere konkret, så det bliver helt klart at det faktisk også er et koordineringsspil. Fx at Anne og Bob sidder og snakker og kigger hinanden i øjnene, og så er der en lille pause. Her kan de så hver især vælge at læne sig frem til et kys eller ej. Hvis kun én gør det er det i bedste fald pinligt, i værste fald vil de miste deres venskab, fordi den ene ny ved at den anden har romantiske følelser. 
@@ -307,7 +315,7 @@ I min variant ville jeg sige at vi argumenterer som i kantine-dilemmaet. Det er 
 Ja, det er fedt. Det skal klart være med i artiklen, hvis vi kan blive enige om en fornuftig variant. Og så skal det måske mere tydeligt indgå som vores respons på ecological validity i vores reviewer response, allerede der hvor Iris første gang peger på dette. 
 \end{tobo}
 
-\end {tsn}
+\end{response}
 
 
 \section{Reviewer \#3}
@@ -319,11 +327,16 @@ $\Rightarrow$ Regarding the experiment and its interpretation:
 \begin{itemize}
   \item One possible interpretation of the results, which was not discussed in the paper, is that "meeting for coffee" was seen by participants as the desired goal (both because it's intuitively more pleasurable and because the cover story suggests that the colleagues actually want to meet for coffee). This could be confounding their apparent disregard for the fact that cooperation under shared knowledge is unsafe: they could be accepting the risks associated with unsafe cooperation because it seems to be outweighed by the benefits of the social and enjoyable coffee meeting. 
 
-\begin{robin}Answer: This is an important point, also noted by the second reviewer. We believe that an 'intrinsic desire' to meet in the canteen is not a confounding factor to the observed behaviors. We see two main resons for this: 1) the logarithmic scoring (being a \emph{proper} scoring rule~\cite{seidenfeld1985calibration, palfrey2009eliciting}) secures that loss minimization is the primary concern for the participants, which can be corroborated by the strong coupling between participant belief (measured via their certainty estimates) and their actions (their actual choices), see figures 1 and 2 in the paper. 
+\begin{robin}
+Residuum: The results were repeated as strongly when initially tested on people using integers instead of arrival times, and having them coordinate an answer if both got a number below some integer. We decided against this formal version in favor of the canteen formulation, exactly for reasons of ecologoical validity. The question remains of of ecologoical validity: Can the difference between shared knowledge and common knowledge make a difference in the real world? 
+
+Answer: This is an important point, also noted by the second reviewer. We believe that an 'intrinsic desire' to meet in the canteen is not a confounding factor to the observed behaviors. We see two main resons for this: 1) the logarithmic scoring (being a \emph{proper} scoring rule~\cite{seidenfeld1985calibration, palfrey2009eliciting}) secures that loss minimization is the primary concern for the participants, which can be corroborated by the strong coupling between participant belief (measured via their certainty estimates) and their actions (their actual choices), see figures 1 and 2 in the paper. 
 \begin{tobo}
 Jeg kan ikke se hvordan dette kan være et argument imod at de ``accept the risks associated with unsafe cooperation because it seems to be outweighed by the benefits of the social and enjoyable coffee meeting.'' Jeg tænker reviewerens påstand her er at de ikke klart kan skelne deres scoring rule fra deres hverdagsforståelse for hvad der er et godt udfald. Ingen scoring rule kan være et argument imod den påstand.  
 \end{tobo}
 2) Other versions of our game exist in the literature, and they have been shown to recreate the same tendency by players not to think deeply about what their partner thinks. More specifically (also shortly noted in the experimental design section), our game is inspired by the structure of the consecutive number riddle, also called the Conway paradox, see e.g.~\cite{van1980conway, van2015one}. It exists in many different formulations, going back at least to Littlewood \cite{littlewood1953mathematician}. Assume two players receive a card with a number between $1$ and $10$ (both included). They can only see their own card, but are informed that the two numbers are consecutive, e.g.\ one player gets 3 and the other 4. Now it can either be a game concerning whether the two agents know if they have the highest card, it can be a game concerning guessing the card of the other player, or it can be a game to determine whether both cards have a value strictly below 10. In most versions of the game or riddle, the point is that there is a lack of common knowledge between the two agents. Independent of the numbers received, there is no common knowledge that both numbers are strictly below 10~\cite{ditmarsch2008dynamic}. If player $a$ receives a 1, she knows that player $b$ will have received a $2$, but then player $b$ needs to consider it possible that $a$ received a $3$, and if $a$ received a $3$, $a$ will consider it possible that $b$ received a $4$, etc. This alternating chain of each agent reasoning about what the other considers possible is of course structurally similar to what we observed in the mount trekking example as well as in the canteen dilemma. There have not been any systematic experimental investigations of how normal people play the consecutive number riddle, but informal tests and games in classrooms (personal communication) clearly show that a vast majority of students only engage in the required recursive reasoning to the most shallow depths. Note that, in this formulation of the game, there is no intrinsic desire to reach one number rather than the other. In our game, the card numbers have been replaced by arrival times at a workplace, and instead of trying to assess whether both cards are below 10, the goal is to assess whether both colleagues have arrived before 9 am, in time for a cup of coffee.
+
+PLAN: Revise the answer above, insert the relevant parts in the paper itself, refer to paper. 
 \end{robin}
 
  \item The authors discuss (and demonstrate in the appendix) that the two best strategies are the "all office" and "cafeteria before 9am" strategies. They also point out that none of these strategies were adopted by players. However, it was not clear to me, and not discussed in enough detail, how the strategy adopted by participants was different from the "cafeteria before 9am" strategy. It seemed to me that participants' behavior was fairly close to such a cutoff strategy, so I would appreciate some further discussion in the paper to ward off any misinterpretations.
@@ -348,9 +361,11 @@ $\Rightarrow$ A few comments regarding the statistical analyses and visualisatio
 
 \begin{robin}Answer: Yes, we intend to include more detailed comments in the scripts and codes when the paper is about to be finalized for publishing. \end{robin}
 \item I would recommend qualifying somewhat the discussion of figure 2, as the trends in the figure are much more subtle than the textual description suggests. (Or, alternatively, it could be better supported by a quantitative analysis).
-\begin{tobo}
-Jeg har ikke så meget erfaring med violin-plots, så jeg har svært ved at vurdere det. Vi skriver: "It clearly shows that it is exceedingly rare for any of the participants to consider it problematic to go to the canteen when arriving early. Arriving at 8:30 or earlier is deemed sufficiently early to visit the canteen with very high confidence." Men jeg ved fx ikke hvor "exceedingly rare" det er, det ved jeg ikke hvordan man aflæser af et violin-plot. Så spørgsmålet er her: Er vores konklusioner for dramatiske, eller er det fordi vi bør rapportere i et andet format end et violin-plot, hvor vores konklusioner bliver mere tydelige? Vi har sikkert haft noget andet end violin-plots på et tidligere tidspunkt.
-\end{tobo}
+
+\begin{response}
+PLAN: Kan forstås på flere måder. Enten handler det om at vi overfortolker data (eller at figuren ikke viser data tydeligt nok), eller også handler det om at vi underfortolker data (at der foregår mere i figuren end vi adresserer). Nicolet mener at det nok er begge dele. Vi justerer lidt på paragraffen og forklarer her at vi har gjort det. Brug ikke for meget tid på det. 
+\end{response}
+
 \item The readability of Fig. 3 could be improved, maybe by normalizing all bars to 100\%, and maybe rethinking the order of the stacks (or the stacking altogether), because the red section are difficult to compare. The readability of Fig. 4 also could be improved somewhat, maybe by using a gradient color scale?
 
 \begin{robin}Answer: This is a good suggestion and has been changed in the resubmitted version of the paper. (@@@@) \end{robin}
@@ -363,19 +378,22 @@ $\Rightarrow$ A few final points:
 \begin{response} Thank you for pointing out our misrepresentation of Johnson-Laird's theory. We have removed the reference.\end{response}
  
 \item In the formal analysis in the appendix, I was not able to follow at the end of page 20 why the demonstration required the assumption of two subsets of arrival pairs, T1 and T2.
-\begin{tobo}
-Jeg kigger på det. Det er for at kunne dele op i to uafhængige delspil, men om det er strengt nødvendigt må jeg lige tjekke igennem mine beviser for at afgøre. Jeg husker det som at det gjorde tingene simplere, man skal lige være sikker. 
-\end{tobo}
+
+\begin{response}
+PLAN: Bolander kigger på det. Det er for at kunne dele op i to uafhængige delspil, men om det er strengt nødvendigt må lige tjekkes igennem mine beviser for at afgøre. Bolander husker det som at det gjorde tingene simplere, men skal lige være sikker. 
+\end{response} 
 
 
 
 \item I found the end of the paper (the discussion/conclusion section) a little weak and I think it would benefit from a more in-depth or concrete (although not necessarily very long) discussion of the implications of the experimental results for existing theories of private/shared/common knowledge. Do they suggest any revisions to existing models? How are they compatible with previous results? In short, how should these results be situated, by the reader, within the current body of research?
 
-\begin{response} Answer: We agree and have improved substantially upon the concluding section of the paper with discussions about impications, limits, and perspectives. See also the answer given to the editor's point 2. (@@@@) \end{response}
+\begin{response} 
+We agree and have improved substantially upon the concluding section of the paper with discussions about impications, limits, and perspectives. See also the answer given to the editor's point 2. (@@@@) 
+
+PLAN: Svaret ovenfor skal revideres når artiklen er færdig. Vi kan eventuelt her bla referere til romantik-eksemplet. Vi skal nok også referere til andre dele af ecological validity.
+\end{response}
 \end{itemize}
-\begin{tobo}
-Kunne man overveje at gemme romantik-eksemplet til diskussion/konklusion som en del af diskussionerne af ecological validity? Hvis vi alligevel skal udvide afslutningen var det måske et passende sted at adresser både ecological validity og wider implications? 
-\end{tobo}
+
 
 
 \section{RESUBMISSION CHECKLIST:}
