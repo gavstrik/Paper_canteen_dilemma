@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{curry2012putting}
+Oliver Curry and Matthew~Jones Chesters.
+\newblock ‘putting ourselves in the other fellow’s shoes’: The role of
+  ‘theory of mind’in solving coordination problems.
+\newblock {\em Journal of Cognition and Culture}, 12(1-2):147--159, 2012.
+
 \bibitem{de2019maimonides}
 Julian De~Freitas, Peter DeScioli, Kyle~A Thomas, and Steven Pinker.
 \newblock Maimonides’ ladder: States of mutual knowledge and the perception
@@ -13,6 +19,33 @@ Julian De~Freitas, Kyle Thomas, Peter DeScioli, and Steven Pinker.
 \newblock {\em Proceedings of the National Academy of Sciences},
   116(28):13751--13758, 2019.
 
+\bibitem{fagin1995reasoning}
+Ronald Fagin, Joseph~Y. Halpern, Yoram Moses, and Moshe~Y. Vardi.
+\newblock {\em Reasoning About Knowledge}.
+\newblock MIT Press, 1995.
+
+\bibitem{flobbe2008children}
+Liesbeth Flobbe, Rineke Verbrugge, Petra Hendriks, and Irene Kr{\"a}mer.
+\newblock Children’s application of theory of mind in reasoning and language.
+\newblock {\em Journal of Logic, Language and Information}, 17(4):417--442,
+  2008.
+
+\bibitem{good1992rational}
+Irving~John Good.
+\newblock Rational decisions.
+\newblock In {\em Breakthroughs in statistics}, pages 365--377. Springer, 1992.
+
+\bibitem{hedden2002you}
+Trey Hedden and Jun Zhang.
+\newblock What do you think i think you think?: Strategic reasoning in matrix
+  games.
+\newblock {\em Cognition}, 85(1):1--36, 2002.
+
+\bibitem{keysar2003limits}
+Boaz Keysar, Shuhong Lin, and Dale~J Barr.
+\newblock Limits on theory of mind use in adults.
+\newblock {\em Cognition}, 89(1):25--41, 2003.
+
 \bibitem{lee2010rationales}
 James~J Lee and Steven Pinker.
 \newblock Rationales for indirect speech: The theory of the strategic speaker.
@@ -22,6 +55,11 @@ James~J Lee and Steven Pinker.
 John~Edensor Littlewood.
 \newblock {\em A mathematician's miscellany}.
 \newblock Meuthen and Company, 1953.
+
+\bibitem{mccutcheon2019favor}
+Randall~G McCutcheon.
+\newblock In favor of logarithmic scoring.
+\newblock {\em Philosophy of Science}, 86(2):286--303, 2019.
 
 \bibitem{palfrey2009eliciting}
 Thomas~R Palfrey and Stephanie~W Wang.
@@ -72,5 +110,12 @@ Peter van Emde~Boas, Jeroen Groenendijk, and Martin Stokhof.
 \newblock The conway paradox: Its solution in an epistemic framework.
 \newblock In {\em Proceedings of the third Amsterdam Montague Symposion}, pages
   159--182, 1980.
+
+\bibitem{verbrugge2018stepwise}
+Rineke Verbrugge, Ben Meijering, Stefan Wierda, Hedderik van Rijn, Niels
+  Taatgen, et~al.
+\newblock Stepwise training supports strategic second-order theory of mind in
+  turn-taking games.
+\newblock {\em Judgment and decision making}, 13(1):79--98, 2018.
 
 \end{thebibliography}
