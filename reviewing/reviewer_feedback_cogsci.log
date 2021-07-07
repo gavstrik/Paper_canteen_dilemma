@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.25)  5 JUL 2021 15:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.25)  7 JUL 2021 13:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -404,43 +404,54 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 70.
  [2] [3]
-[4] [5] [6]
+[4]
+
+LaTeX Warning: Reference `appendix:payoffs' on page 5 undefined on input line 1
+45.
+
+[5] [6]
 
 LaTeX Warning: Citation `de2018estimating' on page 7 undefined on input line 18
 1.
 
-[7] [8] [9] [10] [11] [12] [13] [14]
-Overfull \hbox (2.62303pt too wide) in paragraph at lines 378--378
-[]\OT1/cmr/bx/n/10 Response 31. []\OT1/cmr/m/it/10 Thank you for point-ing out 
+[7] [8] [9] [10] [11] [12] [13]
+Overfull \hbox (3.30217pt too wide) in paragraph at lines 353--353
+[]\OT1/cmr/bx/n/10 Response 29. []\OT1/cmr/m/it/10 Yes, the ex-per-i-ment mat-t
+ers, see an-swer above. Ex-ploratory
+ []
+
+[14]
+Overfull \hbox (2.62303pt too wide) in paragraph at lines 377--377
+[]\OT1/cmr/bx/n/10 Response 33. []\OT1/cmr/m/it/10 Thank you for point-ing out 
 a mis-rep-re-sen-ta-tion of Johnson-
  []
 
-
-Overfull \hbox (5.5792pt too wide) in paragraph at lines 393--394
+[15]
+Overfull \hbox (5.5792pt too wide) in paragraph at lines 392--393
 []\OT1/cmr/m/it/10 PLAN: Svaret oven-for skal re-v-ideres n^^War ar-tiklen er f
 ^^Zrdig. Vi kan eventuelt
  []
 
-[15]
-Overfull \hbox (18.80634pt too wide) in paragraph at lines 410--411
+
+Overfull \hbox (18.80634pt too wide) in paragraph at lines 409--410
 []\OT1/cmr/m/n/10 Visit the Jour-nal's web-site (https://onlinelibrary.wiley.co
 m/journal/15516709)
  []
 
-(./reviewer_feedback_cogsci.bbl [16] [17]) [18] (./reviewer_feedback_cogsci.aux
+[16] (./reviewer_feedback_cogsci.bbl [17]) [18] (./reviewer_feedback_cogsci.aux
 )
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 11673 strings out of 479023
- 239927 string characters out of 5863350
+ 11674 strings out of 479023
+ 239945 string characters out of 5863350
  517118 words of memory out of 5000000
- 28953 multiletter control sequences out of 15000+600000
+ 28954 multiletter control sequences out of 15000+600000
  409402 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,6n,89p,2408b,243s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,6n,89p,2408b,240s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/tex
 live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2020
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2020/texmf-di
@@ -455,7 +466,7 @@ dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/p
 ublic/cm-super/sfrm1000.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-s
 uper/sfti1000.pfb>
-Output written on reviewer_feedback_cogsci.pdf (18 pages, 220203 bytes).
+Output written on reviewer_feedback_cogsci.pdf (18 pages, 221467 bytes).
 PDF statistics:
  122 PDF objects out of 1000 (max. 8388607)
  87 compressed objects within 1 object stream
