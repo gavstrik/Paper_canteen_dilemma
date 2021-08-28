@@ -1,48 +1,46 @@
-This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: reviewer_feedback_cogsci.aux
 The style file: plain.bst
-Database file #1: ../latex/cd.bib
-Warning--I didn't find a database entry for "de2018estimating"
-You've used 21 entries,
+Database file #1: ../latex/cd.bib.bib
+You've used 22 entries,
             2118 wiz_defined-function locations,
-            641 strings with 7627 characters,
-and the built_in function-call counts, 7418 in all, are:
-= -- 739
-> -- 343
+            646 strings with 7813 characters,
+and the built_in function-call counts, 7698 in all, are:
+= -- 765
+> -- 361
 < -- 4
-+ -- 139
-- -- 114
-* -- 541
-:= -- 1229
-add.period$ -- 65
-call.type$ -- 21
-change.case$ -- 116
++ -- 146
+- -- 120
+* -- 562
+:= -- 1281
+add.period$ -- 68
+call.type$ -- 22
+change.case$ -- 122
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 279
-empty$ -- 576
-format.name$ -- 114
-if$ -- 1544
+cite$ -- 22
+duplicate$ -- 289
+empty$ -- 594
+format.name$ -- 120
+if$ -- 1599
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 24
-newline$ -- 108
-num.names$ -- 42
-pop$ -- 111
+int.to.str$ -- 22
+missing$ -- 25
+newline$ -- 113
+num.names$ -- 44
+pop$ -- 115
 preamble$ -- 1
-purify$ -- 98
+purify$ -- 103
 quote$ -- 0
-skip$ -- 193
+skip$ -- 201
 stack$ -- 0
-substring$ -- 503
-swap$ -- 56
+substring$ -- 508
+swap$ -- 57
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 78
+type$ -- 82
 warning$ -- 0
-while$ -- 78
-width$ -- 23
-write$ -- 233
-(There was 1 warning)
+while$ -- 80
+width$ -- 24
+write$ -- 244
