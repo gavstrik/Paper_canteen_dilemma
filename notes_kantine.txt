@@ -1,0 +1,26 @@
+Medbring kortspil: Find ud af hvor mange. 
+
+Svarbrikker? (ja,nej)
+
+Kan de spille i forskellige konstellationer?
+
+Kort fra 1-10: es er 1.
+
+Hvordan sikrer randomness? Træk kort + kast mønt, fx? 
+
+Lav regler på slide eller på papir som udleveres. 
+
+Spørg dem om det er OK at optage de kvalitative interviews.
+
+Læg kort face down. Kig på eget kort. På et stykke papir ved siden af: 
+
+      ja	nej
+    ---------------------
+    |
+ja  |  1	0
+    | 
+nej |  0        -\infty
+
+
+I skal afgøre om (I er enige om at) begge tal er under 10. Hvis I begge svarer "ja" og I har ret, så får I begge 1$. Hvis I begge svarer nej, så får I 0$. Hvis den ene svarer ja og den anden nej, så mister I alle optjente penge. 
+ 
