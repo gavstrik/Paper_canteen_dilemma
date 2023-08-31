@@ -1,0 +1,120 @@
+From: Thomas Bolander <tobo@dtu.dk>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Subject: GPT4
+X-Universally-Unique-Identifier: D647CA02-B35A-4B90-9660-B963A4083FD8
+Message-ID: <07F6B122-A4D7-49F0-9376-815AC981B6DF@dtu.dk>
+Date: Tue, 4 Apr 2023 00:24:10 +0200
+To: Robin Engelhardt <re@ifro.ku.dk>, Robin Engelhardt
+	<robin.engelhardt@gmail.com>, Thomas Nicolet <thomas1nicolet@gmail.com>
+MIME-Version: 1.0
+
+K=C3=A6re Robin og Thomas
+
+GPT4 er OK next level. Jeg gav den reglerne fra DIS og begyndte at spille m=
+ed den.=20
+
+--
+T: Suppose in the first round you get a 7. What will you do?
+
+GPT4: In the first round, you get a 7. Since you cannot communicate with th=
+e other player, you have to make a decision based on the information you ha=
+ve.
+
+Given that your card is a 7, the other player must have either a 6 or an 8.=
+ In both cases, the numbers are strictly below 9, which means it is safe fo=
+r both players to choose the white stone, worth $2.
+
+So, in this round, you should choose the white stone, as it has the potenti=
+al to maximize your reward while meeting the condition of both card numbers=
+ being strictly below 9.
+
+T: OK, suppose that in the second round you get an 8.=20
+
+GPT4: In the second round, you get an 8. Again, you have to make a decision=
+ based on the information you have.
+
+Given that your card is an 8, the other player must have either a 7 or a 9.=
+ If the other player has a 7, both numbers are strictly below 9, and choosi=
+ng the white stone would be safe for both of you to earn $2. However, if th=
+e other player has a 9, choosing the white stone would result in both playe=
+rs losing all the money earned so far since the condition of both card numb=
+ers being strictly below 9 wouldn't be met.
+
+In this situation, it's safer to choose the black stone, as it guarantees a=
+ reward of $1 regardless of whether the other player has a 7 or a 9, minimi=
+zing the risk of losing your accumulated rewards.
+
+T: But when you got the 7 you chose a white stone, knowing that the co-play=
+er might have gotten an 8, for which you now chose a black stone?
+
+GPT4: You are correct, and I apologize for the inconsistency in my previous=
+ responses. To maintain a consistent strategy, let's reconsider the situati=
+on when you get an 8 in the second round.
+
+Given that your card is an 8, the other player must have either a 7 or a 9.=
+ In the first round, when you had a 7, you chose the white stone, which imp=
+lies that you were willing to take the risk to maximize your reward when bo=
+th card numbers were strictly below 9.=20
+
+To maintain consistency, in the second round, when you have an 8, you shoul=
+d also choose the white stone. This decision maintains the risk-taking stra=
+tegy for maximizing rewards when both card numbers are strictly below 9. Re=
+member, this is a cooperative game, and the goal is to coordinate actions w=
+ith the other player to maximize rewards. By consistently choosing the whit=
+e stone when your card number is below 9, you increase the chances of synch=
+ronizing your actions with your co-player.
+
+T: Is the optimal strategy then to always choose white when your card numbe=
+r is below 9?
+
+GPT4: Yes, in this cooperative coordination game, the optimal strategy for =
+both players is to choose the white stone when their card number is strictl=
+y below 9. This strategy maximizes the potential reward for both players wh=
+ile minimizing the risk of losing the accumulated rewards throughout the ga=
+me.
+
+By following this strategy, both players are more likely to coordinate thei=
+r actions and consistently earn the higher reward of $2 (white stone) when =
+their card numbers are in the range of 2-8. When a player has a card number=
+ of 9 or 10, they should choose the black stone (worth $1) to avoid the ris=
+k of losing all the accumulated rewards.
+
+It's essential for both players to maintain this consistent strategy throug=
+hout the game to maximize their chances of coordinating their actions and a=
+chieving the highest possible total reward.
+
+T: How about the strategy of always choosing black?
+
+GPT4: Choosing the black stone every time is a conservative strategy that g=
+uarantees a reward of $1 in every round, regardless of the card numbers. It=
+ eliminates the risk of losing accumulated rewards during the game.
+
+While this strategy ensures a consistent reward, it might not be optimal in=
+ terms of maximizing the total rewards. By always choosing black, both play=
+ers miss out on the opportunities to earn a higher reward of $2 (white ston=
+e) when both card numbers are strictly below 9.
+
+The previously mentioned strategy of choosing white when the card number is=
+ strictly below 9 and black otherwise is more likely to maximize the total =
+rewards for both players throughout the game, as it takes advantage of the =
+higher reward in safe situations while minimizing the risk of losing accumu=
+lated rewards.
+
+However, if both players prioritize avoiding losses over maximizing rewards=
+, the always-choose-black strategy can be considered a safe alternative wit=
+h guaranteed returns. The choice of strategy ultimately depends on the play=
+ers' risk tolerance and their preference for maximizing rewards versus avoi=
+ding losses.
+=E2=80=94
+
+S=C3=A5 den fanger godt at hvis man skal spille hvid overhovedet skal man s=
+pille hvid s=C3=A5l=C3=A6nge der er en chance for koordinering, svarende ti=
+l hvad vores spilteoretiske teorem siger. Desv=C3=A6rre fanger den s=C3=A5 =
+ikke at sort her alligevel dominerer hvid. Men alligevel interessant at se =
+hvad et konglomerat af alle mennesker t=C3=A6nker om dette spil.
+
+   Thomas
+
+
+
