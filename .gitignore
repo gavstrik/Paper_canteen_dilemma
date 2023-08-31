@@ -10,3 +10,9 @@ latex/*.pdf
 latex/*.end
 latex/*.bak
 .Rproj.user
+reviewing/reviewer_feedback_cogsci.aux
+reviewing/reviewer_feedback_cogsci.log
+reviewing/reviewer_feedback_cogsci.synctex.gz
+reviewing/reviewer_feedback_cogsci.pdf
+latex/cd.out
+.DS_Store
