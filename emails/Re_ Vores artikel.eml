@@ -1,0 +1,1801 @@
+Received: from PRAP192MB1553.EURP192.PROD.OUTLOOK.COM (2603:10a6:102:290::10)
+ by DBAP192MB1019.EURP192.PROD.OUTLOOK.COM with HTTPS; Wed, 30 Aug 2023
+ 07:36:05 +0000
+Received: from AS4P195CA0020.EURP195.PROD.OUTLOOK.COM (2603:10a6:20b:5d6::7)
+ by PRAP192MB1553.EURP192.PROD.OUTLOOK.COM (2603:10a6:102:290::10) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6699.34; Wed, 30 Aug
+ 2023 07:36:03 +0000
+Received: from AMS1EPF00000042.eurprd04.prod.outlook.com
+ (2603:10a6:20b:5d6:cafe::94) by AS4P195CA0020.outlook.office365.com
+ (2603:10a6:20b:5d6::7) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6699.36 via Frontend
+ Transport; Wed, 30 Aug 2023 07:36:03 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.217.54)
+ smtp.mailfrom=gmail.com; dkim=pass (signature was verified)
+ header.d=gmail.com;dmarc=pass action=none header.from=gmail.com;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.217.54 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.217.54; helo=mail-vs1-f54.google.com; pr=C
+Received: from mail-vs1-f54.google.com (209.85.217.54) by
+ AMS1EPF00000042.mail.protection.outlook.com (10.167.16.39) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6745.17 via Frontend Transport; Wed, 30 Aug 2023 07:36:03 +0000
+Received: by mail-vs1-f54.google.com with SMTP id ada2fe7eead31-44d3a5cd2f9so2118454137.3
+        for <tobo@dtu.dk>; Wed, 30 Aug 2023 00:36:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20221208; t=1693380962; x=1693985762; darn=dtu.dk;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:from:to:cc:subject:date:message-id:reply-to;
+        bh=0QSm+KthDLhUSUIfHF39fjdL5a64JLn0GeUA5Ft83kM=;
+        b=dlHD7TuiT79AKcc7beb0Jvq7QWNBeAi00pHAOIhfAWIeWQVw9lohO1cFUO4edrZL3I
+         s++oBzXxyHsDJrVf3uziSe20ivwjgMX6XNlc2IwFqSYi1XOlzDHtxEkBr0YpS3Ydl8VU
+         ZeynIIByfVwu93AZ4KG88cgjyqKDhbAGfDFq/E3TUHunGgqXLS84U36qJ7YpT+8d8GVq
+         5zFLWgxe8oy67qAizSMjbrS52OUm5UyDbiumrTUqz3dC1ovgrTmZ5hHSpTMrvoO6LSNR
+         fdykIY/v3/athzoBKBZn9/OZ2QBJZVpJAMMVlfHjtg84qpdkLudMOsJOgotB0nvElFaW
+         MRAQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20221208; t=1693380962; x=1693985762;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=0QSm+KthDLhUSUIfHF39fjdL5a64JLn0GeUA5Ft83kM=;
+        b=Q8/10cYhn3apN5HZqFqdzE3XtBhokK0u/a+vWk1kks6DmzvPh59nZl0xqpZPQ21YST
+         fRJ/hix09DYtPI9eeRe4Z9QbKfuV00uVBJtkwo1aj1OpZSCy97V65ToM4EPNcpfwo+Ah
+         HmIRaoEJpeDOYj7Vth8uqdzhqU9cWDbQP8eJX+sLuiRFHmaHVhhjiN0RgtP+Fp+LSnYC
+         rkXB8yuNaC7z1ghmwtgUb5uJGsBhQiutv6mElr6TNk8Sg0+m3+3TAcFf4ip/Mt5GCo6u
+         p2cn2M+DwDJn0VmNk26QQ9zZbk33k6eFGqCDzIiDMdCVYAOMzqWasfj3z/k7NT5AE/ll
+         aYQA==
+X-Gm-Message-State: AOJu0YyRNfEeLBUiHqdjddGnR6Q5QZBrt9cAtNcsbr97fAVE3293JdrD
+	oGmaMThqi8qmWzF6pljqcnqV0wyLjq27BFbsdQX52oHU
+X-Google-Smtp-Source: AGHT+IEwSJAk7/MaLfixB7XKkIMRlut5sNAsoO0IFXTWnBySLuPZxiwDRsCqX/XQ9Ez6KzoGoTIFBbNI4bMU46CkdMc=
+X-Received: by 2002:a67:fbc9:0:b0:44d:453c:a839 with SMTP id
+ o9-20020a67fbc9000000b0044d453ca839mr1403858vsr.25.1693380962184; Wed, 30 Aug
+ 2023 00:36:02 -0700 (PDT)
+References: <F751E562-D9EE-4BDF-863B-00DC927958D6@dtu.dk> <06F10DD1-2B0C-4631-9A3A-802C2A401BF4@gmail.com>
+ <CADwiNf2UM0_GDpn5waYSSHOycHpjzZka1NuC9pr7YHHppUBnnw@mail.gmail.com>
+ <a6c85cb5bd81405ca192e404d10bc2aa@ifro.ku.dk> <8B5B966A-B348-4C7C-8864-8CACEFAAC7A7@dtu.dk>
+ <CADwiNf1n5ow=ZQa3zJV3XreE3HVP=U3J9jWrTSNPs_vdNUdaiQ@mail.gmail.com>
+ <FE56BAC6-DD66-405D-A84A-9EF89D6495AA@dtu.dk> <f6d1aec9dfcc44398dd3161753dc506f@ifro.ku.dk>
+ <3B2DDB21-9F4C-47E3-B20A-8D357E6DFA22@dtu.dk>
+In-Reply-To: <3B2DDB21-9F4C-47E3-B20A-8D357E6DFA22@dtu.dk>
+From: Thomas Nicolet <thomas1nicolet@gmail.com>
+Date: Wed, 30 Aug 2023 09:35:52 +0200
+Message-ID: <CADwiNf3TWLSG5o95JbDp5V3N30ysH0qMmSucCbjiaruPMabUtA@mail.gmail.com>
+Subject: Re: Vores artikel
+To: Thomas Bolander <tobo@dtu.dk>
+Cc: Robin Engelhardt <re@ifro.ku.dk>
+Content-Type: multipart/alternative; boundary="000000000000b8742d06041efad6"
+Return-Path: thomas1nicolet@gmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 30 Aug 2023 07:36:03.5621
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 4c76b8c2-6649-4e02-f9aa-08dba92bc3bb
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: f251f123-c9ce-448e-9277-34bb285911d9:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ AMS1EPF00000042:EE_|PRAP192MB1553:EE_|DBAP192MB1019:EE_
+X-MS-Exchange-Organization-AuthSource:
+ AMS1EPF00000042.eurprd04.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 4c76b8c2-6649-4e02-f9aa-08dba92bc3bb
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:209.85.217.54;CTRY:US;LANG:da;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:mail-vs1-f54.google.com;PTR:mail-vs1-f54.google.com;CAT:NONE;SFS:(13230031)(4636009)(84050400002)(84040400005)(451199024)(26005)(6916009)(42186006)(75640400001)(4326008)(1096003)(66574015)(4006050)(73392003)(336012)(30864003)(55446002)(107886003)(86362001)(5660300002)(82202003)(8676002)(83380400001)(7116003)(6666004)(7636003)(7596003)(76482006)(356005)(3480700007)(33964004)(559001)(579004);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 30 Aug 2023 07:36:03.5621
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 4c76b8c2-6649-4e02-f9aa-08dba92bc3bb
+X-MS-Exchange-CrossTenant-Id: f251f123-c9ce-448e-9277-34bb285911d9
+X-MS-Exchange-CrossTenant-AuthSource:
+ AMS1EPF00000042.eurprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PRAP192MB1553
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.9674194
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6745.019
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?ZTBTQVNRbm4vU2tJb1E0MXovZ3lwcjI1SHhtWUlaaUJoRlU2dnlZem5JSUY0?=
+ =?utf-8?B?R1ZBMnUybmV4VnZvbnpWK1hlVDlYdmxsZy9xd3NPRTBQQWRnelhQc21SWkNB?=
+ =?utf-8?B?ZzBKejVjbkxoQkxVUVN1V0piOENOd05ZdFZLRFFZK3kyRkRZS2hFdXNFNEJ6?=
+ =?utf-8?B?WXViMGZoME0wQkRoZTRzYlpCZjVFY2Rtc2o5aUZrNXdOelp0WVV3ejVYaW9i?=
+ =?utf-8?B?R3JnNnAzUGhyR2RGeUdOS0FqUVZyRUZQcXd3K1pZeXJ4c1FOL01ZdDgwRjhm?=
+ =?utf-8?B?WXhHbzhvRDFCVUdzUGF5R3JsWm81SjZ6Y3kzWWJYem1lTGJZVUtWMi8vV25v?=
+ =?utf-8?B?eWNkcy80VWsyc0RxaU1GWHZvK0t1MFF1eVVSOWF0bjlqOXZaa1gzNnFHdHA1?=
+ =?utf-8?B?S25TSjA4dUIzOW1DSTR1WmZMQ2pOcUNhRmtwaTVvYnh6T1NMOXFxQzAwQVJT?=
+ =?utf-8?B?N01JRG5hemxZc3d2YkdBbFBxdVRndDJEdUs3QnlKSGE2WDBlZzJidHA2cURZ?=
+ =?utf-8?B?ZDZrMldzSFBRZEg5andtSzg4TWNlNmRCNDVaNU1VL0YwMlU1UkVQc1NUK1NG?=
+ =?utf-8?B?TkM2TDZkMDhqRm5UMWs4NUFpelg0VXFmMHBmck45bVUyM2FjM05zRWhOVUti?=
+ =?utf-8?B?WC85dk1EOVg2ZzRlNm1mV3M5WVJkYVI4OTYrc3diTlp4VFFodGhxOHJGSmpQ?=
+ =?utf-8?B?RW4vRWJpeUI4N0pyRjJVcXJLckpzeTBKem5KMndFbk5QMXQwNFFMb2dnbERk?=
+ =?utf-8?B?V3JzN1FiWkJicXIwZjl0NHovMDhjaUQwa0ZnYnA5N0I4akRENXdEREVEQnRM?=
+ =?utf-8?B?S0hOVHAxcGlDRnh5WGdoN2hMZGlYNVNUV2ZsUm0zbk1BeHJMMlZHMkFEOWdF?=
+ =?utf-8?B?Y0dnYzNUbzRyUTNiRWo5VitVVUZGWDlYSHc1cWlVODhxL0F3Ky9aZUdtTnNl?=
+ =?utf-8?B?M01YVzRvcUY4MTVoSGZIS2hsaGk0ZjJRZFRYbUxWMC9nVVhIYmJVYU1UNkZD?=
+ =?utf-8?B?dlp4OHM0amQvaVM5REY5M0NyT01iQkRjWmNWZVNhOWsvL3NReG0zM0pySEJ3?=
+ =?utf-8?B?WVZSTytiTVdtcDZBVVlXR3lRTFhpNzUvdUlXc2tielY2Y3lhVlgrcVVUeEFn?=
+ =?utf-8?B?Y1h2V0hQcWI5dTNFQVBNN09uNHYxbG9LcTY2ckt3WWJLQ1VlTzlwSVhsNmhD?=
+ =?utf-8?B?dCtyc2p5R0F3ZGw5YzRKMVNGbUwxS29vQUZoOS9EaDZpVmQ0RHJGSFR6dE1s?=
+ =?utf-8?B?MWRQcWJZZ2hjdFVxcXIwN1lCNncwR0FPL0ViVWRoYTJseGxGK20xQnd1SHI3?=
+ =?utf-8?B?SFFrYU9NQm1XZkVTQW94cjdOUU8rYmtqZVFoR3NrNnFlVnJHU0FjaUhrUWxJ?=
+ =?utf-8?B?V1dTSFVXUG5XWXd4TXZ4dXFrb09GMm1MOUhjY2k2QThDVlRvcWhqRGpDR0c0?=
+ =?utf-8?B?MGlHWjM5Q2hqWE1Wb1ZuWUFIUTdoOUMxSFo2cVdkQ0hoYTJnZFA2N0xxaHAx?=
+ =?utf-8?B?UWFkd1IvQVhWUjl6SXlLWVpQUzRTMFBWSkZSTGhyTDl2VHY4c0poMDAzdllX?=
+ =?utf-8?B?VzVwK3NsV2dsc0hNYzlxZkQ5NjhiZm5abnY4eFBmQk5oQXltSzQ5QkN4S3dB?=
+ =?utf-8?B?Vy9zQis4VjU5ZXd0b09zd1doUlVtMTNYL2lRSnBNSkNIVm9QNGxoZDl0dEdJ?=
+ =?utf-8?B?VjZHQ3k2WDhBR1RwdlN1Z3V3YUNpbkpoTUlUcTl4cHhxL3BZOGs3bElCUHF4?=
+ =?utf-8?B?cTQvWEtIamlhV2xpWDZNL1JrOFM0VDBFV2kwZ1hlSTRSdWYxa2VFQXhqUjFK?=
+ =?utf-8?B?STRrTkdtdEZTdVh4MUZlRTU2MEJqRndnRjNGbUxpSlZNU0pKblpwaXdoTUx3?=
+ =?utf-8?B?cGlVT1NkZlo5TEFtQnQ0YTgwSUh4bm9zLzY5ckpyTHFMa1YvKy96ay9HM2VF?=
+ =?utf-8?B?TXVoS2dFOTNocTNBblgvY3hlS0ZJUnBoWHFVUG1aL3FwSXpQbTNDd1VKSXBr?=
+ =?utf-8?B?ckJSamxJcjNXZ1VDU0JBcXV0Q3lFb1N6UjliaUVmTHQ5OGVTY2lWcmRyaU1D?=
+ =?utf-8?B?ZGVpalNJeUlHQ05hZWtGZ3QrZlZBTkFrTnltWCs2ZlljQUpqUVVYNm9adU9u?=
+ =?utf-8?Q?OLO0=3D?=
+MIME-Version: 1.0
+
+--000000000000b8742d06041efad6
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Tjek
+
+Den ons. 30. aug. 2023 kl. 08.53 skrev Thomas Bolander <tobo@dtu.dk>:
+
+> Perfekt!!!! S=C3=A5 i morgen kl 10 p=C3=A5 mit kontor. Fantastisk! Jeg gl=
+=C3=A6der mig
+> til at se jer.
+>
+>    Thomas
+>
+> On 29 Aug 2023, at 22.06, Robin Engelhardt <re@ifro.ku.dk> wrote:
+>
+> Yes, Jeg kan godt.
+> Bh, robin
+>
+> *Fra:* Thomas Bolander <tobo@dtu.dk>
+> *Sendt:* 29. august 2023 19:27
+> *Til:* Thomas Nicolet <thomas1nicolet@gmail.com>
+> *Cc:* Robin Engelhardt <re@ifro.ku.dk>
+> *Emne:* Re: Vores artikel
+>
+> Torsdag kl 10 p=C3=A5 DTU? Kan du ogs=C3=A5 der, Robin?
+>
+>    Thomas
+>
+>
+> On 29 Aug 2023, at 16.12, Thomas Nicolet <thomas1nicolet@gmail.com> wrote=
+:
+>
+> K=C3=A6re Robin og Thomas
+>
+> Jeg kan godt v=C3=A6re fleksibel torsdag formiddag. Og ja, det er lidt sv=
+=C3=A6rt at
+> koordinere n=C3=A5r alle laver noget forskelligt imens :)
+>
+> Mvh Thomas
+>
+> Den man. 28. aug. 2023 kl. 18.19 skrev Thomas Bolander <tobo@dtu.dk>:
+>
+> K=C3=A6re Robin og Thomas
+>
+> Det var jeg s=C3=A5 =C3=A5benbart ikke helt klar p=C3=A5, desv=C3=A6rre=
+=E2=80=A6 Det er lidt crazy her
+> efter at have v=C3=A6ret ude at rejse i 2 m=C3=A5neder (konferencer + fer=
+ie) og s=C3=A5
+> skulle g=C3=B8re en helt masse f=C3=A6rdigt og klart til at kunne rejse i=
+gen i 2
+> m=C3=A5neder (Kina).
+>
+> Jeg kan i princippet godt m=C3=B8des p=C3=A5 torsdag, d. 31., men det bli=
+ver m=C3=A5ske
+> lidt halvkvalt, da jeg har s=C3=A5 mange andre m=C3=B8der og ting at t=C3=
+=A6nke p=C3=A5. Jeg
+> p=C3=A5stod oprindeligt at jeg ville have god tid i ugen 28. august til 1=
+.
+> september=E2=80=A6 Ja, det var dengang. Phew=E2=80=A6 Men m=C3=A5ske er d=
+et alligevel bedst at
+> vi m=C3=B8des der p=C3=A5 torsdag, ogs=C3=A5 selvom vi ikke n=C3=B8dvendi=
+gvis f=C3=A5r alt afklaret
+> der. Det er nok meget godt at stikke hovederne sammen og l=C3=A6gge en sl=
+agplan.
+>
+> Hvad er muligt i forhold til jeres jobs? Kan det v=C3=A6re om formiddagen=
+ p=C3=A5
+> torsdag? Kan det v=C3=A6re p=C3=A5 DTU? Jeg har m=C3=B8der hele eftermidd=
+agen p=C3=A5 DTU, s=C3=A5
+> det ville v=C3=A6re fedt for mig at g=C3=B8re det der, men kan ogs=C3=A5 =
+godt forst=C3=A5 hvis
+> det er besv=C3=A6rligt for jer.
+>
+>    Thomas
+>
+>
+>
+>
+> On 13 Aug 2023, at 19.32, Robin Engelhardt <re@ifro.ku.dk> wrote:
+>
+> Jeg kan godt her den 15-16 august!
+> Bh R
+>
+> *Fra:* Thomas Nicolet <thomas1nicolet@gmail.com>
+> *Sendt:* 13. august 2023 16:30
+> *Til:* Thomas Bolander <tobo@dtu.dk>
+> *Cc:* Robin Engelhardt <re@ifro.ku.dk>
+> *Emne:* Re: Vores artikel
+>
+> Jeg er stadig klar d. 31 august, eller her d. 15. eller 16. august. Jeg
+> vil arbejde p=C3=A5 at f=C3=A5 skrevet noget i midten af ugen og vender t=
+ilbage under
+> alle omst=C3=A6ndigheder
+>
+> T
+>
+> Den tors. 13. jul. 2023 kl. 15.50 skrev Thomas <thomas1nicolet@gmail.com>=
+:
+>
+> Det er fint for mig
+>
+> T
+>
+>
+> On 13 Jul 2023, at 15.15, Thomas Bolander <tobo@dtu.dk> wrote:
+>
+> =EF=BB=BF OK, hvad med 14., 15. eller 16. august?
+>
+> Fedt med godkendelser!
+>
+>     Thomas
+>
+>
+>
+> On 6 Jul 2023, at 19.23, Robin Engelhardt <re@ifro.ku.dk> wrote:
+>
+> Jeg kan ikke 20-30. August hvor jeg er p=C3=A5 ekskursion. Den 31. aug er=
+ fin,
+> den 1. sept. er fin om eftermiddagen.
+>
+> Ang. Godkendelser s=C3=A5 har vi godkendelse fra Institutional Review Boa=
+rd.
+>
+> Skriv gerne l=C3=B8s hvis I har tid. Jeg er lidt h=C3=B8jt belagt i aug. =
+Og har
+> ferie i Juli=E2=80=A6
+>
+> Kh, robin
+>
+> *Fra:* Thomas Bolander <tobo@dtu.dk>
+> *Sendt:* 6. juli 2023 12:48
+> *Til:* Thomas Nicolet <thomas1nicolet@gmail.com>
+> *Cc:* Robin Engelhardt <re@ifro.ku.dk>
+> *Emne:* Re: Vores artikel
+>
+>
+>
+>
+>
+> On 6 Jul 2023, at 12.38, Thomas Nicolet <thomas1nicolet@gmail.com> wrote:
+>
+> Ugen 28. august til 1. september er fint for mig, bare ikke inklusiv
+> fredag d. 1. september.
+>
+> M=C3=A5ske kan vi sige mandag d. 28 august?
+>
+>
+>
+> OK, jeg afs=C3=A6tter tentativt hele dagen.
+>
+>
+>
+> Jeg har bedst tid i noget af august, og kan skrive og arbejde p=C3=A5 art=
+iklen
+> der. Kan f=C3=A6rdigg=C3=B8re min egen transkribering for det f=C3=B8rste=
+. Jeg er stadig
+> ikke helt 100% p=C3=A5 hvad vi helst skal =C3=A6ndre, men kan fors=C3=B8g=
+e ud fra de email
+> tr=C3=A5de vi har. Prim=C3=A6rt at f=C3=A5 DIS fors=C3=B8get ind, og s=C3=
+=A5 se p=C3=A5 resten hvad der
+> kan ordnes.
+>
+>
+> Vi kan ogs=C3=A5 fors=C3=B8ge at m=C3=B8des tidligere i august? Jeg er ti=
+lbage p=C3=A5 arbejde
+> 10. august. S=C3=A5 kan vi n=C3=A5 at snakke om hvad der skal prioriteres=
+.
+>
+>
+>
+>
+> Det lyder fint med glade logikere, t=C3=A6nker ogs=C3=A5 det er relativt =
+sj=C3=A6ldent at
+> se (en ellers vigtig) sammenh=C3=A6ng ift mennesker. Kan evt. ogs=C3=A5 u=
+nders=C3=B8ge
+> PLOS ONE etik krav.
+>
+>
+> Det m=C3=A5 du *meget* gerne. Tak!!!
+>
+>
+>
+> God sommer :0)
+>
+>
+> I lige m=C3=A5de.
+>
+>    Thomas
+>
+>
+>
+>
+> T
+>
+> Den tors. 6. jul. 2023 kl. 12.27 skrev Thomas Bolander <tobo@dtu.dk>:
+>
+> Robin har vist ikke svaret, men hvis det ogs=C3=A5 er OK med Robin, s=C3=
+=A5 skulle
+> vi m=C3=A5ske overveje at have et genopstartsm=C3=B8de i slutningen af au=
+gust? Jeg
+> har god tid i ugen 28. august til 1. september, s=C3=A5 I kan foresl=C3=
+=A5 noget der
+> passer jer der, hvis I alts=C3=A5 er i K=C3=B8benhavn der?
+>
+> Jeg reviewede en artikel til en logik-konference hvor de havde lavet noge=
+n
+> muddy children-agtige eksperimenter og snakkede om niveauer af ToM. Det v=
+ar
+> en ret d=C3=A5rligt skrevet artikel, men en del af de andre reviewers var=
+ stadig
+> meget begejstrede for at de havde lavet human subject experiments med det=
+.
+> S=C3=A5 jeg tror ogs=C3=A5 stadig at mange vil v=C3=A6re begejstrede for =
+vores artikel,
+> selvom vi indtil videre har v=C3=A6ret lidt uheldige med den.
+>
+> Vedr=C3=B8rende PLOS ONE, s=C3=A5 havde Jens Ulrik Hansen et problem med =
+en artikel
+> han har sendt derind. Det er noget med de etiske problemstillinger omkrin=
+g
+> human subject experiments, hvor de skal skrive under p=C3=A5 et eller and=
+et. Jeg
+> ved ikke helt hvad det er og hvordan, men vi skal helt sikkert tjekke det
+> inden vi fors=C3=B8ger at sende noget ind til PLOS ONE, for hvis ikke =E2=
+=80=9Cpapirerne
+> er i orden=E2=80=9D, s=C3=A5 vil de bare lave en desk reject af vores art=
+ikel.
+>
+> God sommer!!!!
+>
+>      Thomas
+>
+>
+>
+>
+>
+> On 21 May 2023, at 20.28, Thomas Nicolet <thomas1nicolet@gmail.com> wrote=
+:
+>
+> Jo, lad os lave en plan.
+>
+> Senest slut oktober lyder fint.
+>
+> Jeg ved ikke pr=C3=A6cist hvorn=C3=A5r jeg f=C3=A5r tid, men juni/juli ku=
+nne passe.
+>
+> Den f=C3=B8rste email blev bare sendt for hurtigt, havde ikke skrevet mer=
+e end
+> den opf=C3=B8lgende email du svarer p=C3=A5.
+>
+> T
+>
+>
+> Den s=C3=B8n. 14. maj 2023 kl. 22.30 skrev Thomas Bolander <tobo@dtu.dk>:
+>
+>
+>
+>
+>
+> On 8 May 2023, at 20.21, Thomas Nicolet <thomas1nicolet@gmail.com> wrote:
+>
+>
+>
+> Jeg t=C3=A6nker vi skal passe p=C3=A5 ikke at konkludere noget alt for h=
+=C3=A5ndfast ud
+> fra vores eksperimenter. Det ligner at der er en =E2=80=9Ccurse of shared
+> knowledge=E2=80=9D, men hvis skal passe p=C3=A5 med at v=C3=A6re for h=C3=
+=A5ndfaste om *hvad* den
+> er. M=C3=A5ske handler det ikke om at agenter ikke kan kende forskel p=C3=
+=A5 shared
+> og common knowledge (selvom det kunne se s=C3=A5dan ud), men om at de bas=
+eret p=C3=A5
+> erfaring vil antage at deres medmennesker aldrig t=C3=A6nker ned til comm=
+on
+> knowledge, men altid vil reagere og handle udfra lave niveauer af shared
+> knowledge. Der er s=C3=A5 stadig en curse, fordi det betyder at vi i prak=
+sis
+> ikke kan finde ud af at koordinere, selv hvis vi m=C3=A5ske teoretisk set=
+ ved
+> hvad der skulle til. Koordineringsfejlen opst=C3=A5r fordi vi kun betragt=
+er et
+> relativt sn=C3=A6vert vindue af mulige spillertyper for vores medspiller.=
+ Det
+> forhindrer os i at f=C3=A5 det maksimale udbytte. S=C3=A5 der er en curse=
+ lige
+> gyldigt hvad, der er bare to muligheder:
+>
+> 1) Cursen kommer af at vi ikke er perfekt rationelle agenter, s=C3=A5 vi
+> forst=C3=A5r ikke spillet til bunds.
+> 2) Vi forst=C3=A5r spillet til bunds, men evner stadig ikke at optimere v=
+ores
+> udbytte, fordi vi g=C3=B8r os simplificerende antagelser om vores medspil=
+lere.
+>
+> Vi kunne eventuelt pr=C3=B8ve at se p=C3=A5 hvilke antagelse om spillerty=
+per der
+> kunne reproducere vores data. Vores data er ret p=C3=A6nt, ogs=C3=A5 i fo=
+rhold til
+> kantine vs kortspil. Hvis vi antager at alle spillere lavere en
+> sandsynlighedsfordeling over de mulige typer af medspillere, hvilke(n)
+> sandsynlighedsfordeling matcher s=C3=A5 vores eksperimentielle data?
+>
+>
+> Jeg synes b=C3=A5de pointen er rigtig, og p=C3=A5passelighed ift. at konk=
+ludere
+> h=C3=A5ndfaste ting ud fra eksperimentet. Begge elementer du n=C3=A6vner =
+er nok til
+> stede, at man ikke forst=C3=A5r spillet til bunds, og til den grad man g=
+=C3=B8r,
+> mangler man indblik i sin medspillers tanker (common knowlege). Det er
+> m=C3=A5ske komboen, som g=C3=B8r det specielt sv=C3=A6rt. Man skal nok v=
+=C3=A6re p=C3=A5passelig
+> ift. konklusioner, da det nok kan v=C3=A6re meget sv=C3=A6rt at vide hvad=
+ som g=C3=B8r det
+> sv=C3=A6rt. Med andre ord, man skal sikre at sv=C3=A6rhedsgraden ikke er =
+pga. et
+> "trick", e.g. test setup (den er debunket) eller et andet sprogligt/logis=
+k
+> trick som snyder end.
+>
+>
+> Students: =E2=80=9CExcept since you=E2=80=99re saying there=E2=80=99s ris=
+k involved in six,
+> there=E2=80=99s technically also risk involved in five. =E2=80=9C
+> Students: =E2=80=9COkay, if they have a seven, they might think you have =
+an eight.
+> That=E2=80=99s where the risk comes. It doesn=E2=80=99t go lower than tha=
+t. If you have a
+> six, you could be mistaken for having an eight, and that=E2=80=99s where =
+the risk
+> comes from. If you have a five, you=E2=80=99re not going to be mistaken f=
+or having
+> any ...=E2=80=9D
+> Students: =E2=80=9CYeah, but the point, too, is you could decide with tha=
+t six
+> that since you might be mistaken for having an eight, that you should go
+> black.=E2=80=9D
+> Student: =E2=80=9CTwo to five is white, six to ten is black, accept and t=
+hen you
+> always win.=E2=80=9D
+> Student: =E2=80=9CNo, because if you have a six and a five and you use th=
+at
+> paradigm, you lose.=E2=80=9C
+>
+> Der er mange guldkorn i de interviews. Jeg har ikke l=C3=A6st Thomas=E2=
+=80=99 i
+> detaljer, jeg foresl=C3=A5r at Thomas ogs=C3=A5 pr=C3=B8ver at reng=C3=B8=
+re og tjekke sit
+> interview igennem, s=C3=A5 vi f=C3=A5r noget ud som er mere l=C3=A6sbart.=
+ Ideelt set s=C3=A5
+> man kan skelne de forskellige studerende, hvis du kan skelne deres stemme=
+r,
+> Thomas. Ellers kan jeg m=C3=A5ske g=C3=B8re det til slut, jeg er nok lidt=
+ bedre til
+> at skelne deres stemmer, da jeg kender dem.
+>
+>
+> Ja, der er mange guldkorn. Det er sv=C3=A6rt at eftervise endegyldigt
+> eksperimentielt, men der er klart en barrierer for at forst=C3=A5 at
+> mix-strategi ikke kan v=C3=A6re sikker. Har testet det p=C3=A5 et par fol=
+k, meget
+> robust resultat. Jeg kan godt reng=C3=B8re mit interview, det kan v=C3=A6=
+re det er
+> lettere at k=C3=B8re det igennem conformer-1 eller en anden bedre model f=
+or
+> krydsreference. Whisper var ikke helt super. Jeg kan pr=C3=B8ve at skelne=
+ ift
+> stemmer, men m=C3=A5ske bare anonymt. Det bliver ikke i maj, tidligst jun=
+i.
+>
+>
+> OK. Vi skal m=C3=A5ske l=C3=A6gge en plan for hvorn=C3=A5r vi f=C3=A6rdig=
+g=C3=B8r artiklen og
+> resubmiter? Jeg er ude at rejse hele juni p=C3=A5 konferencer. Har jeg s=
+=C3=A5 lidt
+> tid til at skrive p=C3=A5 denne artikel? Potentielt ja, men =C3=A6rlig ta=
+lt bliver
+> det nok begr=C3=A6nset, jeg kommer nok til at bruge mest tid p=C3=A5 at v=
+=C3=A6re tilstede
+> p=C3=A5 de konferencer. I juli er jeg p=C3=A5 ferie, s=C3=A5 er jeg hjemm=
+e 3 uger, og
+> tager dern=C3=A6st 2 m=C3=A5neder til Kina (september-oktober). Jeg har m=
+=C3=A5ske bedst
+> tid n=C3=A5r jeg er i Kina. Jeg skal arbejde med de lokale, men har eller=
+s 100%
+> tid til forskning, s=C3=A5 jeg kan sikkert ogs=C3=A5 f=C3=A5 tid til at k=
+igge p=C3=A5 vores
+> artikel. S=C3=A5 jeg ville anbefale en eller anden plan som g=C3=B8r at v=
+i kan blive
+> f=C3=A6rdige senest slut oktober? Ville det v=C3=A6re realistisk? Har I t=
+id?
+>
+>
+>
+>
+>
+>
+> thomas2014psychology "These results support the hypothesis that people
+> represent common knowledge as a distinct cognitive category that licenses
+> them to coordinate with others for mutual gain"
+>
+>
+> Ja, de konkluderer ogs=C3=A5 skarpt ift. relevans af resultater og "human
+> social life" ud fra fors=C3=B8g. M=C3=A5ske ogs=C3=A5 en pointe, at vores=
+ fors=C3=B8g ikke
+> n=C3=B8dvendigvis modsiger deres.
+>
+>
+> Ja, OK, det kunne man selvf=C3=B8lgelig godt v=C3=A6gte. Men s=C3=A5 sige=
+ at vores
+> resultater tilf=C3=B8jer noget til historien og viser at deres resultater=
+ m=C3=A5ske
+> er en konsekvens af deres setup hvor der bliver gjort eksplicit klart hva=
+d
+> der er common knowledge, hvilket nok ofte ikke sker i praksis.
+>
+>
+>
+> M=C3=A5ske kan man ubevidst skelne common knowledge situationer, uden at =
+kunne
+> eksplicitere hvorfor, og lignende, uden common knowledge g=C3=A5r ens
+> r=C3=A6sonnering til grunde, uden man kan eksplicitere helt hvorfor.
+>
+>
+> Om Iris
+>
+> "You seem to have taken the approach to arguing for ecological validity b=
+y
+> listing presumed real-world analogues of the game scenario. This seems
+> unsatisfactory and insufficient."
+>
+>
+> Ja, det kan jeg godt se. Hvis ens resultat er pga. et
+> sprogligt/visuelt/logisk trick (e.g. "bat & ball costs 1.10 dollars..."),
+> s=C3=A5 er det ikke sikkert det udtrykker noget om menneskets kognition, =
+hvis
+> forklaringen kan ligge i formuleringen af problemet. Men jeg er stadig li=
+dt
+> uklar ift hele den kritik.
+>
+>
+> Jeg synes efterh=C3=A5nden jeg forst=C3=A5r det, selvom det tog en rum ti=
+d.
+>
+>    Thomas
+>
+>
+>
+> Jeg synes stadig at der m=C3=A5 v=C3=A6re noget kognitivt sv=C3=A6rt der =
+sker,
+> literaturen har jo ogs=C3=A5 bekr=C3=A6ftet at ToM er sv=C3=A6rt.
+>
+>
+>
+>
+>
+>
+>
+>
+> Den man. 8. maj 2023 kl. 19.58 skrev Thomas Nicolet <
+> thomas1nicolet@gmail.com>:
+>
+> Hej Thomas og Robin, jeg samler nogle svar p=C3=A5 udest=C3=A5ende emails=
+ her
+>
+>
+>
+
+--000000000000b8742d06041efad6
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr">Tjek<br></div><br><div class=3D"gmail_quote"><div dir=3D"ltr=
+" class=3D"gmail_attr">Den ons. 30. aug. 2023 kl. 08.53 skrev Thomas Boland=
+er &lt;<a href=3D"mailto:tobo@dtu.dk">tobo@dtu.dk</a>&gt;:<br></div><blockq=
+uote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1p=
+x solid rgb(204,204,204);padding-left:1ex">
+
+
+
+<div>
+Perfekt!!!! S=C3=A5 i morgen kl 10 p=C3=A5 mit kontor. Fantastisk! Jeg gl=
+=C3=A6der mig til at se jer.
+<div><br>
+</div>
+<div>&nbsp; &nbsp;Thomas<br>
+<div><br>
+<blockquote type=3D"cite">
+<div>On 29 Aug 2023, at 22.06, Robin Engelhardt &lt;<a href=3D"mailto:re@if=
+ro.ku.dk" target=3D"_blank">re@ifro.ku.dk</a>&gt; wrote:</div>
+<br>
+<div>
+<div style=3D"font-family:Helvetica;font-size:15px;font-style:normal;font-v=
+ariant-caps:normal;font-weight:400;letter-spacing:normal;text-align:start;t=
+ext-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;text=
+-decoration:none">
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><sp=
+an lang=3D"EN-US">Yes, Jeg kan godt.<u></u><u></u></span></div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><sp=
+an lang=3D"EN-US">Bh, robin<u></u><u></u></span></div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><sp=
+an lang=3D"EN-US"><u></u>&nbsp;<u></u></span></div>
+<div>
+<div style=3D"border-width:1pt medium medium;border-style:solid none none;b=
+order-color:rgb(225,225,225) currentcolor currentcolor;padding:3pt 0cm 0cm"=
+>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><b>=
+Fra:</b><span>&nbsp;</span>Thomas Bolander &lt;<a href=3D"mailto:tobo@dtu.d=
+k" style=3D"color:blue;text-decoration:underline" target=3D"_blank">tobo@dt=
+u.dk</a>&gt;<span>&nbsp;</span><br>
+<b>Sendt:</b><span>&nbsp;</span>29. august 2023 19:27<br>
+<b>Til:</b><span>&nbsp;</span>Thomas Nicolet &lt;<a href=3D"mailto:thomas1n=
+icolet@gmail.com" style=3D"color:blue;text-decoration:underline" target=3D"=
+_blank">thomas1nicolet@gmail.com</a>&gt;<br>
+<b>Cc:</b><span>&nbsp;</span>Robin Engelhardt &lt;<a href=3D"mailto:re@ifro=
+.ku.dk" style=3D"color:blue;text-decoration:underline" target=3D"_blank">re=
+@ifro.ku.dk</a>&gt;<br>
+<b>Emne:</b><span>&nbsp;</span>Re: Vores artikel<u></u><u></u></div>
+</div>
+</div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><u>=
+</u>&nbsp;<u></u></div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Tor=
+sdag kl 10 p=C3=A5 DTU? Kan du ogs=C3=A5 der, Robin?<span>&nbsp;</span><u><=
+/u><u></u></div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><u>=
+</u>&nbsp;<u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp; &nbsp;Thomas<u></u><u></u></div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><br=
+>
+<br>
+<u></u><u></u></div>
+<blockquote style=3D"margin-top:5pt;margin-bottom:5pt">
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">On =
+29 Aug 2023, at 16.12, Thomas Nicolet &lt;<a href=3D"mailto:thomas1nicolet@=
+gmail.com" style=3D"color:blue;text-decoration:underline" target=3D"_blank"=
+>thomas1nicolet@gmail.com</a>&gt; wrote:<u></u><u></u></div>
+</div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><u>=
+</u>&nbsp;<u></u></div>
+<div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">K=
+=C3=A6re Robin og Thomas<u></u><u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><u>=
+</u>&nbsp;<u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Jeg=
+ kan godt v=C3=A6re fleksibel torsdag formiddag. Og ja, det er lidt sv=C3=
+=A6rt at koordinere n=C3=A5r alle laver noget forskelligt imens :)<u></u><u=
+></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><u>=
+</u>&nbsp;<u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Mvh=
+ Thomas<u></u><u></u></div>
+</div>
+</div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><u>=
+</u>&nbsp;<u></u></div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Den=
+ man. 28. aug. 2023 kl. 18.19 skrev Thomas Bolander &lt;<a href=3D"mailto:t=
+obo@dtu.dk" style=3D"color:blue;text-decoration:underline" target=3D"_blank=
+">tobo@dtu.dk</a>&gt;:<u></u><u></u></div>
+</div>
+<blockquote style=3D"border-width:medium medium medium 1pt;border-style:non=
+e none none solid;border-color:currentcolor currentcolor currentcolor rgb(2=
+04,204,204);padding:0cm 0cm 0cm 6pt;margin-left:4.8pt;margin-right:0cm">
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">K=
+=C3=A6re Robin og Thomas<span>&nbsp;</span><u></u><u></u></div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><u>=
+</u>&nbsp;<u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Det=
+ var jeg s=C3=A5 =C3=A5benbart ikke helt klar p=C3=A5, desv=C3=A6rre=E2=80=
+=A6 Det er lidt crazy her efter at have v=C3=A6ret ude at rejse i 2 m=C3=A5=
+neder (konferencer + ferie) og s=C3=A5 skulle g=C3=B8re en helt masse f=C3=
+=A6rdigt
+ og klart til at kunne rejse igen i 2 m=C3=A5neder (Kina).&nbsp;<u></u><u><=
+/u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><u>=
+</u>&nbsp;<u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Jeg=
+ kan i princippet godt m=C3=B8des p=C3=A5 torsdag, d. 31., men det bliver m=
+=C3=A5ske lidt halvkvalt, da jeg har s=C3=A5 mange andre m=C3=B8der og ting=
+ at t=C3=A6nke p=C3=A5. Jeg p=C3=A5stod oprindeligt at jeg ville have
+ god tid i ugen 28. august til 1. september=E2=80=A6 Ja, det var dengang. P=
+hew=E2=80=A6 Men m=C3=A5ske er det alligevel bedst at vi m=C3=B8des der p=
+=C3=A5 torsdag, ogs=C3=A5 selvom vi ikke n=C3=B8dvendigvis f=C3=A5r alt afk=
+laret der. Det er nok meget godt at stikke hovederne sammen og l=C3=A6gge e=
+n slagplan.&nbsp;<u></u><u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><u>=
+</u>&nbsp;<u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Hva=
+d er muligt i forhold til jeres jobs? Kan det v=C3=A6re om formiddagen p=C3=
+=A5 torsdag? Kan det v=C3=A6re p=C3=A5 DTU? Jeg har m=C3=B8der hele eftermi=
+ddagen p=C3=A5 DTU, s=C3=A5 det ville v=C3=A6re fedt for mig at g=C3=B8re
+ det der, men kan ogs=C3=A5 godt forst=C3=A5 hvis det er besv=C3=A6rligt fo=
+r jer.&nbsp;<u></u><u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><u>=
+</u>&nbsp;<u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp; &nbsp;Thomas<u></u><u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><u>=
+</u>&nbsp;<u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><u>=
+</u>&nbsp;<u></u></div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><br=
+>
+<br>
+<u></u><u></u></div>
+<blockquote style=3D"margin-top:5pt;margin-bottom:5pt">
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">On =
+13 Aug 2023, at 19.32, Robin Engelhardt &lt;<a href=3D"mailto:re@ifro.ku.dk=
+" style=3D"color:blue;text-decoration:underline" target=3D"_blank">re@ifro.=
+ku.dk</a>&gt; wrote:<u></u><u></u></div>
+</div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><u>=
+</u>&nbsp;<u></u></div>
+<div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Jeg=
+ kan godt her den 15-16 august!<u></u><u></u></div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Bh =
+R<u></u><u></u></div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+<div style=3D"border-width:1pt medium medium;border-style:solid none none;p=
+adding:3pt 0cm 0cm;border-color:currentcolor">
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><b>=
+Fra:</b><span>&nbsp;</span>Thomas Nicolet &lt;<a href=3D"mailto:thomas1nico=
+let@gmail.com" style=3D"color:blue;text-decoration:underline" target=3D"_bl=
+ank">thomas1nicolet@gmail.com</a>&gt;<span>&nbsp;</span><br>
+<b>Sendt:</b><span>&nbsp;</span>13. august 2023 16:30<br>
+<b>Til:</b><span>&nbsp;</span>Thomas Bolander &lt;<a href=3D"mailto:tobo@dt=
+u.dk" style=3D"color:blue;text-decoration:underline" target=3D"_blank">tobo=
+@dtu.dk</a>&gt;<br>
+<b>Cc:</b><span>&nbsp;</span>Robin Engelhardt &lt;<a href=3D"mailto:re@ifro=
+.ku.dk" style=3D"color:blue;text-decoration:underline" target=3D"_blank">re=
+@ifro.ku.dk</a>&gt;<br>
+<b>Emne:</b><span>&nbsp;</span>Re: Vores artikel<u></u><u></u></div>
+</div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Jeg=
+ er stadig klar d. 31 august, eller her d. 15. eller 16. august. Jeg vil ar=
+bejde p=C3=A5 at f=C3=A5 skrevet noget i midten af ugen og vender tilbage u=
+nder alle omst=C3=A6ndigheder<u></u><u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">T<u=
+></u><u></u></div>
+</div>
+</div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Den=
+ tors. 13. jul. 2023 kl. 15.50 skrev Thomas &lt;<a href=3D"mailto:thomas1ni=
+colet@gmail.com" style=3D"color:blue;text-decoration:underline" target=3D"_=
+blank">thomas1nicolet@gmail.com</a>&gt;:<u></u><u></u></div>
+</div>
+<blockquote style=3D"border-width:medium medium medium 1pt;border-style:non=
+e none none solid;padding:0cm 0cm 0cm 6pt;margin:5pt 0cm 5pt 4.8pt;border-c=
+olor:currentcolor currentcolor currentcolor rgb(204,204,204)">
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Det=
+ er fint for mig<u></u><u></u></div>
+<div>
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 12pt;font-size:11pt;font-fam=
+ily:Calibri,sans-serif">
+T<u></u><u></u></p>
+<div>
+<blockquote style=3D"margin-top:5pt;margin-bottom:5pt">
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 12pt;font-size:11pt;font-fam=
+ily:Calibri,sans-serif">
+<br>
+On 13 Jul 2023, at 15.15, Thomas Bolander &lt;<a href=3D"mailto:tobo@dtu.dk=
+" style=3D"color:blue;text-decoration:underline" target=3D"_blank">tobo@dtu=
+.dk</a>&gt; wrote:<u></u><u></u></p>
+</blockquote>
+</div>
+<blockquote style=3D"margin-top:5pt;margin-bottom:5pt">
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">=EF=
+=BB=BF OK, hvad med 14., 15. eller 16. august?&nbsp;<u></u><u></u></div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Fed=
+t med godkendelser!<u></u><u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp; &nbsp; Thomas<u></u><u></u></div>
+<div>
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 12pt;font-size:11pt;font-fam=
+ily:Calibri,sans-serif">
+<u></u>&nbsp;<u></u></p>
+<blockquote style=3D"margin-top:5pt;margin-bottom:5pt">
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">On =
+6 Jul 2023, at 19.23, Robin Engelhardt &lt;<a href=3D"mailto:re@ifro.ku.dk"=
+ style=3D"color:blue;text-decoration:underline" target=3D"_blank">re@ifro.k=
+u.dk</a>&gt; wrote:<u></u><u></u></div>
+</div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+<div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Jeg=
+ kan ikke 20-30. August hvor jeg er p=C3=A5 ekskursion. Den 31. aug er fin,=
+ den 1. sept. er fin om eftermiddagen.<u></u><u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Ang=
+. Godkendelser s=C3=A5 har vi godkendelse fra Institutional Review Board.<u=
+></u><u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Skr=
+iv gerne l=C3=B8s hvis I har tid. Jeg er lidt h=C3=B8jt belagt i aug. Og ha=
+r ferie i Juli=E2=80=A6<u></u><u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Kh,=
+ robin<u></u><u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+<div>
+<div style=3D"border-width:1pt medium medium;border-style:solid none none;p=
+adding:3pt 0cm 0cm;border-color:currentcolor">
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><b>=
+Fra:</b>&nbsp;Thomas Bolander &lt;<a href=3D"mailto:tobo@dtu.dk" style=3D"c=
+olor:blue;text-decoration:underline" target=3D"_blank">tobo@dtu.dk</a>&gt;&=
+nbsp;<br>
+<b>Sendt:</b>&nbsp;6. juli 2023 12:48<br>
+<b>Til:</b>&nbsp;Thomas Nicolet &lt;<a href=3D"mailto:thomas1nicolet@gmail.=
+com" style=3D"color:blue;text-decoration:underline" target=3D"_blank">thoma=
+s1nicolet@gmail.com</a>&gt;<br>
+<b>Cc:</b>&nbsp;Robin Engelhardt &lt;<a href=3D"mailto:re@ifro.ku.dk" style=
+=3D"color:blue;text-decoration:underline" target=3D"_blank">re@ifro.ku.dk</=
+a>&gt;<br>
+<b>Emne:</b>&nbsp;Re: Vores artikel<u></u><u></u></div>
+</div>
+</div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+<div>
+<div>
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 12pt;font-size:11pt;font-fam=
+ily:Calibri,sans-serif">
+&nbsp;<u></u><u></u></p>
+</div>
+<blockquote style=3D"margin-top:5pt;margin-bottom:5pt">
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">On =
+6 Jul 2023, at 12.38, Thomas Nicolet &lt;<a href=3D"mailto:thomas1nicolet@g=
+mail.com" style=3D"color:blue;text-decoration:underline" target=3D"_blank">=
+thomas1nicolet@gmail.com</a>&gt; wrote:<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+<div>
+<div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Uge=
+n 28. august til 1. september er fint for mig, bare ikke inklusiv fredag d.=
+ 1. september.<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">M=
+=C3=A5ske kan vi sige mandag d. 28 august?<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">OK,=
+ jeg afs=C3=A6tter tentativt hele dagen.&nbsp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 12pt;font-size:11pt;font-fam=
+ily:Calibri,sans-serif">
+&nbsp;<u></u><u></u></p>
+</div>
+<blockquote style=3D"margin-top:5pt;margin-bottom:5pt">
+<div>
+<div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Jeg=
+ har bedst tid i noget af august, og kan skrive og arbejde p=C3=A5 artiklen=
+ der. Kan f=C3=A6rdigg=C3=B8re min egen transkribering for det f=C3=B8rste.=
+ Jeg er stadig ikke helt 100% p=C3=A5 hvad vi helst
+ skal =C3=A6ndre, men kan fors=C3=B8ge ud fra de email tr=C3=A5de vi har. P=
+rim=C3=A6rt at f=C3=A5 DIS fors=C3=B8get ind, og s=C3=A5 se p=C3=A5 resten =
+hvad der kan ordnes.<u></u><u></u></div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Vi =
+kan ogs=C3=A5 fors=C3=B8ge at m=C3=B8des tidligere i august? Jeg er tilbage=
+ p=C3=A5 arbejde 10. august. S=C3=A5 kan vi n=C3=A5 at snakke om hvad der s=
+kal prioriteres.&nbsp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 12pt;font-size:11pt;font-fam=
+ily:Calibri,sans-serif">
+&nbsp;<u></u><u></u></p>
+</div>
+<blockquote style=3D"margin-top:5pt;margin-bottom:5pt">
+<div>
+<div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Det=
+ lyder fint med glade logikere, t=C3=A6nker ogs=C3=A5 det er relativt sj=C3=
+=A6ldent at se (en ellers vigtig) sammenh=C3=A6ng ift mennesker. Kan evt. o=
+gs=C3=A5 unders=C3=B8ge PLOS ONE etik krav.<u></u><u></u></div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Det=
+ m=C3=A5 du *meget* gerne. Tak!!!<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<blockquote style=3D"margin-top:5pt;margin-bottom:5pt">
+<div>
+<div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">God=
+ sommer :0)<u></u><u></u></div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">I l=
+ige m=C3=A5de.&nbsp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp; &nbsp;Thomas<u></u><u></u></div>
+</div>
+</div>
+<div>
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 12pt;font-size:11pt;font-fam=
+ily:Calibri,sans-serif">
+&nbsp;<u></u><u></u></p>
+</div>
+<blockquote style=3D"margin-top:5pt;margin-bottom:5pt">
+<div>
+<div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">T<u=
+></u><u></u></div>
+</div>
+</div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+<div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Den=
+ tors. 6. jul. 2023 kl. 12.27 skrev Thomas Bolander &lt;<a href=3D"mailto:t=
+obo@dtu.dk" style=3D"color:blue;text-decoration:underline" target=3D"_blank=
+">tobo@dtu.dk</a>&gt;:<u></u><u></u></div>
+</div>
+</div>
+<blockquote style=3D"border-width:medium medium medium 1pt;border-style:non=
+e none none solid;padding:0cm 0cm 0cm 6pt;margin:5pt 0cm 5pt 4.8pt;border-c=
+olor:currentcolor currentcolor currentcolor rgb(204,204,204)">
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Rob=
+in har vist ikke svaret, men hvis det ogs=C3=A5 er OK med Robin, s=C3=A5 sk=
+ulle vi m=C3=A5ske overveje at have et genopstartsm=C3=B8de i slutningen af=
+ august? Jeg har god tid i ugen 28. august til
+ 1. september, s=C3=A5 I kan foresl=C3=A5 noget der passer jer der, hvis I =
+alts=C3=A5 er i K=C3=B8benhavn der?&nbsp;<u></u><u></u></div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Jeg=
+ reviewede en artikel til en logik-konference hvor de havde lavet nogen mud=
+dy children-agtige eksperimenter og snakkede om niveauer af ToM. Det var en=
+ ret d=C3=A5rligt skrevet artikel,
+ men en del af de andre reviewers var stadig meget begejstrede for at de ha=
+vde lavet human subject experiments med det. S=C3=A5 jeg tror ogs=C3=A5 sta=
+dig at mange vil v=C3=A6re begejstrede for vores artikel, selvom vi indtil =
+videre har v=C3=A6ret lidt uheldige med den.&nbsp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Ved=
+r=C3=B8rende PLOS ONE, s=C3=A5 havde Jens Ulrik Hansen et problem med en ar=
+tikel han har sendt derind. Det er noget med de etiske problemstillinger om=
+kring human subject experiments, hvor
+ de skal skrive under p=C3=A5 et eller andet. Jeg ved ikke helt hvad det er=
+ og hvordan, men vi skal helt sikkert tjekke det inden vi fors=C3=B8ger at =
+sende noget ind til PLOS ONE, for hvis ikke =E2=80=9Cpapirerne er i orden=
+=E2=80=9D, s=C3=A5 vil de bare lave en desk reject af vores artikel.&nbsp;<=
+u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">God=
+ sommer!!!!<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp; &nbsp; &nbsp;Thomas<u></u><u></u></div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+<div>
+<div>
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 12pt;font-size:11pt;font-fam=
+ily:Calibri,sans-serif">
+&nbsp;<u></u><u></u></p>
+</div>
+<blockquote style=3D"margin-top:5pt;margin-bottom:5pt">
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">On =
+21 May 2023, at 20.28, Thomas Nicolet &lt;<a href=3D"mailto:thomas1nicolet@=
+gmail.com" style=3D"color:blue;text-decoration:underline" target=3D"_blank"=
+>thomas1nicolet@gmail.com</a>&gt; wrote:<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+<div>
+<div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Jo,=
+ lad os lave en plan.<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Sen=
+est slut oktober lyder fint.<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Jeg=
+ ved ikke pr=C3=A6cist hvorn=C3=A5r jeg f=C3=A5r tid, men juni/juli kunne p=
+asse.<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Den=
+ f=C3=B8rste email blev bare sendt for hurtigt, havde ikke skrevet mere end=
+ den opf=C3=B8lgende email du svarer p=C3=A5.<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">T<u=
+></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+<div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Den=
+ s=C3=B8n. 14. maj 2023 kl. 22.30 skrev Thomas Bolander &lt;<a href=3D"mail=
+to:tobo@dtu.dk" style=3D"color:blue;text-decoration:underline" target=3D"_b=
+lank">tobo@dtu.dk</a>&gt;:<u></u><u></u></div>
+</div>
+</div>
+<blockquote style=3D"border-width:medium medium medium 1pt;border-style:non=
+e none none solid;padding:0cm 0cm 0cm 6pt;margin:5pt 0cm 5pt 4.8pt;border-c=
+olor:currentcolor currentcolor currentcolor rgb(204,204,204)">
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+<div>
+<div>
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 12pt;font-size:11pt;font-fam=
+ily:Calibri,sans-serif">
+&nbsp;<u></u><u></u></p>
+</div>
+<blockquote style=3D"margin-top:5pt;margin-bottom:5pt">
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">On =
+8 May 2023, at 20.21, Thomas Nicolet &lt;<a href=3D"mailto:thomas1nicolet@g=
+mail.com" style=3D"color:blue;text-decoration:underline" target=3D"_blank">=
+thomas1nicolet@gmail.com</a>&gt; wrote:<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+<div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+<blockquote style=3D"border-width:medium medium medium 1pt;border-style:non=
+e none none solid;padding:0cm 0cm 0cm 6pt;margin:5pt 0cm 5pt 4.8pt;border-c=
+olor:currentcolor currentcolor currentcolor rgb(204,204,204)">
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Jeg=
+ t=C3=A6nker vi skal passe p=C3=A5 ikke at konkludere noget alt for h=C3=A5=
+ndfast ud fra vores eksperimenter. Det ligner at der er en =E2=80=9Ccurse o=
+f shared knowledge=E2=80=9D, men hvis skal passe p=C3=A5 med at
+ v=C3=A6re for h=C3=A5ndfaste om *hvad* den er. M=C3=A5ske handler det ikke=
+ om at agenter ikke kan kende forskel p=C3=A5 shared og common knowledge (s=
+elvom det kunne se s=C3=A5dan ud), men om at de baseret p=C3=A5 erfaring vi=
+l antage at deres medmennesker aldrig t=C3=A6nker ned til common knowledge,
+ men altid vil reagere og handle udfra lave niveauer af shared knowledge. D=
+er er s=C3=A5 stadig en curse, fordi det betyder at vi i praksis ikke kan f=
+inde ud af at koordinere, selv hvis vi m=C3=A5ske teoretisk set ved hvad de=
+r skulle til. Koordineringsfejlen opst=C3=A5r fordi
+ vi kun betragter et relativt sn=C3=A6vert vindue af mulige spillertyper fo=
+r vores medspiller. Det forhindrer os i at f=C3=A5 det maksimale udbytte. S=
+=C3=A5 der er en curse lige gyldigt hvad, der er bare to muligheder:<br>
+<br>
+1) Cursen kommer af at vi ikke er perfekt rationelle agenter, s=C3=A5 vi fo=
+rst=C3=A5r ikke spillet til bunds.<br>
+2) Vi forst=C3=A5r spillet til bunds, men evner stadig ikke at optimere vor=
+es udbytte, fordi vi g=C3=B8r os simplificerende antagelser om vores medspi=
+llere.<br>
+<br>
+Vi kunne eventuelt pr=C3=B8ve at se p=C3=A5 hvilke antagelse om spillertype=
+r der kunne reproducere vores data. Vores data er ret p=C3=A6nt, ogs=C3=A5 =
+i forhold til kantine vs kortspil. Hvis vi antager at alle spillere lavere =
+en sandsynlighedsfordeling over de mulige typer af medspillere,
+ hvilke(n) sandsynlighedsfordeling matcher s=C3=A5 vores eksperimentielle d=
+ata?<u></u><u></u></div>
+</div>
+</blockquote>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif"><br=
+>
+Jeg synes b=C3=A5de pointen er rigtig, og p=C3=A5passelighed ift. at konklu=
+dere h=C3=A5ndfaste ting ud fra eksperimentet. Begge elementer du n=C3=A6vn=
+er er nok til stede, at man ikke forst=C3=A5r spillet til bunds, og til den=
+ grad man g=C3=B8r, mangler man indblik i sin medspillers tanker
+ (common knowlege). Det er m=C3=A5ske komboen, som g=C3=B8r det specielt sv=
+=C3=A6rt. Man skal nok v=C3=A6re p=C3=A5passelig ift. konklusioner, da det =
+nok kan v=C3=A6re meget sv=C3=A6rt at vide hvad som g=C3=B8r det sv=C3=A6rt=
+. Med andre ord, man skal sikre at sv=C3=A6rhedsgraden ikke er pga. et &quo=
+t;trick&quot;, e.g.
+ test setup (den er debunket) eller et andet sprogligt/logisk trick som sny=
+der end.<u></u><u></u></div>
+</div>
+<div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+<blockquote style=3D"border-width:medium medium medium 1pt;border-style:non=
+e none none solid;padding:0cm 0cm 0cm 6pt;margin:5pt 0cm 5pt 4.8pt;border-c=
+olor:currentcolor currentcolor currentcolor rgb(204,204,204)">
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Stu=
+dents: =E2=80=9CExcept since you=E2=80=99re saying there=E2=80=99s risk inv=
+olved in six, there=E2=80=99s technically also risk involved in five. =E2=
+=80=9C<br>
+Students: =E2=80=9COkay, if they have a seven, they might think you have an=
+ eight. That=E2=80=99s where the risk comes. It doesn=E2=80=99t go lower th=
+an that. If you have a six, you could be mistaken for having an eight, and =
+that=E2=80=99s where the risk comes from. If you have a five, you=E2=80=99r=
+e
+ not going to be mistaken for having any ...=E2=80=9D<br>
+Students: =E2=80=9CYeah, but the point, too, is you could decide with that =
+six that since you might be mistaken for having an eight, that you should g=
+o black.=E2=80=9D<br>
+Student: =E2=80=9CTwo to five is white, six to ten is black, accept and the=
+n you always win.=E2=80=9D<br>
+Student: =E2=80=9CNo, because if you have a six and a five and you use that=
+ paradigm, you lose.=E2=80=9C&nbsp;<br>
+<br>
+Der er mange guldkorn i de interviews. Jeg har ikke l=C3=A6st Thomas=E2=80=
+=99 i detaljer, jeg foresl=C3=A5r at Thomas ogs=C3=A5 pr=C3=B8ver at reng=
+=C3=B8re og tjekke sit interview igennem, s=C3=A5 vi f=C3=A5r noget ud som =
+er mere l=C3=A6sbart. Ideelt set s=C3=A5 man kan skelne de forskellige stud=
+erende, hvis
+ du kan skelne deres stemmer, Thomas. Ellers kan jeg m=C3=A5ske g=C3=B8re d=
+et til slut, jeg er nok lidt bedre til at skelne deres stemmer, da jeg kend=
+er dem.<u></u><u></u></div>
+</div>
+</blockquote>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Ja,=
+ der er mange guldkorn. Det er sv=C3=A6rt at eftervise endegyldigt eksperim=
+entielt, men der er klart en barrierer for at forst=C3=A5 at mix-strategi i=
+kke kan v=C3=A6re sikker. Har testet det p=C3=A5
+ et par folk, meget robust resultat. Jeg kan godt reng=C3=B8re mit intervie=
+w, det kan v=C3=A6re det er lettere at k=C3=B8re det igennem conformer-1 el=
+ler en anden bedre model for krydsreference. Whisper var ikke helt super. J=
+eg kan pr=C3=B8ve at skelne ift stemmer, men m=C3=A5ske bare
+ anonymt. Det bliver ikke i maj, tidligst juni.<u></u><u></u></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">OK.=
+ Vi skal m=C3=A5ske l=C3=A6gge en plan for hvorn=C3=A5r vi f=C3=A6rdigg=C3=
+=B8r artiklen og resubmiter? Jeg er ude at rejse hele juni p=C3=A5 konferen=
+cer. Har jeg s=C3=A5 lidt tid til at skrive p=C3=A5 denne artikel? Potentie=
+lt
+ ja, men =C3=A6rlig talt bliver det nok begr=C3=A6nset, jeg kommer nok til =
+at bruge mest tid p=C3=A5 at v=C3=A6re tilstede p=C3=A5 de konferencer. I j=
+uli er jeg p=C3=A5 ferie, s=C3=A5 er jeg hjemme 3 uger, og tager dern=C3=A6=
+st 2 m=C3=A5neder til Kina (september-oktober). Jeg har m=C3=A5ske bedst ti=
+d n=C3=A5r jeg
+ er i Kina. Jeg skal arbejde med de lokale, men har ellers 100% tid til for=
+skning, s=C3=A5 jeg kan sikkert ogs=C3=A5 f=C3=A5 tid til at kigge p=C3=A5 =
+vores artikel. S=C3=A5 jeg ville anbefale en eller anden plan som g=C3=B8r =
+at vi kan blive f=C3=A6rdige senest slut oktober? Ville det v=C3=A6re reali=
+stisk?
+ Har I tid?&nbsp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 12pt;font-size:11pt;font-fam=
+ily:Calibri,sans-serif">
+&nbsp;<u></u><u></u></p>
+</div>
+<blockquote style=3D"margin-top:5pt;margin-bottom:5pt">
+<div>
+<div>
+<div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+<blockquote style=3D"border-width:medium medium medium 1pt;border-style:non=
+e none none solid;padding:0cm 0cm 0cm 6pt;margin:5pt 0cm 5pt 4.8pt;border-c=
+olor:currentcolor currentcolor currentcolor rgb(204,204,204)">
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">tho=
+mas2014psychology &quot;These results support the hypothesis that people re=
+present common knowledge as a distinct cognitive category that licenses the=
+m to coordinate with others for
+ mutual gain&quot;<u></u><u></u></div>
+</div>
+</blockquote>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Ja,=
+ de konkluderer ogs=C3=A5 skarpt ift. relevans af resultater og &quot;human=
+ social life&quot; ud fra fors=C3=B8g. M=C3=A5ske ogs=C3=A5 en pointe, at v=
+ores fors=C3=B8g ikke n=C3=B8dvendigvis modsiger deres.<u></u><u></u></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Ja,=
+ OK, det kunne man selvf=C3=B8lgelig godt v=C3=A6gte. Men s=C3=A5 sige at v=
+ores resultater tilf=C3=B8jer noget til historien og viser at deres resulta=
+ter m=C3=A5ske er en konsekvens af deres setup hvor
+ der bliver gjort eksplicit klart hvad der er common knowledge, hvilket nok=
+ ofte ikke sker i praksis.&nbsp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 12pt;font-size:11pt;font-fam=
+ily:Calibri,sans-serif">
+&nbsp;<u></u><u></u></p>
+</div>
+<blockquote style=3D"margin-top:5pt;margin-bottom:5pt">
+<div>
+<div>
+<div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">M=
+=C3=A5ske kan man ubevidst skelne common knowledge situationer, uden at kun=
+ne eksplicitere hvorfor, og lignende, uden common knowledge g=C3=A5r ens r=
+=C3=A6sonnering til grunde, uden man kan eksplicitere
+ helt hvorfor.<br>
+<br>
+<br>
+Om Iris&nbsp;<u></u><u></u></div>
+</div>
+</div>
+<blockquote style=3D"border-width:medium medium medium 1pt;border-style:non=
+e none none solid;padding:0cm 0cm 0cm 6pt;margin:5pt 0cm 5pt 4.8pt;border-c=
+olor:currentcolor currentcolor currentcolor rgb(204,204,204)">
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&qu=
+ot;You seem to have taken the approach to arguing for ecological validity b=
+y listing presumed real-world analogues of the game scenario. This seems un=
+satisfactory and insufficient.&quot;<u></u><u></u></div>
+</div>
+</div>
+</blockquote>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Ja,=
+ det kan jeg godt se. Hvis ens resultat er pga. et sprogligt/visuelt/logisk=
+ trick (e.g. &quot;bat &amp; ball costs 1.10 dollars...&quot;), s=C3=A5 er =
+det ikke sikkert det udtrykker noget om menneskets
+ kognition, hvis forklaringen kan ligge i formuleringen af problemet. Men j=
+eg er stadig lidt uklar ift hele den kritik.&nbsp;<u></u><u></u></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Jeg=
+ synes efterh=C3=A5nden jeg forst=C3=A5r det, selvom det tog en rum tid.&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp; &nbsp;Thomas<u></u><u></u></div>
+</div>
+</div>
+<div>
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 12pt;font-size:11pt;font-fam=
+ily:Calibri,sans-serif">
+&nbsp;<u></u><u></u></p>
+</div>
+<blockquote style=3D"margin-top:5pt;margin-bottom:5pt">
+<div>
+<div>
+<div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Jeg=
+ synes stadig at der m=C3=A5 v=C3=A6re noget kognitivt sv=C3=A6rt der sker,=
+ literaturen har jo ogs=C3=A5 bekr=C3=A6ftet at ToM er sv=C3=A6rt.<u></u><u=
+></u></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+</div>
+<div>
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 12pt;font-size:11pt;font-fam=
+ily:Calibri,sans-serif">
+&nbsp;<u></u><u></u></p>
+</div>
+<blockquote style=3D"margin-top:5pt;margin-bottom:5pt">
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">&nb=
+sp;<u></u><u></u></div>
+</div>
+<div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Den=
+ man. 8. maj 2023 kl. 19.58 skrev Thomas Nicolet &lt;<a href=3D"mailto:thom=
+as1nicolet@gmail.com" style=3D"color:blue;text-decoration:underline" target=
+=3D"_blank">thomas1nicolet@gmail.com</a>&gt;:<u></u><u></u></div>
+</div>
+</div>
+<blockquote style=3D"border-width:medium medium medium 1pt;border-style:non=
+e none none solid;padding:0cm 0cm 0cm 6pt;margin:5pt 0cm 5pt 4.8pt;border-c=
+olor:currentcolor currentcolor currentcolor rgb(204,204,204)">
+<div>
+<div>
+<div>
+<div style=3D"margin:0cm;font-size:11pt;font-family:Calibri,sans-serif">Hej=
+ Thomas og Robin, jeg samler nogle svar p=C3=A5 udest=C3=A5ende emails her<=
+/div>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+<br>
+</div>
+</div>
+
+</blockquote></div>
+
+--000000000000b8742d06041efad6--
