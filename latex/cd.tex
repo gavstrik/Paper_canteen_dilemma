@@ -576,16 +576,16 @@ If $u_{\bf t'}(s) = u_m$, we immediately get $u_{\bf t'}(s') \geq u_{\bf t'}(s)$
 \end{proof}
 
 \begin{lemma}\label{lemma:no-c-after-o}
-Let $s$ be a Pareto optimal strategy. For all arrival times $t$, if $s(t)(o) > 0$ then $s(t+10)(o) > \frac12$.
+Let $s$ be a Pareto optimal strategy. For all arrival times $t$, if $s(t) = o$ then $s(t+10) = o$.
 %If a Pareto optimal strategy $s$ has $s(t)(o) > 0$ for some $t$, then $s(t+10)(o) < \frac12$.
 %Assume $s(t)(o) > 0$ and $s(t+10)(c) \geq \frac{1}{2}$ for some strategy $s$ and arrival time $t$. Then $s$ is not Pareto optimal.
 \end{lemma}
 \begin{proof}
-Let $s$ be a strategy with $s(t)(o) > 0$ and $s(t+10)(o) \leq \frac12$ for some $t$. We need to find a strategy $s'$ Pareto dominating $s$. %We only consider the case $i=1$, the case of $i=2$ being symmetric. 
+Let $s$ be a strategy with $s(t) = o$ and $s(t+10) = c$ for some $t$. We need to find a strategy $s'$ Pareto dominating $s$. %We only consider the case $i=1$, the case of $i=2$ being symmetric. 
 %Then we have $s_1(t)(o) >0$ and $s_2(t+10)(c) \geq \frac{1}{2}$.  
-If $s(t')(c) > 0$ for some $t' \geq 9{:}00$, the existence of a strategy dominating $s$ follows
-immediately from Lemma~\ref{lemma:no-canteen-at-nine}. We can hence in the following assume that $s(t')(c) = 0$ for all $t' \geq 9{:}00$.  Since $s(t+10)(o) < 1$, we can thus also conclude that $t + 10 < 9{:}00$.
-Now define $s'$ to be identical to $s$ except that we let $s'(t')(c) = 1$ for all $t' \leq t$.
+If $s(t') = c$ for some $t' \geq 9{:}00$, the existence of a strategy dominating $s$ follows
+immediately from Lemma~\ref{lemma:no-canteen-at-nine}. We can hence in the following assume that $s(t') = o$ for all $t' \geq 9{:}00$.  Since $s(t+10) = c$, we can thus also conclude that $t + 10 < 9{:}00$.
+Now define $s'$ to be identical to $s$ except that we let $s'(t') = c$ for all $t' \leq t$.
 %\[
 %  \begin{array}{ll}
 %    s'_1(t-20x)(c) = 1 &\text{for } x \geq 0 \\
@@ -593,29 +593,13 @@ Now define $s'$ to be identical to $s$ except that we let $s'(t')(c) = 1$ for al
 %  \end{array}
 %\]
 %recalling that we are only considering arrival pairs in $T$. 
-We want to show that $EU(s') > EU(s)$. First consider the arrival pair $\mathbf{t} = (t,t+10)$. We want to show that $u_{\bf t}(s') > u_{\bf t}(s)$, i.e., that $u_{\bf t}(s') - u_{\bf t}(s) >0 $. Let $p = s(t)(o)$ and $q = s(t+10)(o)$. Note that by assumption, $p > 0$ and $q \leq \frac12$. Then, by definition of expected payoff, $u_{\bf t}(s) = p q u_o  + (p(1-q) + (1-p)q) u_m + (1-p)(1-q)u_c$. In $s'$, we have the same but with $p=0$, so $u_{\bf t}(s') =  q u_m + (1-q)u_c$. We then get $u_{\bf t}(s') - u_{\bf t}(s) = p(2q-1) u_m + p(1-q) u_c - pq u_o = p(1-q) u_c - p(1-2q) u_m - pq u_o$. Since $p>0$, this is positive iff $(1-q) u_c - (1-2q) u_m - q u_o$ is. Since $q \leq \frac12$, we have $1-2q \geq 0$. Since $u_o > u_m$, we then get  $(1-q) u_c - (1-2q) u_m - q u_o \geq (1-q) u_c - (1-2q) u_o - q u_o = (1-q) (u_c - u_o)$. Since $q \leq \frac12$ and $u_c > u_o$, this expression is positive, and hence 
-%0.9 uc + 0.8 u_m - 0.9u_o
-$u_{\bf t}(s') - u_{\bf t}(s) >0 $, as wanted. %Suppose instead that $q > \frac12$. Then $1-2q < 0$. 
-% (1-q) u_c + (2q-1)u_m - q u_o.  q=0.9: 0.1u_c + 0.8u_m - 0.9u_o
-% u_c > u_o > u_m. u_c = 1, u_o = 0.9, u_m = 0. Then 0.1*1 - 0.9*0.9 = 
-%Since $u_o > u_m$, we get  $p(1-q) u_c - p(1-2q) u_m - pq u_o \geq p(1-q) u_c - p(1-2q) u_o - pq u_o = p(1-q) u_c - p(1-q) u_o = p(1-q) (u_c - u_o)$. Since $p > 0$, $q < 1$ and $u_c > u_o$, we get that the expression is positive, showing $u_{\bf t}(s') - u_{\bf t}(s) > 0$.
-% all $o$ choices at $t$ are replaced by $c$ choices, by definition, 
-%$c$ is chosen with probability 1 at $t$, by definition, 
-%whereas the other player preserves her choice at $t+10$. This means that to compute $u_{\bf t}(s')$ from $u_{\bf t}(s)$, we need to replace each occurrence of $(o,x)$ by $(c,x)$, i.e., $u_{\bf t}(s') = u_{\bf t}(c,o) p q + u_{\bf t}(c,c) p(1-q) + u_{\bf t}(c,o) (1-p)q + u_{\bf t}(c,c) (1-p)(1-q)$. We then get $u_{\bf t}(s') - u_{\bf t}(s) = (u_{\bf t}(c,o) - u_{\bf t}(o,o)) pq + (u_{\bf t}(c,c) - u_{\bf t}(o,c)) p (1-q) = (u_{\bf t}(c,c) - u_{\bf t}(o,c)) p (1-q) -  (u_{\bf t}(o,o) - u_{\bf t}(c,o)) pq$.  From constraint U1, we get that $ u_{\bf t}(c,c) - u_{\bf t}(o,c) > u_{\bf t}(o,o) - u_{\bf t}(c,o)$. Since we have assumed  $s(t+10)(c) \geq \frac12$, we get $q = s(t+10)(o) \leq \frac12$ and hence $p (1-q) \geq pq$. Since we have assumed $s(t)(o) >0$, we also have $p >0$. Hence $(u_{\bf t}(c,c) - u_{\bf t}(o,c)) p (1-q) -  (u_{\bf t}(o,o) - u_{\bf t}(c,o)) pq > 0$, so $u_{\bf t}(s') - u_{\bf t}(s) >0$. 
-%First note that at the arrival pair $(t,t+10)$, $\bf s'$ by definition specifies $c$ for both players (with probability 1). By constraint U1, and since $t +10 < 9{:}00$, this choice has a strictly better payoff than any other choice. Since $s_1(t)(o) > 0$, in particular the strategy $\bf s'$ has a better payoff at $(t,t+10)$ than $\bf s$, i.e., $u_{(t,t+10)}({\bf s}') > u_{(t,t+10)}({\bf s})$. 
-% $u_{(t,t+10)}({\bf s}') = u_{(t,t+10)} (c, s_2(t+10))$ by definition of $\bf s'$.
-%\[
-% \begin{array}{rll}
-% u_{(t,t+10)}({\bf s}')\!\!\!\!\!{ } &= u_{(t,t+10)} (c, s_2(t+10)) &\text{by def.\ of $\bf s'$} \\
-% 						&= u_{(t,t+10)} (c, c) &\text{by def.\ of $\bf s$} \\
-%						&> u_{(t,t+10)} (o,c) &\text{by constraint U1, as } t+10 < 9{:}00 \\
-%						&= u_{(t,t+10)} ({\bf s}) &\text{by def.\ of $\bf s$}
-%  \end{array}
-%\]
+We want to show that $EU(s') > EU(s)$. First consider the arrival pair $\mathbf{t} = (t,t+10)$. We immediately get $u_{\bf t}(s') = u_c > u_m = u_{\bf t}(s)$.
+%Then, by definition of expected payoff, $u_{\bf t}(s) = p q u_o  + (p(1-q) + (1-p)q) u_m + (1-p)(1-q)u_c$. In $s'$, we have the same but with $p=0$, so $u_{\bf t}(s') =  q u_m + (1-q)u_c$. We then get $u_{\bf t}(s') - u_{\bf t}(s) = p(2q-1) u_m + p(1-q) u_c - pq u_o = p(1-q) u_c - p(1-2q) u_m - pq u_o$. Since $p>0$, this is positive iff $(1-q) u_c - (1-2q) u_m - q u_o$ is. Since $q \leq \frac12$, we have $1-2q \geq 0$. Since $u_o > u_m$, we then get  $(1-q) u_c - (1-2q) u_m - q u_o \geq (1-q) u_c - (1-2q) u_o - q u_o = (1-q) (u_c - u_o)$. Since $q \leq \frac12$ and $u_c > u_o$, this expression is positive, and hence 
+%0.9 uc + 0.8 u_m - 0.9u_o$u_{\bf t}(s') - u_{\bf t}(s) >0 $, as wanted. 
 To prove $EU(s') > EU(s)$, it hence now only remains to prove that $u_{\bf t'}(s') \geq u_{\bf t'}(s)$ for all $\mathbf{t'} = (t'_1,t'_2) \in \bf T$. The only non-trivial case is when $t'_i \leq t$ for some $i$ 
 %either $t'_1 = t - 20x$ for some $x \geq 0$ or $t'_2 = t - 10 - 20y$ for some $y \geq 0$ 
 (in all other cases, $s'(\bf t') = s(\bf t')$). 
-If $t'_i \leq t$ then either we also have $t'_{3-i} \leq t$ or else $t'_i = t$ and $t'_{3-i} = t+ 10$. The latter case has already been covered, so we only need to consider the case of $t'_1,t'_2 \leq t$. Then $s'(t'_1)(c) = s'(t'_2)(c) = 1$, by definition of $s'$, so $u_{\bf t'}(s') = u_c$. Since $u_c$ is the highest possible payoff, we immediately get $u_{\bf t'}(s') \geq u_{\bf t'} (s)$, and we're done.
+If $t'_i \leq t$ then either we also have $t'_{3-i} \leq t$ or else $t'_i = t$ and $t'_{3-i} = t+ 10$. The latter case has already been covered, so we only need to consider the case of $t'_1,t'_2 \leq t$. Then $s'(t'_1) = s'(t'_2) = c$, by definition of $s'$, so $u_{\bf t'}(s') = u_c$. Since $u_c$ is the highest possible payoff, we immediately get $u_{\bf t'}(s') \geq u_{\bf t'} (s)$, and we're done.
 %By constraint U1 we get  $u_{\bf t'} (c, c) \geq u_{\bf t'} (s)$, and we're done.
 % Consider first a $\bf t'$ with $t'_2 = t -10- 20y$ for some $y \geq 0$. Then $t'_1 =  t - 20x$ for some $x \geq 0$, and hence $u_{\bf t'}( {\bf s'}) = u_{\bf t'} (c, c)$. 
 %By constraint U1 we have $u_{\bf t'} (c, c) \geq u_{\bf t'} (s)$, and hence $u_{\bf t'}( {\bf s'}) \geq u_{\bf t'} (\bf s)$, as required. Consider instead $\bf t'$ with $t'_1 = t - 20x$ for some $x \geq 0$. Then either $t'_2 = t - 10 -20y$ for some $y \geq 0$ or we have $t'_1 = t$ and $t'_2 = t+10$. Both cases have already previously been covered. This completes the proof.
@@ -626,21 +610,14 @@ If $t'_i \leq t$ then either we also have $t'_{3-i} \leq t$ or else $t'_i = t$ a
 Let $s$ be a Pareto optimal strategy. For all arrival times $t < 8{:}50$, if $s(t)(c) = 1$ then $s(t+10)(c) =1$.
 \end{lemma}
 \begin{proof}
-Let $s$ be a strategy with $s(t) = c$ and $s(t+10) = c$ for some $t < 8{:}50$. We need to show that $s$ is not Pareto optimal. We can assume $t$ to be odd, the other case being symmetric. Consider the strategy $s'$ that is like $s$ except $s(t+10)(c) =1$. Note that $u_{\bf t}(s') = u_{\bf t}(s)$ when $\bf t$ doesn't contain $t+10$. To prove that $s'$ dominates $s$, we hence only need to prove that $u_{(t,t+10)}(s') + u_{(t+20,t+10)}(s') - u_{(t,t+10)}(s) - u_{(t+20,t+10)}(s) > 0$. Let $p = s(t+10)(o)$ and $q = s(t+20)(o)$. Note that since $s(t+10)(c) < 1$, we have $p > 0$. 
-
-Consider first the case where $t + 20 < 9{:}00$. %Let $x = u_{(t,t+10)}(c,c)$. Then also $x = u_{(t+20,t+10)}(c,c)$ by constraint U2. Let $y = u_{(t+20,t+10)}(o,c)$. Then $y = u_{(t+20,t+10)}(c,o) = u_{(t,t+10)}(c,o)$ by constraint U1. 
-Since $s'(t)(c) = 1$ and $s'(t+10)(c) = 1$ and $s(t+20)(c) = 1-q$, we get $u_{(t,t+10)}(s') = u_c$ and $u_{(t+20,t+10)}(s') = (1-q) u_c + q u_m$ and hence $u_{(t,t+10)}(s') + u_{(t+20,t+10)}(s') = (2-q)u_c + q u_m$. %Let $z =  u_{(t+20,t+10)}(o,o)$. Then 
-Similarly, we get $u_{(t,t+10)}(s) = (1-p)u_c + p u_m$ and $u_{(t+20,t+10)}(s) = (1-p)(1-q)u_c + (p(1-q)+ (1-p)q) u_m + pq u_o = (1-p-q+pq)u_c + (p+q-2pq) u_m + pq u_o$, and hence $u_{(t,t+10)}(s) + u_{(t+20,t+10)}(s) = (2-2p-q+pq)u_c + (2p+q-2pq) u_m + pq u_o$. Now we can compute the difference that we wanted to prove to be positive: $u_{(t,t+10)}(s') + u_{(t+20,t+10)}(s') - u_{(t,t+10)}(s) - u_{(t+20,t+10)}(s) = p(2-q) u_c - 2p(1-q) u_m - pq u_o$. Recall that we have $u_c > u_o > u_m$. Since also $p >0$, we get $p(2-q) u_c - 2p(1-q) u_m - pq u_o  > p(2-q) u_c - 2p(1-q) u_c - pq u_c = 0$, as required.  
-
-
-%Then we get $u_{(t,t+10)}(s') + u_{(t+20,t+10)}(s') - u_{(t,t+10)}(s) - u_{(t+20,t+10)}(s) = u_{(t,t+10)}(c,c) + u_{(t+20,t+10)}(o,c) q + u_{(t+20,t+10)}(c,c) (1-q) - u_{(t,t+10)}(c,o) p - u_{(t,t+10)}(c,c) (1-p) - u_{(t+20,t+10)}(o,o) pq - u_{(t+20,t+10)}(c,o) p(1-q) - u_{(t+20,t+10)}(o,c) (1-p)q - u_{(t+20,t+10)}(c,c) (1-p)(1-q)$. Consider first the case where $t + 20 < 9{:}00$. By constraint U1 we then have $u_{(t,t+10)}(c,c) = u_{(t+20,t+10)}(c,c)$ and $u_{(t+20,t+10)}(o,c) = u_{(t+20,t+10)}(c,o) = u_{(t,t+10)}(c,o)$. The expression from before can hence be reduced to $u_{(t,t+10)}(c,c) p (2- q) + u_{(t,t+10)}(c,o) 2p (q-1) - u_{(t+20,t+10)}(o,o) pq \geq u_{(t,t+10)}(c,c) p (2- q)  - u_{(t+20,t+10)}(o,o) pq > 0$, since $u_{(t,t+10)}(c,c) > u_{(t+20,t+10)}(o,o)$, $p(2-q) \geq pq$ and $p >0$. This shows the required when $t + 20 < 9{:}00$. 
-
-
-Assume instead $t + 20 \geq 9{:}00$. Since $t < 8{:}50$, we must have $t + 20 = 9{:}00$.
-By Lemma~\ref{lemma:no-canteen-at-nine} we have $s(t+20)(o) = 1$, i.e., $q = 1$. 
-%As before, let $x = u_{(t,t+10)}(c,c)$ and $y = u_{(t+20,t+10)}(o,c)$. Since $t + 20 \geq 9{:}00$, by constraint U2 we have $y = u_{(t+20,t+10)}(c,c) = u_{(t,t+10)}(c,o) = u_{(t+20,t+10)}(c,o)$. Let $z = u_{(t+20,t+10)}(o,o)$. 
-As before we have $u_{(t,t+10)}(s') =  u_c$, but now we get $u_{(t+20,t+10)}(s') = u_m$.  Also as before we have $u_{(t,t+10)}(s) = (1-p)u_c + p u_m$, but now we get $u_{(t+20,t+10)}(s) = (1-p)u_m + p u_o$. Hence  $u_{(t,t+10)}(s') + u_{(t+20,t+10)}(s') - u_{(t,t+10)}(s) - u_{(t+20,t+10)}(s) = u_c + u_m - (1-p)u_c - p u_m - (1-p)u_m - p u_o = p u_c - p u_o$. Since $u_c > u_o$ and $p > 0$, we get $p u_c - p u_o > 0$, as required. 
-%u_{(t,t+10)}(c,c) + u_{(t+20,t+10)}(c,o)  - u_{(t,t+10)}(c,o) p - u_{(t,t+10)}(c,c) (1-p) - u_{(t+20,t+10)}(o,o) p  - u_{(t+20,t+10)}(c,o) (1-p) = u_{(t,t+10)}(c,c) p + u_{(t+20,t+10)}(c,o) p - u_{(t,t+10)}(c,o) p - u_{(t+20,t+10)}(o,o)p$.
+Let $s$ be a strategy with $s(t) = c$ and $s(t+10) = o$ for some $t < 8{:}50$. We need to show that $s$ is not Pareto optimal. We can assume $t$ to be odd, the other case being symmetric. Consider the strategy $s'$ that is like $s$ except $s(t+10) = c$. Note that $u_{\bf t}(s') = u_{\bf t}(s)$ when $\bf t$ doesn't contain $t+10$. To prove that $s'$ dominates $s$, we hence only need to prove that $u_{(t,t+10)}(s') + u_{(t+20,t+10)}(s') > u_{(t,t+10)}(s) + u_{(t+20,t+10)}(s)$.
+%Let $p = s(t+10)(o)$ and $q = s(t+20)(o)$. Note that since $s(t+10)(c) < 1$, we have $p > 0$. 
+%Consider first the case where $t + 20 < 9{:}00$. 
+We have $u_{(t,t+10)}(s) = u_m$ and $u_{(t,t+10)}(s') = u_c$, so we need to prove $u_c + u_{(t+20,t+10)}(s') > u_m + u_{(t+20,t+10)}(s)$. Since $s(t+10) = o$, we get $u_{(t+20,t+10)}(s) < u_c$ (the highest payoff of coordinating into the canteen cannot be reached). Since the lowest payoff is $u_m$, we now get $u_c + u_{(t+20,t+10)}(s') \geq u_c + u_m > u_{(t+20,t+10)}(s) + u_m$, as required.
+%If $s(t+20) = c$, we have  $u_{(t+20,t+10)}(s) = u_m$ and  $u_{(t+20,t+10)}(s') = u_c$ and hence the inequality becomes $2u_c > 2u_m$, which clearly holds. If $s(t+20) = o$, we instead have $u_{(t+20,t+10)}(s) = u_o$ and  $u_{(t+20,t+10)}(s') = u_m$ and hence the inequality instead becomes $u_c + u_m > u_m + u_o$, i.e., $u_c > u_o$, which also holds. 
+%Consider first the case where $t + 20 < 9{:}00$. Since $s'(t)(c) = 1$ and $s'(t+10)(c) = 1$ and $s(t+20)(c) = 1-q$, we get $u_{(t,t+10)}(s') = u_c$ and $u_{(t+20,t+10)}(s') = (1-q) u_c + q u_m$ and hence $u_{(t,t+10)}(s') + u_{(t+20,t+10)}(s') = (2-q)u_c + q u_m$. Similarly, we get $u_{(t,t+10)}(s) = (1-p)u_c + p u_m$ and $u_{(t+20,t+10)}(s) = (1-p)(1-q)u_c + (p(1-q)+ (1-p)q) u_m + pq u_o = (1-p-q+pq)u_c + (p+q-2pq) u_m + pq u_o$, and hence $u_{(t,t+10)}(s) + u_{(t+20,t+10)}(s) = (2-2p-q+pq)u_c + (2p+q-2pq) u_m + pq u_o$. Now we can compute the difference that we wanted to prove to be positive: $u_{(t,t+10)}(s') + u_{(t+20,t+10)}(s') - u_{(t,t+10)}(s) - u_{(t+20,t+10)}(s) = p(2-q) u_c - 2p(1-q) u_m - pq u_o$. Recall that we have $u_c > u_o > u_m$. Since also $p >0$, we get $p(2-q) u_c - 2p(1-q) u_m - pq u_o  > p(2-q) u_c - 2p(1-q) u_c - pq u_c = 0$, as required.  
+%
+%Assume instead $t + 20 \geq 9{:}00$. Since $t < 8{:}50$, we must have $t + 20 = 9{:}00$. By Lemma~\ref{lemma:no-canteen-at-nine} we have $s(t+20) = o$.As before we have $u_{(t,t+10)}(s) = u_m$ and $u_{(t,t+10)}(s') = u_c$, so we still need to prove the inequality $u_c + u_{(t+20,t+10)}(s') > u_m + u_{(t+20,t+10)}(s)$. However, now we have $u_{(t+20,t+10)}(s') = u_m$. But then the inequality becomes $u_c + u_m > u_m + u_{(t+20,t+10)}(s)$, i.e., $u_c >  u_{(t+20,t+10)}(s)$, which necessarily holds, as it's not possible to coordinate into the canteen at $t+20 = 9{:}00$.
 \end{proof}
 
 \begin{definition}
@@ -652,35 +629,25 @@ Note that the strategy we in the informal discussions above referred to as the `
 Any Pareto optimal strategy is either the all-office strategy or the cut-off strategy with cut-off $9{:}00$.
 \end{theorem}
 \begin{proof}
-Let $s$ be a Pareto optimal strategy. Then by Lemma~\ref{lemma:no-canteen-at-nine}, $s(t_{max}) = o$. Let $t_{cut}$ denote the earliest time with $s(t_{cut}) = o$. Then $s(t) =c$ for all $t_{min} \leq t < t_{cut}$. Suppose first that $t_{cut} > t_{min}$. Then $s(t_{min}) = c$. By Lemma~\ref{lemma:canteen-propagate}, we then get that $s(t) = c$ for all $t \leq 8{:}50$. By Lemma~\ref{lemma:no-canteen-at-nine}, we furthermore have that $s(t) = o$ for all $t \geq 9{:}00$. In other words, $s$ is the cut-off strategy with cut-off $9{:}00$.  Suppose alternatively that $t_{cut} = t_{min}$. Then by Lemma~\ref{lemma:no-c-after-o}, we have $s(t)(o) > \frac12$ for all $t > t_{min}$. 
-
-
-
-
-Suppose $t_{cut}$ is even, the other case being symmetric. Then $s(t)(c) = 1$ for all $t_{min} \leq t < t_{cut}$. By Lemma~\ref{lemma:no-c-after-o}, we then get $s(t)(o) > \frac{1}{2}$ for all $t > t_{cut}$. We want to show that either $t_{cut} = t_{min}$ or $t_{cut} = 9{:}00$. Suppose to achieve a contradiction that $t_{min} < t_{cut} < 9{:}00$. Then $s(t_{cut}-10)(c) =1$ and $s(t_{cut}+10)(o) > \frac12$. Consider a strategy $s'$ that is exactly like $s$ except $s(t_{cut})(c) = 1$. Note that $u_{\bf t}(s') = u_{\bf t}(s)$ when $\bf t$ doesn't contain $t_{cut}$. 
-Let $p = s(t_{cut})(o)$ and $q = s(t_{cut}+10)(o)$. When moving from $s$ to $s'$, we replace the probability $p$ of choosing $o$ at $t_{cut}$ by the same probability of choosing $c$. As in the proof of Lemma~\ref{lemma:no-c-after-o}, we can use this information to compute the relative utility between $s$ and $s'$. Let ${\bf t} = (t_{cut}-10,t_{cut})$. First we then get $u_{\bf t}(s') - u_{\bf t}(s) = (u_{\bf t}(c,c) - u_{\bf t}(c,o))p$. Letting ${\bf t'} = (t_{cut}+10,t_{cut})$, we furthermore get $u_{\bf t'}(s') - u_{\bf t'}(s) = (u_{\bf t'}(o,c) - u_{\bf t'}(o,o))pq + (u_{\bf t'}(c,c) - u_{\bf t'}(c,o))p(1-q)$. Computing further, we get $(u_{\bf t}(s') + u_{\bf t'}(s')) - (u_{\bf t}(s) + u_{\bf t}(s)) = (u_{\bf t'}(c,c) - u_{\bf t'}(c,o)) p (2-q) - (u_{\bf t'}(o,o) - u_{\bf t'}(o,c))pq$. Now note that $p(2-q) \geq pq$ and  $u_{\bf t'}(c,c) - u_{\bf t'}(c,o) > u_{\bf t'}(o,o) - u_{\bf t'}(o,c)$, hence the computed expression is positive. This shows that $EU(s') > EU(s)$, and hence that $s$ is not Pareto optimal, which is a contradiction. 
-
-We now know that $t_{cut} = t_{min}$ or $t_{cut} = 9{:}00$. In the latter case, we necessarily have $s(t)(o) = 1$ for all $t \geq t_{cut}$ by Lemma~\ref{lemma:no-canteen-at-nine}, and since we already concluded that $s(t)(c) = 1$ for all $t < t_{cut}$, we can then conclude that this is the cut-off strategy with cut-off $9{:}00$. Suppose instead that $t_{cut} = t_{min}$. Then $s(t)(o) > \frac12$ for all $t > t_{cut}$.  
-
- 
-
-
-
-Let $\sigma$ be the following string over the alphabet $\{o,c\}$, where we alternate between the strategy choices of player 1 and 2 from $\tmin$ to $\tmax$:
-\[
-s_1(\tmin) s_2(\tmin + 10) s_1(\tmin + 20) s_2(\tmin + 30)  \cdots 
-s_1(\tmax) \\
-\]
-Note that when $(t_1,t_2) \in T$, then $s_1(t_1)$ and $s_2(t_2)$ both occur in the string $\sigma$. From Lemma~\ref{lemma:no-c-after-o} it follows that $\sigma$ cannot contain the substring $oc$. Suppose the first letter of $\sigma$ is $o$. Then since $\sigma$ does not contain the substring $oc$, we have $\sigma = o^{|\sigma|}$ (a string of only $o$s). Hence $s_1(\mathbf{t}) = s_2(\mathbf{t}) = o$ for all $\mathbf{t} \in T$. This means that $\mathbf{s}$ is the all-office strategy profile. Suppose alternatively that the first letter of $\sigma$ is $c$. The last letter of $\sigma$ is necessarily $o$ since $\tmax \geq 9{:}00$ and $\bf s$ is Pareto optimal, cf.\ Lemma~\ref{lemma:no-canteen-at-nine}. Since $\sigma$ is then a string that starts with $c$ and ends with $o$, but doesn't contain $oc$, it must have the form $c^n o^m$ for some $n, m \geq 1$ with $m+n=|\sigma|$. Hence there exists a $t'$ such that $s_i(t) = c$ for all $t < t'$ and $s_i(t) = o$ for all $t > t'$ (and all $i \in \{1,2\}$).
-In other words, $\mathbf{s}$ is a cut-off strategy profile with cut-off $t'$. What is left to prove is then only that $\mathbf{s}$ has cut-off $8{:}55$. First note that we must necessarily have $t' < 9{:}00$, since otherwise $\mathbf{s}$ would not be Pareto optimal according to Lemma~\ref{lemma:no-canteen-at-nine}. From this it follows that we for all arrival pairs $(t_1,t_2) \in T$ must have
-\begin{enumerate}
-  \item If $t_1,t_2 < t'$, the two players coordinate into the canteen, receiving the highest possible payoff.
-  \item If $t_1 < t' < t_2$ or $t_2 < t' < t_1$, the two players are miscoordinated (one chooses canteen, the other office), receiving the lowest possible payoff.
-  \item If $t_1,t_2 > t'$, the two players coordinate into their offices, receiving a payoff strictly between the lowest and highest.
-\end{enumerate}
-Note that there will always be exactly one arrival pair in $T$ of type 2, independent of $t'$. Since arrival pairs of type 1 have a higher payoff than arrival pairs of type 3, and $\mathbf{s}$ is Pareto optimal, $\mathbf{s}$ must have the maximal number of arrival pairs of type 1, that is, it is the cut-off strategy with the latest possible cut-off. That is exactly the cut-off $8{:}55$ (or, more precisely, any cut-off strictly between $8{:}50$ and $9{:}00$).
+Let $s$ be a Pareto optimal strategy. Then by Lemma~\ref{lemma:no-canteen-at-nine}, $s(t_{max}) = o$. Let $t_{cut}$ denote the earliest time with $s(t_{cut}) = o$. Then $s(t) =c$ for all $t_{min} \leq t < t_{cut}$. Suppose first that $t_{cut} > t_{min}$. Then $s(t_{min}) = c$. By Lemma~\ref{lemma:canteen-propagate}, we then get that $s(t) = c$ for all $t \leq 8{:}50$. By Lemma~\ref{lemma:no-canteen-at-nine}, we furthermore have that $s(t) = o$ for all $t \geq 9{:}00$. In other words, $s$ is the cut-off strategy with cut-off $9{:}00$.  Suppose alternatively that $t_{cut} = t_{min}$. Then $s(t_{min})=o$, and by  Lemma~\ref{lemma:no-c-after-o}, we then get $s(t) = o$ for all $t \geq t_{min}$. This is the all-office strategy. 
+%Suppose $t_{cut}$ is even, the other case being symmetric. Then $s(t)(c) = 1$ for all $t_{min} \leq t < t_{cut}$. By Lemma~\ref{lemma:no-c-after-o}, we then get $s(t)(o) > \frac{1}{2}$ for all $t > t_{cut}$. We want to show that either $t_{cut} = t_{min}$ or $t_{cut} = 9{:}00$. Suppose to achieve a contradiction that $t_{min} < t_{cut} < 9{:}00$. Then $s(t_{cut}-10)(c) =1$ and $s(t_{cut}+10)(o) > \frac12$. Consider a strategy $s'$ that is exactly like $s$ except $s(t_{cut})(c) = 1$. Note that $u_{\bf t}(s') = u_{\bf t}(s)$ when $\bf t$ doesn't contain $t_{cut}$. 
+%Let $p = s(t_{cut})(o)$ and $q = s(t_{cut}+10)(o)$. When moving from $s$ to $s'$, we replace the probability $p$ of choosing $o$ at $t_{cut}$ by the same probability of choosing $c$. As in the proof of Lemma~\ref{lemma:no-c-after-o}, we can use this information to compute the relative utility between $s$ and $s'$. Let ${\bf t} = (t_{cut}-10,t_{cut})$. First we then get $u_{\bf t}(s') - u_{\bf t}(s) = (u_{\bf t}(c,c) - u_{\bf t}(c,o))p$. Letting ${\bf t'} = (t_{cut}+10,t_{cut})$, we furthermore get $u_{\bf t'}(s') - u_{\bf t'}(s) = (u_{\bf t'}(o,c) - u_{\bf t'}(o,o))pq + (u_{\bf t'}(c,c) - u_{\bf t'}(c,o))p(1-q)$. Computing further, we get $(u_{\bf t}(s') + u_{\bf t'}(s')) - (u_{\bf t}(s) + u_{\bf t}(s)) = (u_{\bf t'}(c,c) - u_{\bf t'}(c,o)) p (2-q) - (u_{\bf t'}(o,o) - u_{\bf t'}(o,c))pq$. Now note that $p(2-q) \geq pq$ and  $u_{\bf t'}(c,c) - u_{\bf t'}(c,o) > u_{\bf t'}(o,o) - u_{\bf t'}(o,c)$, hence the computed expression is positive. This shows that $EU(s') > EU(s)$, and hence that $s$ is not Pareto optimal, which is a contradiction. 
+%We now know that $t_{cut} = t_{min}$ or $t_{cut} = 9{:}00$. In the latter case, we necessarily have $s(t)(o) = 1$ for all $t \geq t_{cut}$ by Lemma~\ref{lemma:no-canteen-at-nine}, and since we already concluded that $s(t)(c) = 1$ for all $t < t_{cut}$, we can then conclude that this is the cut-off strategy with cut-off $9{:}00$. Suppose instead that $t_{cut} = t_{min}$. Then $s(t)(o) > \frac12$ for all $t > t_{cut}$.  
+%Let $\sigma$ be the following string over the alphabet $\{o,c\}$, where we alternate between the strategy choices of player 1 and 2 from $\tmin$ to $\tmax$:
+%\[
+%s_1(\tmin) s_2(\tmin + 10) s_1(\tmin + 20) s_2(\tmin + 30)  \cdots 
+%s_1(\tmax) \\
+%\]
+%Note that when $(t_1,t_2) \in T$, then $s_1(t_1)$ and $s_2(t_2)$ both occur in the string $\sigma$. From Lemma~\ref{lemma:no-c-after-o} it follows that $\sigma$ cannot contain the substring $oc$. Suppose the first letter of $\sigma$ is $o$. Then since $\sigma$ does not contain the substring $oc$, we have $\sigma = o^{|\sigma|}$ (a string of only $o$s). Hence $s_1(\mathbf{t}) = s_2(\mathbf{t}) = o$ for all $\mathbf{t} \in T$. This means that $\mathbf{s}$ is the all-office strategy profile. Suppose alternatively that the first letter of $\sigma$ is $c$. The last letter of $\sigma$ is necessarily $o$ since $\tmax \geq 9{:}00$ and $\bf s$ is Pareto optimal, cf.\ Lemma~\ref{lemma:no-canteen-at-nine}. Since $\sigma$ is then a string that starts with $c$ and ends with $o$, but doesn't contain $oc$, it must have the form $c^n o^m$ for some $n, m \geq 1$ with $m+n=|\sigma|$. Hence there exists a $t'$ such that $s_i(t) = c$ for all $t < t'$ and $s_i(t) = o$ for all $t > t'$ (and all $i \in \{1,2\}$).
+%In other words, $\mathbf{s}$ is a cut-off strategy profile with cut-off $t'$. What is left to prove is then only that $\mathbf{s}$ has cut-off $8{:}55$. First note that we must necessarily have $t' < 9{:}00$, since otherwise $\mathbf{s}$ would not be Pareto optimal according to Lemma~\ref{lemma:no-canteen-at-nine}. From this it follows that we for all arrival pairs $(t_1,t_2) \in T$ must have
+%\begin{enumerate}
+%  \item If $t_1,t_2 < t'$, the two players coordinate into the canteen, receiving the highest possible payoff.
+%  \item If $t_1 < t' < t_2$ or $t_2 < t' < t_1$, the two players are miscoordinated (one chooses canteen, the other office), receiving the lowest possible payoff.
+%  \item If $t_1,t_2 > t'$, the two players coordinate into their offices, receiving a payoff strictly between the lowest and highest.
+%\end{enumerate}
+%Note that there will always be exactly one arrival pair in $T$ of type 2, independent of $t'$. Since arrival pairs of type 1 have a higher payoff than arrival pairs of type 3, and $\mathbf{s}$ is Pareto optimal, $\mathbf{s}$ must have the maximal number of arrival pairs of type 1, that is, it is the cut-off strategy with the latest possible cut-off. That is exactly the cut-off $8{:}55$ (or, more precisely, any cut-off strictly between $8{:}50$ and $9{:}00$).
 \end{proof}
-The theorem proves what was argued in the main text: There are only two candidates for an optimal strategy, the all-office strategy or the canteen-before-9 strategy. This does not in any way imply that we should expect human players to adapt any of these two strategies, but if two perfectly rational players were to play the game, and if they knew they could expect the other player to play perfectly rational as well, of course the optimal strategy would be played. And, as earlier mentioned, in our particular version of the game, the optimal strategy is the all-office strategy.
+The theorem proves what was argued in the main text: There are only two candidates for an optimal strategy, the all-office strategy or the canteen-before-9 strategy. This does not in any way imply that we should expect human players to adopt any of these two strategies, but if two perfectly rational players were to play the game, and if they knew they could expect the other player to play perfectly rational as well, of course the optimal strategy would be played. And, as earlier mentioned, in our particular version of the game, the optimal strategy is the all-office strategy.
 
 
 %\subsection{Conflict of Interest}
