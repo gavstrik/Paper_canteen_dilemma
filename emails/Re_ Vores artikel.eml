@@ -1,0 +1,604 @@
+Received: from GVXP192MB1902.EURP192.PROD.OUTLOOK.COM (2603:10a6:150::10) by
+ DBAP192MB1019.EURP192.PROD.OUTLOOK.COM with HTTPS; Sun, 21 May 2023 18:28:49
+ +0000
+Received: from FR0P281CA0114.DEUP281.PROD.OUTLOOK.COM (2603:10a6:d10:a8::16)
+ by GVXP192MB1902.EURP192.PROD.OUTLOOK.COM (2603:10a6:150::10) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6411.28; Sun, 21 May 2023 18:28:45 +0000
+Received: from VE1EUR01FT045.eop-EUR01.prod.protection.outlook.com
+ (2603:10a6:d10:a8:cafe::2b) by FR0P281CA0114.outlook.office365.com
+ (2603:10a6:d10:a8::16) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6433.12 via Frontend
+ Transport; Sun, 21 May 2023 18:28:45 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.208.180)
+ smtp.mailfrom=gmail.com; dkim=pass (signature was verified)
+ header.d=gmail.com;dmarc=pass action=none header.from=gmail.com;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.208.180 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.208.180; helo=mail-lj1-f180.google.com; pr=C
+Received: from mail-lj1-f180.google.com (209.85.208.180) by
+ VE1EUR01FT045.mail.protection.outlook.com (10.152.3.125) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6433.7 via Frontend Transport; Sun, 21 May 2023 18:28:44 +0000
+Received: by mail-lj1-f180.google.com with SMTP id 38308e7fff4ca-2af1c884b08so34199671fa.1
+        for <tobo@dtu.dk>; Sun, 21 May 2023 11:28:44 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20221208; t=1684693723; x=1687285723;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:from:to:cc:subject:date:message-id:reply-to;
+        bh=UPSC7U282pK1EAOJ4UxblYUoah1fbzi91xDChmkDzhc=;
+        b=K+a1PQ+Tz0lZySu5120nxFMsFyxmgGIKhZ4v0LfuYKpKRi2tOgiePze1RKMZ8lmSP2
+         A8RcKgwOS6Kk6frMG7lOkTkzrC7jSCYRGXPcH7IoWmjYOXmcI5QfOfh/NZ9g4byphOzO
+         cDcCiCkQEGLU4GUTgh5Cr9PdrAZkXcrZSiCsQMjkyvT+TR3MWNtl1bUQbkimLUUjKBeK
+         8YbZ02wPEHchzFGqG3pAC/qfVCO+XhcPSePOtV67oIcB7ENJuvyePS8ILbLlVNcWy2MN
+         UDmShJ/HfYjMb7HC4MMannY7F6g1U46h+jo7bRwJgm6Ge5EFnxuibGA0OQfZGDQn3Y2L
+         NJrA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20221208; t=1684693723; x=1687285723;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=UPSC7U282pK1EAOJ4UxblYUoah1fbzi91xDChmkDzhc=;
+        b=CUt588Pzxad3tzarkjqithhsZjwr2yjOVZplgQd9PlTf9FRO1fZBQ7CjgvwSMA35+U
+         hlUnukfRO86Gdi46OhSwvrrp9cvb0YCt6HJ+hv8kRkFht9qJgKd3gmFs7D1bfgq4xkBM
+         qacM6TgjLFyvqOXd+CogTRUrwksUE96jm0nOzD2nRR+IL5cg/aJu9oGtz4N2+yICvLrN
+         NuYP+2bpF2jgGKvmpeJcl39YZaJ8ov7+7k7DqlDrbyPxmkumbYQCgIVkC6yXsEOwGFMj
+         tlFYSu13SgIiWFy7wVRVFVRrzdtJ9hFS/uP7laAan+uLxn+Yyh6yEF0uv5EOxvYmKtUA
+         vkPA==
+X-Gm-Message-State: AC+VfDyuSZO17jdv5hURdMksizWXbqzePbNdK50sohZt3j8iiSaTB1F8
+	IVEsa/JR48biPXg7r8dcb+yR2CQcztd02pyYFUlUWLK8b1w=
+X-Google-Smtp-Source: ACHHUZ6euMh0+eT3GznqVzIX7yIasxy0gnO121NqeKFnz74lXy3U6h1oea4rX7abZmiuPIsiuW0YgPWQ0jciLor6mXc=
+X-Received: by 2002:a2e:b949:0:b0:2a7:b0b2:29 with SMTP id 9-20020a2eb949000000b002a7b0b20029mr2837416ljs.22.1684693722484;
+ Sun, 21 May 2023 11:28:42 -0700 (PDT)
+References: <4F9E19AB-E7C1-4237-9A94-DA8FF3604782@dtu.dk> <CADwiNf2KTnSSFDNqbbr1KQn7gNh8nXiXjTUHEzTqoFZqnkF7Rg@mail.gmail.com>
+ <CADwiNf3kj2xF6F=RaRhhs2Tx2ytuxvPE=aGEOLBp+xuM=1L2+w@mail.gmail.com> <06724E12-12D9-44D4-9CA2-182FF2A92368@dtu.dk>
+In-Reply-To: <06724E12-12D9-44D4-9CA2-182FF2A92368@dtu.dk>
+From: Thomas Nicolet <thomas1nicolet@gmail.com>
+Date: Sun, 21 May 2023 20:28:31 +0200
+Message-ID: <CADwiNf0OAxLSRJX=3KuMcVVsOvm-f8KhOKXVfZYGqnmt69J8bQ@mail.gmail.com>
+Subject: Re: Vores artikel
+To: Thomas Bolander <tobo@dtu.dk>
+Cc: Robin Engelhardt <re@ifro.ku.dk>
+Content-Type: multipart/alternative; boundary="000000000000e2579a05fc38529a"
+Return-Path: thomas1nicolet@gmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 21 May 2023 18:28:44.9137
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 68c9e656-2510-42f1-4457-08db5a2935ff
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: f251f123-c9ce-448e-9277-34bb285911d9:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ VE1EUR01FT045:EE_|GVXP192MB1902:EE_|DBAP192MB1019:EE_
+X-MS-Exchange-Organization-AuthSource:
+ VE1EUR01FT045.eop-EUR01.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 68c9e656-2510-42f1-4457-08db5a2935ff
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:209.85.208.180;CTRY:US;LANG:da;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:mail-lj1-f180.google.com;PTR:mail-lj1-f180.google.com;CAT:NONE;SFS:(13230028)(4636009)(84050400002)(84040400005)(451199021)(75640400001)(1096003)(8676002)(4006050)(5660300002)(7116003)(66574015)(3480700007)(83380400001)(73392003)(82202003)(26005)(336012)(55446002)(86362001)(107886003)(7636003)(7596003)(356005)(6666004)(33964004)(6916009)(4326008)(76482006)(42186006)(30864003);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 21 May 2023 18:28:44.8825
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 68c9e656-2510-42f1-4457-08db5a2935ff
+X-MS-Exchange-CrossTenant-Id: f251f123-c9ce-448e-9277-34bb285911d9
+X-MS-Exchange-CrossTenant-AuthSource:
+ VE1EUR01FT045.eop-EUR01.prod.protection.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: GVXP192MB1902
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.8370621
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6411.027
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(930097);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?RDhndUdKMU9sS0k0Q0hLUEUvOVFNaEJJK1dNQkxWbUFPdW5tM3Z1SGcrTXBK?=
+ =?utf-8?B?TzhBbnh6Z01lQk03Mytua1AwMVNtVzF4TC91V203SUwwclk0bTFTWk5wSnJS?=
+ =?utf-8?B?SzE5U1RGcXZnUzNnL1BkQ2xtZVpnRUU4WmZOcjJHTDc3em1WRllXbGYyU01l?=
+ =?utf-8?B?KzFBN2t0a0E0N2cvR2FZRkhiOG9GMldXOTBjMGtSMDNqcW5jSEE3UWNhRDNu?=
+ =?utf-8?B?NmRYaW5wekpNcXR6OEJZeThhWFNyTW9EbDdDMzNMc1l5V3JLVVR5N3RBbmZJ?=
+ =?utf-8?B?WHM3NUtWOEQ4T2FxbzRRcUowWERqZFU0VjFUc1RmR1VCaHJGZHZnMTZDNTlL?=
+ =?utf-8?B?ajRGWWNhalRqdEtvb3JhSHBaOUs4N3o5SFZSMEpqUjlad2dmajh6TXA4eitD?=
+ =?utf-8?B?TFlGY1c0b2NScTdhalBsUUxFbnRueitRRjRrNDZBSDZWWm5tSm40ZHhUcDdp?=
+ =?utf-8?B?SmZkaVRCeTE0V1kvQ1cwTGt4bmEzTkVmdlNkM0hrVHdLYndBMDFkRng0VWhT?=
+ =?utf-8?B?UWRvY0pUSU1yeWVxUng1UFRxTElNbGtZWXNIS00xMVplaTB1enM5SmlMLzl0?=
+ =?utf-8?B?MlhmRFhyV0ovSUR6bkN6Y20rV3dHVytWbGtZUDMrNGE3R1JvZDExNklGQlhW?=
+ =?utf-8?B?djhDSW1MQVI1cjFOUDdWSjFuSjNmLzk2NndidHQvb3VRZFUxaEtwWWc3RDVB?=
+ =?utf-8?B?cXBMcGFhdlZZUUJBTkxUbXRZUTlYS2tMbzhCTGNUdHMyVzBxTk5tbXpYQUxS?=
+ =?utf-8?B?NnZzcXNmYnZlTjJIK0xYZk5OM2o1cU1oYlJKTUN4VUJ1enhieTlHeDVzd1I2?=
+ =?utf-8?B?bURibjErbTFuNGhBOEl5RWRiTHUyOEZ0ZVdROFN0Sm45Q0xiZXRFeHA0TWE4?=
+ =?utf-8?B?alZ3Vm94bHA5YS80QXlUZ2ZVVW1jemIyMWZ2NndlT1E5ekJ0Z3RkdFVYZWMx?=
+ =?utf-8?B?RTgxbEdnY3ZEcWhtSHJGWTVycXRsV09LQjM1ZUFNRUt3VlRaMDlEOEtUdW8v?=
+ =?utf-8?B?ZHNtY2Q1S0pTRTB3Z3Q0MmJ5dGJXcURDTkpNT1lvcU42dDZ1OUtDMTViVGlS?=
+ =?utf-8?B?eCttOC9BY242UmlGUS9EWC93K0tHYVZEMGZITE9QdWJhak5GVUdyUitJQWox?=
+ =?utf-8?B?TUk3cjJQR1NQSFNIbjk4QWRCaDlsaGJaRFhGZllJSTEyeW9yK2YyWDNEbVRL?=
+ =?utf-8?B?b3pPS0JpNElLL0luWFdpMEMycUVlOEk0M2ZUNkZXSVlKVUtSNGF0RnltNnNK?=
+ =?utf-8?B?andHeTVCdTBwOVFNM3g0bDNSUkQ5TUd0T3BHa3JiandnYU05WXgzeEEyekRz?=
+ =?utf-8?B?RkRWNXlWL2YvOEp4LzRqSjFXc0M4NXFPemtxZUpEUDhFaFJ6cFFDK2FWZVpI?=
+ =?utf-8?B?dU5HQkUwQmFyYjFLYlE2MzF3eWNwNjNnS1ZCMlZXei81MXFLUjVwM2RnUTcy?=
+ =?utf-8?B?TVRxRGVaV3FidmpZa280NXJLQ1ZFMTY1SzJDcTJmKzFZSCt3Y2RQVkxJaG96?=
+ =?utf-8?B?L2I3ZitSWjFNR3BlZjhMOEtHNlA3bEFJMjRYaTZ6ZWFQaGZaZGhzeGxiY2Zm?=
+ =?utf-8?B?a1NiZW92TW9jQUFrNjEyd1RJQis4U095eE9NY2tVYkFrbjM0MHlPYlNybnlY?=
+ =?utf-8?B?NERFd3E0dHVEbkJuQi9sR0ZJa09FNG43RHdzemFGdExHTS9vK0g4VEZ0NUh5?=
+ =?utf-8?B?WVVNV0l3UkQ3SkdDYWllWDVYYVRVbHJzSnFwMk12ZmpzNEM4TWNOZzljZ2o5?=
+ =?utf-8?B?ZDJ0VHhFbG80NnJuVXpJK1lDeFJ1bnhWRElsakV1Mi8rOUZNOFNiYkx6aDRY?=
+ =?utf-8?B?dVBacmVZV0dtMUdCdHdQakVqa2NxMCtRU2pRYnQvVjlxenE5cm9qaVdGS3Vu?=
+ =?utf-8?B?RmxOV2tjcXJKNTZ2S2lqVlVPQlFFblNNSFlyS3FPcU9qUFlIb0hTRXc3K29T?=
+ =?utf-8?Q?iw/Ki6CmVGk=3D?=
+MIME-Version: 1.0
+
+--000000000000e2579a05fc38529a
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Jo, lad os lave en plan.
+
+Senest slut oktober lyder fint.
+
+Jeg ved ikke pr=C3=A6cist hvorn=C3=A5r jeg f=C3=A5r tid, men juni/juli kunn=
+e passe.
+
+Den f=C3=B8rste email blev bare sendt for hurtigt, havde ikke skrevet mere =
+end
+den opf=C3=B8lgende email du svarer p=C3=A5.
+
+T
+
+
+Den s=C3=B8n. 14. maj 2023 kl. 22.30 skrev Thomas Bolander <tobo@dtu.dk>:
+
+>
+>
+> On 8 May 2023, at 20.21, Thomas Nicolet <thomas1nicolet@gmail.com> wrote:
+>
+>
+> Jeg t=C3=A6nker vi skal passe p=C3=A5 ikke at konkludere noget alt for h=
+=C3=A5ndfast ud
+>> fra vores eksperimenter. Det ligner at der er en =E2=80=9Ccurse of share=
+d
+>> knowledge=E2=80=9D, men hvis skal passe p=C3=A5 med at v=C3=A6re for h=
+=C3=A5ndfaste om *hvad* den
+>> er. M=C3=A5ske handler det ikke om at agenter ikke kan kende forskel p=
+=C3=A5 shared
+>> og common knowledge (selvom det kunne se s=C3=A5dan ud), men om at de ba=
+seret p=C3=A5
+>> erfaring vil antage at deres medmennesker aldrig t=C3=A6nker ned til com=
+mon
+>> knowledge, men altid vil reagere og handle udfra lave niveauer af shared
+>> knowledge. Der er s=C3=A5 stadig en curse, fordi det betyder at vi i pra=
+ksis
+>> ikke kan finde ud af at koordinere, selv hvis vi m=C3=A5ske teoretisk se=
+t ved
+>> hvad der skulle til. Koordineringsfejlen opst=C3=A5r fordi vi kun betrag=
+ter et
+>> relativt sn=C3=A6vert vindue af mulige spillertyper for vores medspiller=
+. Det
+>> forhindrer os i at f=C3=A5 det maksimale udbytte. S=C3=A5 der er en curs=
+e lige
+>> gyldigt hvad, der er bare to muligheder:
+>>
+>> 1) Cursen kommer af at vi ikke er perfekt rationelle agenter, s=C3=A5 vi
+>> forst=C3=A5r ikke spillet til bunds.
+>> 2) Vi forst=C3=A5r spillet til bunds, men evner stadig ikke at optimere =
+vores
+>> udbytte, fordi vi g=C3=B8r os simplificerende antagelser om vores medspi=
+llere.
+>>
+>> Vi kunne eventuelt pr=C3=B8ve at se p=C3=A5 hvilke antagelse om spillert=
+yper der
+>> kunne reproducere vores data. Vores data er ret p=C3=A6nt, ogs=C3=A5 i f=
+orhold til
+>> kantine vs kortspil. Hvis vi antager at alle spillere lavere en
+>> sandsynlighedsfordeling over de mulige typer af medspillere, hvilke(n)
+>> sandsynlighedsfordeling matcher s=C3=A5 vores eksperimentielle data?
+>>
+>
+> Jeg synes b=C3=A5de pointen er rigtig, og p=C3=A5passelighed ift. at konk=
+ludere
+> h=C3=A5ndfaste ting ud fra eksperimentet. Begge elementer du n=C3=A6vner =
+er nok til
+> stede, at man ikke forst=C3=A5r spillet til bunds, og til den grad man g=
+=C3=B8r,
+> mangler man indblik i sin medspillers tanker (common knowlege). Det er
+> m=C3=A5ske komboen, som g=C3=B8r det specielt sv=C3=A6rt. Man skal nok v=
+=C3=A6re p=C3=A5passelig
+> ift. konklusioner, da det nok kan v=C3=A6re meget sv=C3=A6rt at vide hvad=
+ som g=C3=B8r det
+> sv=C3=A6rt. Med andre ord, man skal sikre at sv=C3=A6rhedsgraden ikke er =
+pga. et
+> "trick", e.g. test setup (den er debunket) eller et andet sprogligt/logis=
+k
+> trick som snyder end.
+>
+> Students: =E2=80=9CExcept since you=E2=80=99re saying there=E2=80=99s ris=
+k involved in six,
+>> there=E2=80=99s technically also risk involved in five. =E2=80=9C
+>> Students: =E2=80=9COkay, if they have a seven, they might think you have=
+ an
+>> eight. That=E2=80=99s where the risk comes. It doesn=E2=80=99t go lower =
+than that. If you
+>> have a six, you could be mistaken for having an eight, and that=E2=80=99=
+s where the
+>> risk comes from. If you have a five, you=E2=80=99re not going to be mist=
+aken for
+>> having any ...=E2=80=9D
+>> Students: =E2=80=9CYeah, but the point, too, is you could decide with th=
+at six
+>> that since you might be mistaken for having an eight, that you should go
+>> black.=E2=80=9D
+>> Student: =E2=80=9CTwo to five is white, six to ten is black, accept and =
+then you
+>> always win.=E2=80=9D
+>> Student: =E2=80=9CNo, because if you have a six and a five and you use t=
+hat
+>> paradigm, you lose.=E2=80=9C
+>>
+>> Der er mange guldkorn i de interviews. Jeg har ikke l=C3=A6st Thomas=E2=
+=80=99 i
+>> detaljer, jeg foresl=C3=A5r at Thomas ogs=C3=A5 pr=C3=B8ver at reng=C3=
+=B8re og tjekke sit
+>> interview igennem, s=C3=A5 vi f=C3=A5r noget ud som er mere l=C3=A6sbart=
+. Ideelt set s=C3=A5
+>> man kan skelne de forskellige studerende, hvis du kan skelne deres stemm=
+er,
+>> Thomas. Ellers kan jeg m=C3=A5ske g=C3=B8re det til slut, jeg er nok lid=
+t bedre til
+>> at skelne deres stemmer, da jeg kender dem.
+>>
+>
+> Ja, der er mange guldkorn. Det er sv=C3=A6rt at eftervise endegyldigt
+> eksperimentielt, men der er klart en barrierer for at forst=C3=A5 at
+> mix-strategi ikke kan v=C3=A6re sikker. Har testet det p=C3=A5 et par fol=
+k, meget
+> robust resultat. Jeg kan godt reng=C3=B8re mit interview, det kan v=C3=A6=
+re det er
+> lettere at k=C3=B8re det igennem conformer-1 eller en anden bedre model f=
+or
+> krydsreference. Whisper var ikke helt super. Jeg kan pr=C3=B8ve at skelne=
+ ift
+> stemmer, men m=C3=A5ske bare anonymt. Det bliver ikke i maj, tidligst jun=
+i.
+>
+>
+> OK. Vi skal m=C3=A5ske l=C3=A6gge en plan for hvorn=C3=A5r vi f=C3=A6rdig=
+g=C3=B8r artiklen og
+> resubmiter? Jeg er ude at rejse hele juni p=C3=A5 konferencer. Har jeg s=
+=C3=A5 lidt
+> tid til at skrive p=C3=A5 denne artikel? Potentielt ja, men =C3=A6rlig ta=
+lt bliver
+> det nok begr=C3=A6nset, jeg kommer nok til at bruge mest tid p=C3=A5 at v=
+=C3=A6re tilstede
+> p=C3=A5 de konferencer. I juli er jeg p=C3=A5 ferie, s=C3=A5 er jeg hjemm=
+e 3 uger, og
+> tager dern=C3=A6st 2 m=C3=A5neder til Kina (september-oktober). Jeg har m=
+=C3=A5ske bedst
+> tid n=C3=A5r jeg er i Kina. Jeg skal arbejde med de lokale, men har eller=
+s 100%
+> tid til forskning, s=C3=A5 jeg kan sikkert ogs=C3=A5 f=C3=A5 tid til at k=
+igge p=C3=A5 vores
+> artikel. S=C3=A5 jeg ville anbefale en eller anden plan som g=C3=B8r at v=
+i kan blive
+> f=C3=A6rdige senest slut oktober? Ville det v=C3=A6re realistisk? Har I t=
+id?
+>
+>
+>
+> thomas2014psychology "These results support the hypothesis that people
+>> represent common knowledge as a distinct cognitive category that license=
+s
+>> them to coordinate with others for mutual gain"
+>>
+>
+> Ja, de konkluderer ogs=C3=A5 skarpt ift. relevans af resultater og "human
+> social life" ud fra fors=C3=B8g. M=C3=A5ske ogs=C3=A5 en pointe, at vores=
+ fors=C3=B8g ikke
+> n=C3=B8dvendigvis modsiger deres.
+>
+>
+> Ja, OK, det kunne man selvf=C3=B8lgelig godt v=C3=A6gte. Men s=C3=A5 sige=
+ at vores
+> resultater tilf=C3=B8jer noget til historien og viser at deres resultater=
+ m=C3=A5ske
+> er en konsekvens af deres setup hvor der bliver gjort eksplicit klart hva=
+d
+> der er common knowledge, hvilket nok ofte ikke sker i praksis.
+>
+> M=C3=A5ske kan man ubevidst skelne common knowledge situationer, uden at =
+kunne
+> eksplicitere hvorfor, og lignende, uden common knowledge g=C3=A5r ens
+> r=C3=A6sonnering til grunde, uden man kan eksplicitere helt hvorfor.
+>
+>
+> Om Iris
+>
+>> "You seem to have taken the approach to arguing for ecological validity
+>> by listing presumed real-world analogues of the game scenario. This seem=
+s
+>> unsatisfactory and insufficient."
+>>
+>
+> Ja, det kan jeg godt se. Hvis ens resultat er pga. et
+> sprogligt/visuelt/logisk trick (e.g. "bat & ball costs 1.10 dollars..."),
+> s=C3=A5 er det ikke sikkert det udtrykker noget om menneskets kognition, =
+hvis
+> forklaringen kan ligge i formuleringen af problemet. Men jeg er stadig li=
+dt
+> uklar ift hele den kritik.
+>
+>
+> Jeg synes efterh=C3=A5nden jeg forst=C3=A5r det, selvom det tog en rum ti=
+d.
+>
+>    Thomas
+>
+> Jeg synes stadig at der m=C3=A5 v=C3=A6re noget kognitivt sv=C3=A6rt der =
+sker,
+> literaturen har jo ogs=C3=A5 bekr=C3=A6ftet at ToM er sv=C3=A6rt.
+>
+>
+>
+>
+>
+>
+> Den man. 8. maj 2023 kl. 19.58 skrev Thomas Nicolet <
+> thomas1nicolet@gmail.com>:
+>
+>> Hej Thomas og Robin, jeg samler nogle svar p=C3=A5 udest=C3=A5ende email=
+s her
+>>
+>
+>
+
+--000000000000e2579a05fc38529a
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><div>Jo, lad os lave en plan.</div><div><br></div><div>Senes=
+t slut oktober lyder fint.</div><div><br></div><div>Jeg ved ikke pr=C3=A6ci=
+st hvorn=C3=A5r jeg f=C3=A5r tid, men juni/juli kunne passe.</div><div><br>=
+</div><div>Den f=C3=B8rste email blev bare sendt for hurtigt, havde ikke sk=
+revet mere end den opf=C3=B8lgende email du svarer p=C3=A5.<br></div><div><=
+br></div><div>T<br></div><div><br></div></div><br><div class=3D"gmail_quote=
+"><div dir=3D"ltr" class=3D"gmail_attr">Den s=C3=B8n. 14. maj 2023 kl. 22.3=
+0 skrev Thomas Bolander &lt;<a href=3D"mailto:tobo@dtu.dk">tobo@dtu.dk</a>&=
+gt;:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px=
+ 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">
+
+
+
+<div>
+<br>
+<div><br>
+<blockquote type=3D"cite">
+<div>On 8 May 2023, at 20.21, Thomas Nicolet &lt;<a href=3D"mailto:thomas1n=
+icolet@gmail.com" target=3D"_blank">thomas1nicolet@gmail.com</a>&gt; wrote:=
+</div>
+<br>
+<div>
+<div dir=3D"ltr"><br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-=
+left:1px solid rgb(204,204,204);padding-left:1ex">
+Jeg t=C3=A6nker vi skal passe p=C3=A5 ikke at konkludere noget alt for h=C3=
+=A5ndfast ud fra vores eksperimenter. Det ligner at der er en =E2=80=9Ccurs=
+e of shared knowledge=E2=80=9D, men hvis skal passe p=C3=A5 med at v=C3=A6r=
+e for h=C3=A5ndfaste om *hvad* den er. M=C3=A5ske handler det ikke om at ag=
+enter ikke
+ kan kende forskel p=C3=A5 shared og common knowledge (selvom det kunne se =
+s=C3=A5dan ud), men om at de baseret p=C3=A5 erfaring vil antage at deres m=
+edmennesker aldrig t=C3=A6nker ned til common knowledge, men altid vil reag=
+ere og handle udfra lave niveauer af shared knowledge.
+ Der er s=C3=A5 stadig en curse, fordi det betyder at vi i praksis ikke kan=
+ finde ud af at koordinere, selv hvis vi m=C3=A5ske teoretisk set ved hvad =
+der skulle til. Koordineringsfejlen opst=C3=A5r fordi vi kun betragter et r=
+elativt sn=C3=A6vert vindue af mulige spillertyper for
+ vores medspiller. Det forhindrer os i at f=C3=A5 det maksimale udbytte. S=
+=C3=A5 der er en curse lige gyldigt hvad, der er bare to muligheder:<br>
+<br>
+1) Cursen kommer af at vi ikke er perfekt rationelle agenter, s=C3=A5 vi fo=
+rst=C3=A5r ikke spillet til bunds.<br>
+2) Vi forst=C3=A5r spillet til bunds, men evner stadig ikke at optimere vor=
+es udbytte, fordi vi g=C3=B8r os simplificerende antagelser om vores medspi=
+llere.<br>
+<br>
+Vi kunne eventuelt pr=C3=B8ve at se p=C3=A5 hvilke antagelse om spillertype=
+r der kunne reproducere vores data. Vores data er ret p=C3=A6nt, ogs=C3=A5 =
+i forhold til kantine vs kortspil. Hvis vi antager at alle spillere lavere =
+en sandsynlighedsfordeling over de mulige typer af medspillere,
+ hvilke(n) sandsynlighedsfordeling matcher s=C3=A5 vores eksperimentielle d=
+ata?<br>
+</blockquote>
+<br>
+Jeg synes b=C3=A5de pointen er rigtig, og p=C3=A5passelighed ift. at konklu=
+dere h=C3=A5ndfaste ting ud fra eksperimentet. Begge elementer du n=C3=A6vn=
+er er nok til stede, at man ikke forst=C3=A5r spillet til bunds, og til den=
+ grad man g=C3=B8r, mangler man indblik i sin medspillers tanker
+ (common knowlege). Det er m=C3=A5ske komboen, som g=C3=B8r det specielt sv=
+=C3=A6rt. Man skal nok v=C3=A6re p=C3=A5passelig ift. konklusioner, da det =
+nok kan v=C3=A6re meget sv=C3=A6rt at vide hvad som g=C3=B8r det sv=C3=A6rt=
+. Med andre ord, man skal sikre at sv=C3=A6rhedsgraden ikke er pga. et &quo=
+t;trick&quot;, e.g.
+ test setup (den er debunket) eller et andet sprogligt/logisk trick som sny=
+der end.<br>
+<div>
+<div><br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-=
+left:1px solid rgb(204,204,204);padding-left:1ex">
+Students: =E2=80=9CExcept since you=E2=80=99re saying there=E2=80=99s risk =
+involved in six, there=E2=80=99s technically also risk involved in five. =
+=E2=80=9C<br>
+Students: =E2=80=9COkay, if they have a seven, they might think you have an=
+ eight. That=E2=80=99s where the risk comes. It doesn=E2=80=99t go lower th=
+an that. If you have a six, you could be mistaken for having an eight, and =
+that=E2=80=99s where the risk comes from. If you have a five, you=E2=80=99r=
+e
+ not going to be mistaken for having any ...=E2=80=9D<br>
+Students: =E2=80=9CYeah, but the point, too, is you could decide with that =
+six that since you might be mistaken for having an eight, that you should g=
+o black.=E2=80=9D<br>
+Student: =E2=80=9CTwo to five is white, six to ten is black, accept and the=
+n you always win.=E2=80=9D<br>
+Student: =E2=80=9CNo, because if you have a six and a five and you use that=
+ paradigm, you lose.=E2=80=9C
+<br>
+<br>
+Der er mange guldkorn i de interviews. Jeg har ikke l=C3=A6st Thomas=E2=80=
+=99 i detaljer, jeg foresl=C3=A5r at Thomas ogs=C3=A5 pr=C3=B8ver at reng=
+=C3=B8re og tjekke sit interview igennem, s=C3=A5 vi f=C3=A5r noget ud som =
+er mere l=C3=A6sbart. Ideelt set s=C3=A5 man kan skelne de forskellige stud=
+erende, hvis
+ du kan skelne deres stemmer, Thomas. Ellers kan jeg m=C3=A5ske g=C3=B8re d=
+et til slut, jeg er nok lidt bedre til at skelne deres stemmer, da jeg kend=
+er dem.<br>
+</blockquote>
+<br>
+</div>
+<div>Ja, der er mange guldkorn. Det er sv=C3=A6rt at eftervise endegyldigt =
+eksperimentielt, men der er klart en barrierer for at forst=C3=A5 at mix-st=
+rategi ikke kan v=C3=A6re sikker. Har testet det p=C3=A5 et par folk, meget=
+ robust resultat. Jeg kan godt reng=C3=B8re mit interview,
+ det kan v=C3=A6re det er lettere at k=C3=B8re det igennem conformer-1 elle=
+r en anden bedre model for krydsreference. Whisper var ikke helt super. Jeg=
+ kan pr=C3=B8ve at skelne ift stemmer, men m=C3=A5ske bare anonymt. Det bli=
+ver ikke i maj, tidligst juni.
+<br>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<div><br>
+</div>
+<div>OK. Vi skal m=C3=A5ske l=C3=A6gge en plan for hvorn=C3=A5r vi f=C3=A6r=
+digg=C3=B8r artiklen og resubmiter? Jeg er ude at rejse hele juni p=C3=A5 k=
+onferencer. Har jeg s=C3=A5 lidt tid til at skrive p=C3=A5 denne artikel? P=
+otentielt ja, men =C3=A6rlig talt bliver det nok begr=C3=A6nset, jeg kommer=
+ nok til
+ at bruge mest tid p=C3=A5 at v=C3=A6re tilstede p=C3=A5 de konferencer. I =
+juli er jeg p=C3=A5 ferie, s=C3=A5 er jeg hjemme 3 uger, og tager dern=C3=
+=A6st 2 m=C3=A5neder til Kina (september-oktober). Jeg har m=C3=A5ske bedst=
+ tid n=C3=A5r jeg er i Kina. Jeg skal arbejde med de lokale, men har ellers=
+ 100%
+ tid til forskning, s=C3=A5 jeg kan sikkert ogs=C3=A5 f=C3=A5 tid til at ki=
+gge p=C3=A5 vores artikel. S=C3=A5 jeg ville anbefale en eller anden plan s=
+om g=C3=B8r at vi kan blive f=C3=A6rdige senest slut oktober? Ville det v=
+=C3=A6re realistisk? Har I tid?&nbsp;</div>
+<div><br>
+</div>
+<br>
+<blockquote type=3D"cite">
+<div>
+<div dir=3D"ltr">
+<div>
+<div><br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-=
+left:1px solid rgb(204,204,204);padding-left:1ex">
+thomas2014psychology &quot;These results support the hypothesis that people=
+ represent common knowledge as a distinct cognitive category that licenses =
+them to coordinate with others for mutual gain&quot;
+<br>
+</blockquote>
+<br>
+</div>
+<div>Ja, de konkluderer ogs=C3=A5 skarpt ift. relevans af resultater og &qu=
+ot;human social life&quot; ud fra fors=C3=B8g. M=C3=A5ske ogs=C3=A5 en poin=
+te, at vores fors=C3=B8g ikke n=C3=B8dvendigvis modsiger deres.
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<div><br>
+</div>
+<div>Ja, OK, det kunne man selvf=C3=B8lgelig godt v=C3=A6gte. Men s=C3=A5 s=
+ige at vores resultater tilf=C3=B8jer noget til historien og viser at deres=
+ resultater m=C3=A5ske er en konsekvens af deres setup hvor der bliver gjor=
+t eksplicit klart hvad der er common knowledge, hvilket nok
+ ofte ikke sker i praksis.&nbsp;</div>
+<br>
+<blockquote type=3D"cite">
+<div>
+<div dir=3D"ltr">
+<div>
+<div>M=C3=A5ske kan man ubevidst skelne common knowledge situationer, uden =
+at kunne eksplicitere hvorfor, og lignende, uden common knowledge g=C3=A5r =
+ens r=C3=A6sonnering til grunde, uden man kan eksplicitere helt hvorfor.<br=
+>
+<br>
+<br>
+Om Iris <br>
+</div>
+<blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-=
+left:1px solid rgb(204,204,204);padding-left:1ex">
+<div>&quot;You seem to have taken the approach to arguing for ecological va=
+lidity by listing presumed real-world analogues of the game scenario. This =
+seems unsatisfactory and insufficient.&quot;</div>
+</blockquote>
+<div><br>
+</div>
+<div>Ja, det kan jeg godt se. Hvis ens resultat er pga. et sprogligt/visuel=
+t/logisk trick (e.g. &quot;bat &amp; ball costs 1.10 dollars...&quot;), s=
+=C3=A5 er det ikke sikkert det udtrykker noget om menneskets kognition, hvi=
+s forklaringen kan ligge i formuleringen af problemet.
+ Men jeg er stadig lidt uklar ift hele den kritik. </div>
+</div>
+</div>
+</div>
+</blockquote>
+<div><br>
+</div>
+<div>Jeg synes efterh=C3=A5nden jeg forst=C3=A5r det, selvom det tog en rum=
+ tid.&nbsp;</div>
+<div><br>
+</div>
+<div>&nbsp; &nbsp;Thomas</div>
+<br>
+<blockquote type=3D"cite">
+<div>
+<div dir=3D"ltr">
+<div>
+<div>Jeg synes stadig at der m=C3=A5 v=C3=A6re noget kognitivt sv=C3=A6rt d=
+er sker, literaturen har jo ogs=C3=A5 bekr=C3=A6ftet at ToM er sv=C3=A6rt.<=
+br>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<div><br>
+</div>
+<div><br>
+</div>
+<div><br>
+</div>
+<br>
+<blockquote type=3D"cite">
+<div><br>
+<div class=3D"gmail_quote">
+<div dir=3D"ltr" class=3D"gmail_attr">Den man. 8. maj 2023 kl. 19.58 skrev =
+Thomas Nicolet &lt;<a href=3D"mailto:thomas1nicolet@gmail.com" target=3D"_b=
+lank">thomas1nicolet@gmail.com</a>&gt;:<br>
+</div>
+<blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-=
+left:1px solid rgb(204,204,204);padding-left:1ex">
+<div dir=3D"ltr">
+<div>Hej Thomas og Robin, jeg samler nogle svar p=C3=A5 udest=C3=A5ende ema=
+ils her</div>
+</div>
+</blockquote>
+</div>
+</div>
+</blockquote>
+</div>
+<br>
+</div>
+
+</blockquote></div>
+
+--000000000000e2579a05fc38529a--
