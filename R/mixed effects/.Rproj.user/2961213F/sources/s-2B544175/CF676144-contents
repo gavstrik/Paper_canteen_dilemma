@@ -1,0 +1,85 @@
+setwd("C:/Users/hjl161/Documents/Papers/Paper_canteen_dilemma/R/mixed effects")
+
+# install.packages(c("ggplot2", "GGally", "reshape2", "lme4", "compiler", "parallel", "boot", "lattice"))
+# install.packages("cowplot")
+
+require(ggplot2)
+require(GGally)
+require(reshape2)
+require(lme4)
+require(compiler)
+require(parallel)
+require(boot)
+require(lattice)
+require(cowplot)
+
+cd <- read.csv("../../Data/data.csv")
+
+# explanation of the data:
+# "code" is the identifier for each subject
+# "exp" is the identifier for each experiment done either at AMT, DTU1 or DTU2
+# "session" is the experimental session (only one for DTU1 and DTU2, but several for AMT)
+# "group" is the pair of subjects playing with each other in each session
+# "round" is the round number. There are 10 rounds in the AMT experiments, but 30 rounds in DTU1 and DTU2
+# "arrival" is the arrival time
+# "certainty" is the reported likelihood by subjects that they will coordinate
+# "bonus" is the penalty (in dollars) for this round
+# "cutoff" is the arrival time reported by subjects they think is enough for safe coordination
+# "payoff" is what the subjects got payed
+
+
+head(cd)
+
+# make a new column giving each pair of subjects an unique id:
+cd$pair_id <- paste(cd$session, cd$group)
+head(cd)
+
+keeps <- c("exp", "pair_id", "round", "arrival", "choice", "certainty")
+data <- cd[keeps]
+head(data)
+
+str(cd)
+
+# convert columns into factors
+cd <- within(cd, {
+  choice <- factor(choice, levels = 0:1, labels = c("office", "canteen"))
+  arrival <- factor(arrival)
+  experiment <- factor(exp)
+  certainty <- factor(certainty)
+  round <- factor(round)
+  cutoff <- factor(cutoff)
+})
+
+
+str(cd)
+
+# check that all variables are representted by subjects
+xtabs(~ choice + arrival, data=cd)
+xtabs(~ choice + certainty, data=cd)
+xtabs(~ choice + round, data=cd)
+xtabs(~ choice + cutoff, data=cd)
+xtabs(~ choice + experiment, data=cd)
+
+
+# a very simple logistic regression
+logistic <- glm(choice ~ arrival, data=cd, family="binomial")
+summary(logistic)
+
+log2 <- glm(choice ~ arrival + experiment, data=cd, family="binomial")
+summary(log2)
+
+ll.null <- log2$null.deviance/-2
+ll.proposed <- log2$null.deviance/-2
+(ll.null - ll.proposed) / ll.null
+
+predicted.data <- data.frame(probability.of.choosing.canteen=log2$fitted.values, choice=cd$choice)
+predicted.data <- predicted.data[order(predicted.data$probability.of.choosing.canteen, decreasing=FALSE),]
+predicted.data$rank <- 1:nrow(prediced.data$arrival)
+
+ggplot(data=predicted.data, aes(x=rank, y=probability.of.choosing.canteen)) + 
+  geom_point(aes(color=cd), alpha=1, shape=4, stroke=2) +
+  xlab("Index") + 
+  ylab("Predicted probability of choosing canteen")
+
+
+
