@@ -8,7 +8,7 @@
 \usepackage[caption=false]{subfig}  % needed for compatibility btw revtex and captions
 \usepackage{dcolumn}   % needed for some tables
 \usepackage{graphicx}
-\usepackage{titlesec}
+%\usepackage{titlesec}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
@@ -75,9 +75,9 @@ References for SI citations
 %{\Huge \center Supplementary Information\\}
 
 
+\section{Materials and Methods}
 
-
-\subsection*{Mechanical Turk (MTurk) Walkthrough and Screenshots}
+\subsection{Mechanical Turk (MTurk) Experiment, Including Walkthrough and Screenshots}
 \begin{figure} %[h]
 \centering\includegraphics[width=0.8\linewidth]{screenshot_instructions}
 \caption{Screenshot of instructions page.}
@@ -103,8 +103,17 @@ References for SI citations
 \caption{Screenshot after a player has lost all her bonus.}
 \label{fig:round8finished}
 \end{figure}
+The MTurk experiments were approved by the the Research Ethics Committee at the Faculty of Humanities, University of
+Copenhagen, Denmark on 22 February 2019. The approval stated: 
+\begin{quote} 
+The Research Ethics Committee at the Faculty of Humanities, University of
+Copenhagen, has assessed your research experiment “The Canteen Dilemma“. Based
+on the information you have provided in your Application for Ethical Approval, the
+Committee has concurred that the project activities are in accordance with the relevant
+International and Danish ethical guidelines and regulations. [...] The Committee hereby approves your project.
+\end{quote} 
 MTurk participants were recruited, and online experiments were conducted in the period from the 25th February 2019 to 1st March 2019. After accepting
-%After accepting 
+%After accepting  
 our `Human Intelligence Task' (HIT) and providing informed consent, participants from MTurk were put in a ’waiting room’ until they were paired up with another participant. After a group of two was formed, participants were directed to an initial instruction page which detailed the rules of the game with a time limit of 240 seconds, see screenshot in Fig.~\ref{fig:instructions}.
 After reading the instructions, participants were directed to round 1 (of 10) where they were given their own arrival time and asked to make a decision between between going to the canteen or the office. Each round had a time limit of 61 seconds and rules from the instructions were repeated on the bottom of the page, see example screenshots for round 1 in Fig.~\ref{fig:round1}.
 
@@ -137,7 +146,7 @@ A final question pertaining all participant's understanding of the concept of co
 \end{quote}
 
 
-\subsection*{DTU Experiments}
+\subsection{DTU Experiments}
 The DTU students were asked three additional post-game questions:
 \begin{quote}
 5. ``Did you ever go to the canteen at an arrival time later than what was safe according
@@ -152,7 +161,7 @@ in the game? Why or why not?" \textit{(open ended)}
 \end{quote}
 In the last question, half of the participants were given 8:40 as their own arrival time while the other half were given 9:00. The question concerns whether player’s own knowledge of the other’s arrival time affect their prediction of the other player’s decision. It relates to the curse of knowledge \cite{birch2007curse} since participants might attribute their own belief (that it is early enough or too late to go to the canteen) to the other player.
 
-\subsection*{MTurk Settings}
+\subsection{MTurk Settings}
 \label{MTurksettings}
 Looking at Table \ref{table:A1}, the average payout to MTurk-workers was \$4.17 (including a general participation fee of \$2) which amounts to an average of more than \$20 per hour, which is considered very generous according to MTurk guidelines and certainly above the recently estimated average of \$6 per hour when excluding un-submitted and rejected work \cite{HaraEtAl18}. Students in the DTU experiments (DTU1 and DTU2) did not receive any monetary reward, but were told to try to maximize their payoff, and awarded prizes for doing well.
 
@@ -177,7 +186,7 @@ All participants automatically received a `qualification' when accepting a HIT. 
 
 MTurk participant attention was expected to be equal to or better than undergraduate participant's attention \cite{Rand2012}, while various forms of dishonesty (practical joking or trying to pair up with a friend) was expected to be rare, due to the high turnover rate experienced for our HITs. In addition, during the experiment, participants had easy access to our email for questions and possible bug reports. Apart from a few timeouts, participants had no comments or complaints.
 
-\section*{Full Rule Set for DIS Version of the Game}
+\subsection{Full Rule Set for DIS Version of the Game}
 
 This game is a 2-player cooperative coordination game with 15 rounds. The 2 players have to try to coordinate their actions, and if they are successful, they will both achieve the same positive reward (so it's not a zero-sum game). The positive reward can either be \$1 or \$2. If you're miscoordinated, you lose all the money you earned so far in the game. After the 15 rounds, you get to keep the rewards you have accumulated. Well, actually, in this version of the game, you will not be paid actual money, but you should try to behave as if you did, i.e., try to maximize the reward.
 
@@ -196,10 +205,12 @@ Both players then receive rewards depending on the colors of their stones and th
 \item[c)] If both players chose a white stone, then they both receive \$2 (i.e., a white stone), but only if both numbers are strictly below 9, meaning they are both in the interval 2--8. If not, the players lose all the money (stones) they have received in the game so far.
 \end{enumerate} 
 
-\section*{Transcriptions of Qualitative Interviews with DIS Students}
+\section{Results} 
+
+\subsection{Transcriptions of Qualitative Interviews with DIS Students}
 
 
-\subsection*{Interview 1}
+\paragraph{Interview 1}
 This is a transcription of an interview between Robin Engelhardt (R) and students (S) from the DIS experiment.
 
 
@@ -440,7 +451,8 @@ R: “Yeah. And that's why only black is safe in the end. Okay, thanks a lot. I 
 
 
 
-\subsection*{Interview 2}
+\bigskip
+\paragraph{Interview 2}
 This is a transcription of an interview between Thomas Bolander (T) and students S1, S2 and S4 in the DIS experiment.
 
 \medskip
@@ -689,7 +701,8 @@ S2: You're stopping at, like, two. So suppose the person had five, the other per
 T: Thanks a lot. Perfect. Thank you.
 
 
-\subsection*{Interview 3}
+\bigskip
+\paragraph{Interview 3}
 Interview at DIS with Thomas Schrum Nicolet and four studentsS1, S2, S3 and S4 (S1 and S2 played together, as did S3 and S4)
 
 \medskip
@@ -856,8 +869,10 @@ S1: Did you find an optimal number?
 T: [Explains that no such number exists.]
  
 
+\section{Additional supplementary material}
 
-\section*{Formal definitions of Private, Shared and Common Knowledge}
+
+\subsection{Formal definitions of Private, Shared and Common Knowledge}
 \label{A:definitions}
 We can define the notion of common knowledge and related notions a bit more precisely as follows, following the conventions from epistemic logic (see e.g.\ Herzig and Mauffre~\cite{herzig2015share}). Given a proposition $p$ and an agent $i$, we use $K_i p$ to denote that agent $i$ knows $p$. Given a group of agents $G = \{1,\dots,m\}$, we say that $p$ is \emph{private knowledge} in $G$ if at least one of the agents know $p$, that is, if $K_i p$ is true for some $i \in G$. We use $E_G p$ to denote that everybody in $G$ knows $p$, that is, for all $i \in G$, it is true that $K_i p$. Whenever it is not necessary to be explicit about the group of agents $G$, we will just write $E p$ and say ``everybody knows $p$''. For all $n$, we then recursively define $E^n p$ to be shorthand for $E E^{n-1} p$, where $E^1 p$ is shorthand for $E p$. So for instance $E^2 p$ expresses that ``everybody knows that everybody knows that $p$'', and in general $E^n p$ means we have $n$ iterations of ``everybody knows that'' in front of $p$. We read $E^n p$ as ``everybody knows $p$ to depth/order $n$''. We also call this \emph{shared knowledge} (of $p$) to depth/order $n$, or \emph{$n$th-order shared knowledge}. When we say that $p$ is \emph{shared knowledge}, we mean that it is shared knowledge to depth $n$ for some $n \geq 1$. \emph{Common knowledge} of $p$ then means that $E^n p$ is true for all $n \in \mathbb{N}$.
 
@@ -865,7 +880,7 @@ In epistemic logic, the three notions---private, shared and common knowledge---a
 
 In our paper, we interpret the concepts exclusively, although we make an exception for private knowledge. When $p$ is known by all agents, we say that $p$ is both private and (first-order) shared knowledge. The exact border between private and shared knowledge vary significantly between different papers. De Freitas et al.~\cite{de2019common} consider the case $E p$ to still only be private knowledge, and for $p$ to be considered shared knowledge furthermore requires that there is at least one agent $i$ knowing $E p$ to be true (that is, requires $K_i E p$ to be true for some $i \in G$). The point of De Freitas et al.\ is that if only $E p$ is true, it is not really shared knowledge, but only private knowledge held by everyone in $G$. In our paper, we have sought a compromise between the terminology by De Freitas et al. and the standard terminology in epistemic logic, and hence we have the overlap between private and shared knowledge.
 
-\section*{Supporting data analysis}
+\subsection{Supporting data analysis}
 \begin{figure} %[htb]
 \subfloat[\label{fig: logit mturk}]{%
   \includegraphics[width=.46\linewidth]{figS6_logit_2bins_MTurk}%
