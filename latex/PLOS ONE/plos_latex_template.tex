@@ -96,7 +96,9 @@
 \usepackage[right]{lineno}
 
 % ligatures disabled
-\usepackage[nopatch=eqnum]{microtype}
+% MODIFIED. nopatch=eqnum gives compilation error 
+%\usepackage[nopatch=eqnum]{microtype}
+\usepackage{microtype}
 \DisableLigatures[f]{encoding = *, family = * }
 
 % color can be used to apply background shading to table cells only
