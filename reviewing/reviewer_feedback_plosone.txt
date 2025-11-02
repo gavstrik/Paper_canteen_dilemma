@@ -1,0 +1,166 @@
+
+Thank you for submitting your manuscript to PLOS ONE. After careful consideration, we have decided that your manuscript does not meet our criteria for publication and must therefore be rejected.
+
+I have received reports from 2 expert reviewers. The reviewers are split in their recommendations, with Reviewer 1 recommending inviting a revision, while Reviewer 2 recommends rejection. Both reviewers raise some important issues about the 
+
+**precise and clear definitions of common knowledge and mutual knowledge**, THOMAS
+
+as well as the matching protocol used in the experiment. Reviewer 1 also raises an 
+
+**important concern about the payoff structure, and how reported beliefs are incentivized.** ROBIN?
+
+In the experiment, reported beliefs are built into the game payoffs directly, rather than the more standard practice of belief elicitation through some other incentive-compatible mechanism. This unusual approach requires stronger justification, as it is unclear how it affects the incentives facing participants in the experiment. Thus, I have decided to reject the paper due to insufficient detail in the description of the experimental methods, which also leads to uncertainty about whether the conclusions are supported by the data.
+
+
+I am sorry that we cannot be more positive on this occasion, but hope that you appreciate the reasons for this decision.
+
+Kind regards,
+
+Caleb Cox
+Academic Editor
+PLOS ONE
+
+
+
+
+[Note: HTML markup is below. Please do not edit.]
+
+Reviewers' comments:
+
+Reviewer's Responses to Questions
+
+Comments to the Author
+
+1. Is the manuscript technically sound, and do the data support the conclusions?
+
+The manuscript must describe a technically sound piece of scientific research with data that supports the conclusions. Experiments must have been conducted rigorously, with appropriate controls, replication, and sample sizes. The conclusions must be drawn appropriately based on the data presented.
+
+Reviewer #1: Yes
+
+Reviewer #2: No
+
+2. Has the statistical analysis been performed appropriately and rigorously?
+
+Reviewer #1: Yes
+
+Reviewer #2: Yes
+
+3. Have the authors made all data underlying the findings in their manuscript fully available?
+
+The PLOS Data policy requires authors to make all data underlying the findings described in their manuscript fully available without restriction, with rare exception (please refer to the Data Availability Statement in the manuscript PDF file). The data should be provided as part of the manuscript or its supporting information, or deposited to a public repository. For example, in addition to summary statistics, the data points behind means, medians and variance measures should be available. If there are restrictions on publicly sharing data—e.g. participant privacy or use of data from a third party—those must be specified.
+
+Reviewer #1: Yes
+
+Reviewer #2: Yes
+
+4. Is the manuscript presented in an intelligible fashion and written in standard English?
+
+PLOS ONE does not copyedit accepted manuscripts, so the language in submitted articles must be clear, correct, and unambiguous. Any typographical or grammatical errors should be corrected at revision, so please note any specific errors here.
+
+Reviewer #1: Yes
+
+Reviewer #2: Yes
+
+5. Review Comments to the Author
+
+Please use the space provided to explain your answers to the questions above. You may also include additional comments for the author, including concerns about dual publication, research ethics, or publication ethics. (Please upload your review as an attachment if it exceeds 20,000 characters)
+
+Reviewer #1: Overview
+The paper reports on an interesting experiment design---the Canteen Dilemma game---that introduces imperfect information into the coordination game. It uses a variation of Littlewood’s “envelope riddle” (see Geanakoplos, 1992) to trigger an information structure whereby each player has private information about the state of nature that is relevant to the coordination game but yet the only common knowledge information is the entire state space. The Canteen Dilemma belongs to class of games alongside the traveller’s dilemma (Basu, 1994) where the equilibrium solution---derived through iterative elimination of weakly dominanted strategies---is very much counter-intuitive. Specifically, the equilibrium is for players to always coordinate on the “bad” equilibrium. The experiment finds that participants are fairly adapt at navigating strategic uncertainties and frequently coordinate on the “good” equilibrium.
+
+Major comments
+Comment 1. Classification of private, mutual and common knowledge.
+One point I struggled with in the paper is how it uses the concepts of knowledge---private, mutual (shared), and common. 
+
+**In the introduction, knowledge is linked to a particular action (à la Rubinstein’s e-mail game).** THOMAS 
+
+ In the experimental design, however, knowledge is defined over the state of nature: the pair of arrival times for the two players.
+In the discussion section, the authors relate a state to the pair (t1,t2), where ti is the time (in 10-minute increments) at which player i=1,2 arrives: (8.00, 8.10), (8.10, 8.00), (8.10, 8.20),…, (9.00, 9.10). Each player thus considers 14 possible states.
+(Private knowledge.) If Player 1 arrives at 8:30, he knows the true state is either (8:30,8:20) or (8:30,8:40). More generally, only arrivals at the boundary times 8:00 or 9:10 yield perfect information because they rule out any earlier (or later) counterpart arrival.
+(Common knowledge.) Treat an event as a subset of states. By Aumann’s (1976) theorem, the only event that can be common knowledge in this design is the entire state space itself; no proper subset can satisfy the infinite mutual-knowledge condition. To see this, it is useful, to establish each player’s information partition over the state of nature. Then, Aumann’s theorem shows that the meet of the two partitions (finest common coarsening) is the entire state of nature.
+(Mutual knowledge of “enough time for the canteen.”) Mutual knowledge relates to an event where both players know that there is sufficient time for at least one of them to contemplate going to the canteen. Or that both player’s private knowledge lay with the event set (8.00,8.10),….,(8.50, 8.40), and (8.40, 8.50). The only states that can support the mutual knowledge is :(8:00,8:10) , (8.10, 8.00), …, (8.30,8.40), and (8.40, 8.30). Note that this can rule out (8.40, 8.50), because in this state, both player’s cannot always privately know that the other player arrives earlier than 9.00.
+Figure 7A provides some support for this assertion of mutual knowledge: most participants indicate that 8.40 will be the cut-off timing.
+Figure 3 also provides some support for this assertion of mutual knowledge: most participants coordinated on the canteen outcome from states (8.00,8.10) to (8.30, 8.40).
+
+Comment 2:
+I find it challenging to connect to the introduction and abstract, especially on the theme of n-order shared knowledge, to the experiment. The experiment employs a coordination game in which strategic uncertainty—uncertainty about the other player’s behaviour—and the resulting higher-order beliefs (what I think you think I think …) are central. The equilibrium solution—everyone goes to the office—is obtained by iteratively eliminating weakly dominated strategies. 
+
+**THOMAS: No, that's not at all true. It's a misunderstanding of the game.** 
+
+That procedure implicitly assumes common knowledge of rationality: each player is rational, knows the other is rational, knows the other knows that, and so on ad infinitum. 
+
+**There is an extensive literature in experimental game theory that already shows that this assumption is unrealistic.** THOMAS: Write a bit more about assumptions about rationality. 
+
+In the abstract, the notion of knowledge seems to relate to the common knowledge that players will choose a specific action (going to the office). However, my reading of the discussions in Section 6 (and that of Appendix C) is that the notion of n-order shared knowledge needs to anchor on same event/state. Is the notion of the n-order shared knowledge the states that are “reachable” given a specific true state?
+
+**It will be helpful to clarify what the nth order share knowledge relates to since this seems to be the main thrust of the paper.** THOMAS
+
+Also, how are participants’ behaviour commenting on the notion of common knowledge?
+
+Comment 3:
+**Comparing AMT and DTU. It may not be prudent to compare across the AMT and DTU statistics as in Table 1. Amongst other reasons, the payoffs are different and the number of rounds played also different.** ROBIN?
+
+Comment 4:
+Whilst the all-office strategy requires elimination of weakly dominated strategies, it is quite an unnatural approach (and in fact counter-intuitive) to consider in coordination games. Figures 1, 2, and 3 actually reveal that participants’ face little strategic uncertainties when the states are (8:00,8:10) , (8.10, 8.00), …, (8.30,8.40), and (8.40, 8.30), when it can be mutual knowledge that there “enough time for the canteen”---most participants coordinated on the canteen. Coordination fails at states (8.40, 8.50) or (8.50, 8.40) where there is a lot of strategic uncertainty.
+
+**THOMAS: Completely misunderstands the point of the game.**
+
+
+Minor comments:
+1. Inline 291, it reads as if the range of times are only between 8.10 to 9.10.
+2. 
+**How are the experiment conducted. Are participants facing fixed or random matching? Do they get full feedback about the behaviour of others at each round? Are they informed that each state is equally likely?** ROBIN?
+
+References
+Geanakoplos, John. "Common knowledge." Journal of Economic Perspectives 6, no. 4 (1992): 53-82.
+Basu, Kaushik. "The traveler's dilemma: Paradoxes of rationality in game theory." The American Economic Review84, no. 2 (1994): 391-395.
+
+Reviewer #2: Please see my comment in the attachment
+Paper summary
+The authors designed an experiment to investigate two research questions: (1) whether individuals can distinguish between n-th order shared knowledge and common knowledge, and (2) whether their behavior differs in environments where only n-th order shared knowledge is available instead of common knowledge. They find evidence suggesting negative answers to both questions.
+The experiment, referred to as the "Canteen Dilemma," involves two players who must coordinate their actions and indicate their certainty about the other player's decision. Before each round, Nature determines the payoff structure of the game. Each player's payoff depends on the combination of both players’ choices and their stated belief about the other player's action. The authors demonstrate that both an "all-office" strategy and cutoff strategies are equilibrium strategies in this game.
+
+**THOMAS: No, only one particular cutoff strategy is an equilibrium!**
+
+The experimental results show that the probability of choosing the canteen drops to around 50% when players arrive at 8:50, a time at which players also exhibit the highest uncertainty. Miscoordination peaks between 8:40 and 9:00. Prior to 8:50, players are more likely to coordinate on the canteen, while after 9:00, coordination shifts toward the office. Post-experiment surveys reveal that most participants do not clearly differentiate between common knowledge and n-th order shared knowledge, and that a majority identify 8:30–8:50 as a natural cutoff window for choosing the canteen.
+Although the authors aim to address an interesting and important question, I have serious reservations about their experimental design, the specific game they ask participants to play, and whether these are adequate to answer the research questions they pose. 
+
+**In particular, the paper would benefit from a clearer and more precise definition of common knowledge, a detailed account of what type of n-th order knowledge is being shared in the experimental environment, and a formal discussion of the expected behaviors under each informational condition.** THOMAS
+
+**THOMAS: We *do* define common knowledge.**
+
+ Additionally, the authors should elaborate on how and why this particular experimental setup allows them to meaningfully distinguish between common knowledge and n-th order shared knowledge, as this connection currently feels underdeveloped.
+
+6. PLOS authors have the option to publish the peer review history of their article (what does this mean?). If published, this will include your full peer review and any attached files.
+
+
+If you choose “no”, your identity will remain anonymous but your review may still be made public.
+
+
+Do you want your identity to be public for this peer review? For information about this choice, including consent withdrawal, please see our Privacy Policy.
+
+Reviewer #1: No
+
+Reviewer #2: Yes: Xinxin Lyu
+
+
+[NOTE: If reviewer comments were submitted as an attachment file, they will be attached to this email and accessible via the submission site. Please log into your account, locate the manuscript record, and check for the action link "View Attachments". If this link does not appear, there are no attachment files.]
+
+- - - - -
+For journal use only: PONEDEC3
+
+PDF review:
+
+**Given this structure, it is not immediately obvious why certain strategies (e.g. Office, Very
+Certain) should be optimal without a formal proof, nor why others (e.g. Office, Very
+Uncertain or Canteen, Very Uncertain) can be ruled out. The equilibrium analysis section
+should be revised to rigorously address the strategic role of belief reporting in determining
+payoffs and equilibrium strategies.** ALL. I guess the point here is that only the DTU experiments don't have this additional complication, and they show the same results. 
+
+** It would be
+helpful to clarify this terminology to avoid confusion with standard game theoretic
+usage.** THOMAS add a sentence to clarify this
+
+** Reporting whether coordination rates,
+payoff outcomes, or elicited beliefs converge or stabilize over time would provide
+valuable insight into dynamic strategic adjustments in this setting.** ROBIN. But we already do this, don't we?

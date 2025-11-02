@@ -1,0 +1,468 @@
+\begin{thebibliography}{10}
+
+\bibitem{academian2019unrolling}
+Academian.
+\newblock Unrolling social metacognition: Three levels of meta are not enough.
+\newblock Lesswrong,, August 2018.
+
+\bibitem{apperly2010mindreaders}
+Ian Apperly.
+\newblock {\em Mindreaders: the cognitive basis of" theory of mind"}.
+\newblock Psychology Press, 2010.
+
+\bibitem{apperly2009humans}
+Ian~A Apperly and Stephen~A Butterfill.
+\newblock Do humans have two systems to track beliefs and belief-like states?
+\newblock {\em Psychological review}, 116(4):953, 2009.
+
+\bibitem{aumann1976agreeing}
+Robert~J Aumann.
+\newblock Agreeing to disagree.
+\newblock {\em The annals of statistics}, pages 1236--1239, 1976.
+
+\bibitem{aumann1995backward}
+Robert~J Aumann.
+\newblock Backward induction and common knowledge of rationality.
+\newblock {\em Games and Economic Behavior}, 8(1):6--19, 1995.
+
+\bibitem{bard2020hanabi}
+Nolan Bard, Jakob~N Foerster, Sarath Chandar, Neil Burch, Marc Lanctot,
+  H~Francis Song, Emilio Parisotto, Vincent Dumoulin, Subhodeep Moitra, Edward
+  Hughes, et~al.
+\newblock The hanabi challenge: A new frontier for ai research.
+\newblock {\em Artificial Intelligence}, 280:103216, 2020.
+
+\bibitem{baron1999social}
+Simon Baron-Cohen, Howard~A Ring, Sally Wheelwright, Edward~T Bullmore, Mick~J
+  Brammer, Andrew Simmons, and Steve~CR Williams.
+\newblock Social intelligence in the normal and autistic brain: an fmri study.
+\newblock {\em European journal of neuroscience}, 11(6):1891--1898, 1999.
+
+\bibitem{becker1976economic}
+Gary~S Becker.
+\newblock {\em The economic approach to human behavior}.
+\newblock University of Chicago press, 1976.
+
+\bibitem{birch2007curse}
+Susan~AJ Birch and Paul Bloom.
+\newblock The curse of knowledge in reasoning about false beliefs.
+\newblock {\em Psychological Science}, 18(5):382--386, 2007.
+
+\bibitem{bolander2018seeing}
+Thomas Bolander.
+\newblock Seeing is believing: Formalising false-belief tasks in dynamic
+  epistemic logic.
+\newblock In {\em Jaakko Hintikka on Knowledge and Game-Theoretical Semantics},
+  pages 207--236. Springer, 2018.
+
+\bibitem{bolander2023parameterized}
+Thomas Bolander and Arnaud Lequen.
+\newblock Parameterized complexity of dynamic belief updates: A complete map.
+\newblock {\em Journal of Logic and Computation}, 33(6):1270--1300, 2023.
+
+\bibitem{bolander2015announcements}
+Thomas Bolander, Hans van Ditmarsch, Andreas Herzig, Emiliano Lorini, Pere
+  Pardo, and Fran{\c{c}}ois Schwarzentruber.
+\newblock Announcements to attentive agents.
+\newblock {\em Journal of Logic, Language and Information}, pages 1--35, 2015.
+
+\bibitem{bradbury1998principles}
+Jack~W Bradbury, Sandra~L Vehrencamp, et~al.
+\newblock Principles of animal communication.
+\newblock 1998.
+
+\bibitem{camerer1989curse}
+Colin Camerer, George Loewenstein, and Martin Weber.
+\newblock The curse of knowledge in economic settings: An experimental
+  analysis.
+\newblock {\em Journal of political Economy}, 97(5):1232--1254, 1989.
+
+\bibitem{ChenSchongerWickens16}
+Daniel Chen, Martin Schonger, and Chris Wickens.
+\newblock otree—an open-source platform for laboratory, online, and field
+  experiments.
+\newblock {\em Journal of Behavioral and Experimental Finance}, 9(C):88--97,
+  2016.
+
+\bibitem{clark1996using}
+Herbert~H Clark.
+\newblock {\em Using language}.
+\newblock Cambridge university press, 1996.
+
+\bibitem{clark1981definite}
+Herbert~H Clark and Catherine~R Marshall.
+\newblock Definite knowledge and mutual knowledge.
+\newblock 1981.
+
+\bibitem{curry2012putting}
+Oliver Curry and Matthew~Jones Chesters.
+\newblock ‘putting ourselves in the other fellow’s shoes’: The role of
+  ‘theory of mind’in solving coordination problems.
+\newblock {\em Journal of Cognition and Culture}, 12(1-2):147--159, 2012.
+
+\bibitem{de2019maimonides}
+Julian De~Freitas, Peter DeScioli, Kyle~A Thomas, and Steven Pinker.
+\newblock Maimonides’ ladder: States of mutual knowledge and the perception
+  of charitability.
+\newblock {\em Journal of Experimental Psychology: General}, 148(1):158, 2019.
+
+\bibitem{de2019common}
+Julian De~Freitas, Kyle Thomas, Peter DeScioli, and Steven Pinker.
+\newblock Common knowledge, coordination, and strategic mentalizing in human
+  social life.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  116(28):13751--13758, 2019.
+
+\bibitem{de2015higher}
+Harmen de~Weerd, Rineke Verbrugge, and Bart Verheij.
+\newblock Higher-order theory of mind in the tacit communication game.
+\newblock {\em Biologically Inspired Cognitive Architectures}, 11:10--21, 2015.
+
+\bibitem{de2017negotiating}
+Harmen de~Weerd, Rineke Verbrugge, and Bart Verheij.
+\newblock Negotiating with other minds: the role of recursive theory of mind in
+  negotiation with incomplete information.
+\newblock {\em Autonomous Agents and Multi-Agent Systems}, 31(2):250--287,
+  2017.
+
+\bibitem{devaine2014theory}
+Marie Devaine, Guillaume Hollard, and Jean Daunizeau.
+\newblock Theory of mind: did evolution fool us?
+\newblock {\em PloS One}, 9(2):e87619, 2014.
+
+\bibitem{dissing2020implementing}
+Lasse Dissing and Thomas Bolander.
+\newblock Implementing theory of mind on a robot using dynamic epistemic logic.
+\newblock In {\em Proceedings of the {I}nternational {J}oint {C}onference on
+  {A}rtificial {I}ntelligence ({IJCAI})}, 2020.
+
+\bibitem{erb2016artificial}
+Benjamin Erb.
+\newblock Artificial intelligence \& theory of mind.
+\newblock 2016.
+
+\bibitem{fagin1995reasoning}
+Ronald Fagin, Joseph~Y. Halpern, Yoram Moses, and Moshe~Y. Vardi.
+\newblock {\em Reasoning About Knowledge}.
+\newblock MIT Press, 1995.
+
+\bibitem{friedell1969structure}
+Morris~F Friedell.
+\newblock On the structure of shared awareness.
+\newblock {\em Behavioral Science}, 14(1):28--39, 1969.
+
+\bibitem{frith2003development}
+Uta Frith and Christopher~D Frith.
+\newblock Development and neurophysiology of mentalizing.
+\newblock {\em Philosophical Transactions of the Royal Society of London.
+  Series B: Biological Sciences}, 358(1431):459--473, 2003.
+
+\bibitem{gintis2010rationality}
+Herbert Gintis.
+\newblock Rationality and common knowledge.
+\newblock {\em Rationality and Society}, 22(3):259--282, 2010.
+
+\bibitem{good1992rational}
+Irving~John Good.
+\newblock Rational decisions.
+\newblock In {\em Breakthroughs in statistics}, pages 365--377. Springer, 1992.
+
+\bibitem{goodie2012levels}
+Adam~S Goodie, Prashant Doshi, and Diana~L Young.
+\newblock Levels of theory-of-mind reasoning in competitive games.
+\newblock {\em Journal of Behavioral Decision Making}, 25(1):95--108, 2012.
+
+\bibitem{gopnik1988children}
+Alison Gopnik and Janet~W Astington.
+\newblock Children's understanding of representational change and its relation
+  to the understanding of false belief and the appearance-reality distinction.
+\newblock {\em Child development}, pages 26--37, 1988.
+
+\bibitem{gray2011distortions}
+Kurt Gray, Adrianna~C Jenkins, Andrea~S Heberlein, and Daniel~M Wegner.
+\newblock Distortions of mind perception in psychopathology.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  108(2):477--479, 2011.
+
+\bibitem{halpern2011dealing}
+Joseph~Y Halpern and Riccardo Pucella.
+\newblock Dealing with logical omniscience: Expressiveness and pragmatics.
+\newblock {\em Artificial intelligence}, 175(1):220--235, 2011.
+
+\bibitem{HaraEtAl18}
+K.~Hara, A.~Adams, K.~Milland, S.~Savage, C.~Callison-Burch, and J.~P. Bigham.
+\newblock A data-driven analysis of workers' earnings on amazon mechanical
+  turk.
+\newblock In {\em Proc. of the 2018 Conference on Human Factors in Computing
+  Systems ACM}, Proc. of the 2018 Conference on Human Factors in Computing
+  Systems ACM, page 449, 2018.
+
+\bibitem{harari2014sapiens}
+Yuval~Noah Harari.
+\newblock {\em Sapiens: A brief history of humankind}.
+\newblock Random House, 2014.
+
+\bibitem{hedden2002you}
+Trey Hedden and Jun Zhang.
+\newblock What do you think i think you think?: Strategic reasoning in matrix
+  games.
+\newblock {\em Cognition}, 85(1):1--36, 2002.
+
+\bibitem{herzig2015share}
+Andreas Herzig and Faustine Maffre.
+\newblock How to share knowledge by gossiping.
+\newblock In {\em Multi-Agent Systems and Agreement Technologies}, pages
+  249--263. Springer, 2015.
+
+\bibitem{heyes2014submentalizing}
+Cecilia Heyes.
+\newblock Submentalizing: I am not really reading your mind.
+\newblock {\em Perspectives on Psychological Science}, 9(2):131--143, 2014.
+
+\bibitem{keynes1936general}
+John~Maynard Keynes.
+\newblock {\em The General Theory of Employment Terest and Money}.
+\newblock Macmillan and Company, 1936.
+
+\bibitem{keysar2003limits}
+Boaz Keysar, Shuhong Lin, and Dale~J Barr.
+\newblock Limits on theory of mind use in adults.
+\newblock {\em Cognition}, 89(1):25--41, 2003.
+
+\bibitem{kinderman1998theory}
+Peter Kinderman, Robin Dunbar, and Richard~P Bentall.
+\newblock Theory-of-mind deficits and causal attributions.
+\newblock {\em British Journal of Psychology}, 89(2):191--204, 1998.
+
+\bibitem{lee2010rationales}
+James~J Lee and Steven Pinker.
+\newblock Rationales for indirect speech: The theory of the strategic speaker.
+\newblock {\em Psychological review}, 117(3):785, 2010.
+
+\bibitem{leslie1992domain}
+Alan~M Leslie and Laila Thaiss.
+\newblock Domain specificity in conceptual development: Neuropsychological
+  evidence from autism.
+\newblock {\em Cognition}, 43(3):225--251, 1992.
+
+\bibitem{lewis1969convention}
+David Lewis.
+\newblock {\em Convention: A Philosophical Study}.
+\newblock 1969.
+
+\bibitem{leyton2022essentials}
+Kevin Leyton-Brown and Yoav Shoham.
+\newblock {\em Essentials of game theory: A concise multidisciplinary
+  introduction}.
+\newblock Springer Nature, 2022.
+
+\bibitem{lorini2005establishing}
+Emiliano Lorini, Luca Tummolini, and Andreas Herzig.
+\newblock Establishing mutual beliefs by joint attention: towards a formal
+  model of public events.
+\newblock In {\em Proc. of CogSci}, pages 1325--1330, 2005.
+
+\bibitem{mccutcheon2019favor}
+Randall~G McCutcheon.
+\newblock In favor of logarithmic scoring.
+\newblock {\em Philosophy of Science}, 86(2):286--303, 2019.
+
+\bibitem{meijering2010facilitative}
+Ben Meijering, Leendert van Maanen, Hedderik van Rijn, and Rineke Verbrugge.
+\newblock The facilitative effect of context on second-order social reasoning.
+\newblock In {\em Proceedings of the Annual Meeting of the Cognitive Science
+  Society}, volume~32, 2010.
+
+\bibitem{milgrom1981axiomatic}
+Paul Milgrom.
+\newblock An axiomatic characterization of common knowledge.
+\newblock {\em Econometrica: Journal of the Econometric Society}, pages
+  219--222, 1981.
+
+\bibitem{moses2016relating}
+Yoram Moses.
+\newblock Relating knowledge and coordinated action: The knowledge of
+  preconditions principle.
+\newblock In {\em {TARK} 2015}, volume 215 of {\em {EPTCS}}, pages 231--245,
+  2016.
+
+\bibitem{nagel1995unraveling}
+Rosemarie Nagel.
+\newblock Unraveling in guessing games: An experimental study.
+\newblock {\em The American Economic Review}, 85(5):1313--1326, 1995.
+
+\bibitem{palfrey2009eliciting}
+Thomas~R Palfrey and Stephanie~W Wang.
+\newblock On eliciting beliefs in strategic games.
+\newblock {\em Journal of Economic Behavior \& Organization}, 71(2):98--109,
+  2009.
+
+\bibitem{perner1985john}
+Josef Perner and Heinz Wimmer.
+\newblock “john thinks that mary thinks that…” attribution of
+  second-order beliefs by 5-to 10-year-old children.
+\newblock {\em Journal of experimental child psychology}, 39(3):437--471, 1985.
+
+\bibitem{pinker2003language}
+Steven Pinker.
+\newblock {\em The language instinct: How the mind creates language}.
+\newblock Penguin UK, 2003.
+
+\bibitem{pinker2007stuff}
+Steven Pinker.
+\newblock {\em The stuff of thought: Language as a window into human nature}.
+\newblock Penguin, 2007.
+
+\bibitem{pinker2008logic}
+Steven Pinker, Martin~A Nowak, and James~J Lee.
+\newblock The logic of indirect speech.
+\newblock {\em Proceedings of the National Academy of sciences},
+  105(3):833--838, 2008.
+
+\bibitem{premack1978does}
+David Premack and Guy Woodruff.
+\newblock Does the chimpanzee have a theory of mind?
+\newblock {\em Behavioral and brain sciences}, 1(4):515--526, 1978.
+
+\bibitem{Rand2012}
+David~G. Rand.
+\newblock The promise of {M}echanical {T}urk: how online labor markets can help
+  theorists run behavioral experiments.
+\newblock {\em Journal of Theoretical Biology}, 299:172--9, 2012.
+
+\bibitem{rubinstein1989electronic}
+Ariel Rubinstein.
+\newblock The electronic mail game: Strategic behavior under" almost common
+  knowledge".
+\newblock {\em The American Economic Review}, pages 385--391, 1989.
+
+\bibitem{saxe2009theory}
+Rebecca Saxe.
+\newblock Theory of mind (neural basis).
+\newblock {\em Encyclopedia of consciousness}, 2:401--410, 2009.
+
+\bibitem{saxe2013theory}
+Rebecca Saxe and Liane Young.
+\newblock Theory of mind: How brains think about thoughts.
+\newblock {\em The Oxford handbook of cognitive neuroscience}, 2:204--213,
+  2013.
+
+\bibitem{schaafsma2015deconstructing}
+Sara~M Schaafsma, Donald~W Pfaff, Robert~P Spunt, and Ralph Adolphs.
+\newblock Deconstructing and reconstructing theory of mind.
+\newblock {\em Trends in cognitive sciences}, 19(2):65--72, 2015.
+
+\bibitem{schelling1957bargaining}
+Thomas~C Schelling.
+\newblock Bargaining, communication, and limited war.
+\newblock {\em Conflict Resolution}, 1(1):19--36, 1957.
+
+\bibitem{schelling1980strategy}
+Thomas~C Schelling.
+\newblock {\em The strategy of conflict}.
+\newblock Harvard university press, 1980.
+
+\bibitem{seidenfeld1985calibration}
+Teddy Seidenfeld.
+\newblock Calibration, coherence, and scoring rules.
+\newblock {\em Philosophy of Science}, 52(2):274--294, 1985.
+
+\bibitem{shoham2008multiagent}
+Yoav Shoham and Kevin Leyton-Brown.
+\newblock {\em Multiagent systems: Algorithmic, game-theoretic, and logical
+  foundations}.
+\newblock Cambridge University Press, 2008.
+
+\bibitem{stahl1995players}
+Dale~O Stahl and Paul~W Wilson.
+\newblock On players' models of other players: Theory and experimental
+  evidence.
+\newblock {\em Games and Economic Behavior}, 10(1):218--254, 1995.
+
+\bibitem{sullivan1994preschoolers}
+Kate Sullivan, Deborah Zaitchik, and Helen Tager-Flusberg.
+\newblock Preschoolers can attribute second-order beliefs.
+\newblock {\em Developmental Psychology}, 30(3):395, 1994.
+
+\bibitem{thomas2016recursive}
+Kyle~A Thomas, Julian De~Freitas, Peter DeScioli, and Steven Pinker.
+\newblock Recursive mentalizing and common knowledge in the bystander effect.
+\newblock {\em Journal of Experimental Psychology: General}, 145(5):621, 2016.
+
+\bibitem{thomas2014psychology}
+Kyle~A Thomas, Peter DeScioli, Omar~Sultan Haque, and Steven Pinker.
+\newblock The psychology of coordination and common knowledge.
+\newblock {\em Journal of personality and social psychology}, 107(4):657, 2014.
+
+\bibitem{thomas2018common}
+Kyle~A Thomas, Peter DeScioli, and Steven Pinker.
+\newblock Common knowledge, coordination, and the logic of self-conscious
+  emotions.
+\newblock {\em Evol Hum Behav}, 39:179--190, 2018.
+
+\bibitem{tomasello1995joint}
+Michael Tomasello.
+\newblock Joint attention as social cognition.
+\newblock {\em Joint attention: Its origins and role in development}, pages
+  103--130, 1995.
+
+\bibitem{tooby2010groups}
+John Tooby and Leda Cosmides.
+\newblock Groups in mind: The coalitional roots of war and morality.
+\newblock {\em Human morality and sociality: Evolutionary and comparative
+  perspectives}, pages 91--234, 2010.
+
+\bibitem{van2018parameterized}
+Iris van~de Pol, Iris van Rooij, and Jakub Szymanik.
+\newblock Parameterized complexity of theory of mind reasoning in dynamic
+  epistemic logic.
+\newblock {\em Journal of Logic, Language and Information}, 27(3):255--294,
+  2018.
+
+\bibitem{van2015one}
+Hans van Ditmarsch and Barteld Kooi.
+\newblock One hundred prisoners and a light bulb.
+\newblock In {\em One Hundred Prisoners and a Light Bulb}, pages 83--94.
+  Springer, 2015.
+
+\bibitem{van1980conway}
+Peter van Emde~Boas, Jeroen Groenendijk, and Martin Stokhof.
+\newblock The conway paradox: Its solution in an epistemic framework.
+\newblock In {\em Proceedings of the third Amsterdam Montague Symposion}, pages
+  159--182, 1980.
+
+\bibitem{verbrugge2018stepwise}
+Rineke Verbrugge, Ben Meijering, Stefan Wierda, Hedderik van Rijn, Niels
+  Taatgen, et~al.
+\newblock Stepwise training supports strategic second-order theory of mind in
+  turn-taking games.
+\newblock {\em Judgment and decision making}, 13(1):79--98, 2018.
+
+\bibitem{verbrugge2008learning}
+Rineke Verbrugge and Lisette Mol.
+\newblock Learning to apply theory of mind.
+\newblock {\em Journal of Logic, Language and Information}, 17(4):489--511,
+  2008.
+
+\bibitem{vogeley2001mind}
+Kai Vogeley, Patrick Bussfeld, Albert Newen, Sylvie Herrmann, Francesca
+  Happ{\'e}, Peter Falkai, Wolfgang Maier, Nadim~J Shah, Gereon~R Fink, and
+  Karl Zilles.
+\newblock Mind reading: neural mechanisms of theory of mind and
+  self-perspective.
+\newblock {\em Neuroimage}, 14(1):170--181, 2001.
+
+\bibitem{wason1971natural}
+Peter~C Wason and Diana Shapiro.
+\newblock Natural and contrived experience in a reasoning problem.
+\newblock {\em Quarterly Journal of Experimental Psychology}, 23(1):63--71,
+  1971.
+
+\bibitem{ZhouFishbach16}
+H.~Zhou and A.~Fishbach.
+\newblock The pitfall of experimenting on the web: How unattended selective
+  attrition leads to surprising (yet false) research conclusions.
+\newblock {\em Journal of Personality and Social Psychology}, 111(4):493--504,
+  2016.
+
+\end{thebibliography}

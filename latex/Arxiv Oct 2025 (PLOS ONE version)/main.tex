@@ -1,0 +1,272 @@
+\documentclass[10pt,a4paper]{article}
+%\usepackage[top=0.85in,left=0.75in,footskip=0.75in]{geometry}
+
+\addtolength{\oddsidemargin}{-1cm}
+\addtolength{\evensidemargin}{-1cm}
+\addtolength{\textwidth}{2cm}
+
+\usepackage[caption=false]{subfig}  % needed for compatibility btw revtex and captions
+
+% amsmath and amssymb packages, useful for mathematical formulas and symbols
+\usepackage{amsmath,amssymb}
+
+% Use adjustwidth environment to exceed column width (see example table in text)
+\usepackage{changepage}
+
+% textcomp package and marvosym package for additional characters
+\usepackage{textcomp,marvosym}
+
+% cite package, to clean up citations in the main text. Do not remove.
+%\usepackage{cite}
+
+% Use nameref to cite supporting information files (see Supporting Information section for more info)
+\usepackage{nameref,hyperref}
+
+% line numbers
+%\usepackage[right]{lineno}
+
+% ligatures disabled
+% MODIFIED. nopatch=eqnum gives compilation error 
+%\usepackage[nopatch=eqnum]{microtype}
+\usepackage{microtype}
+\DisableLigatures[f]{encoding = *, family = * }
+
+% color can be used to apply background shading to table cells only
+\usepackage[table]{xcolor}
+
+% array package and thick rules for tables
+\usepackage{array}
+
+% create "+" rule type for thick vertical lines
+\newcolumntype{+}{!{\vrule width 2pt}}
+
+% create \thickcline for thick horizontal lines of variable length
+\newlength\savedwidth
+\newcommand\thickcline[1]{%
+  \noalign{\global\savedwidth\arrayrulewidth\global\arrayrulewidth 2pt}%
+  \cline{#1}%
+  \noalign{\vskip\arrayrulewidth}%
+  \noalign{\global\arrayrulewidth\savedwidth}%
+}
+
+% \thickhline command for thick horizontal lines that span the table
+\newcommand\thickhline{\noalign{\global\savedwidth\arrayrulewidth\global\arrayrulewidth 2pt}%
+\hline
+\noalign{\global\arrayrulewidth\savedwidth}}
+
+
+% Remove comment for double spacing
+%\usepackage{setspace} 
+%\doublespacing
+
+% Text layout
+%\raggedright
+%\setlength{\parindent}{0.5cm}
+%\textwidth 5.25in 
+%\textheight 8.75in
+
+% Bold the 'Figure #' in the caption and separate it from the title/caption with a period
+% Captions will be left justified
+\usepackage[aboveskip=1pt,labelfont=bf,labelsep=period,justification=raggedright,singlelinecheck=off]{caption}
+\renewcommand{\figurename}{Fig}
+
+
+% Remove brackets from numbering in List of References
+%\makeatletter
+%\renewcommand{\@biblabel}[1]{\quad#1.}
+%\makeatother
+
+%% Include all macros below
+
+\usepackage{xcolor}
+
+\newcommand{\lorem}{{\bf LOREM}}
+\newcommand{\ipsum}{{\bf IPSUM}}
+
+\usepackage{tikz}
+
+% Macros
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\newcommand{\at}{\makeatletter @\makeatother}
+\newcommand{\tmin}{t_{\min}}
+\newcommand{\tmax}{t_{\max}}
+
+
+\newcommand{\re}[1]{{\color{brown} RE: #1}}
+\newenvironment{robin}{\smallskip \noindent \color{red!10!green!50!blue}}{\color{black}\smallskip}
+
+%\definecolor{green2}{rgb}{0.55, 0.71, 0.0}
+\newcommand{\tobo}[1]{{\color{red} TOBO: #1}}
+\newcommand{\tsn}[1]{{\color{blue} TSN: #1}}
+\newcommand{\add}[1]{{@@@Add: #1}}
+
+\def\arxiv{0}
+
+%\definecolor{mygreen}{rgb}{0,0.6,0}
+%\newcommand{\at}{\makeatletter @\makeatother}
+%\newcommand{\tmin}{t_{\min}}
+%\newcommand{\tmax}{t_{\max}}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+  \newtheorem{theorem}{Theorem}
+  \newtheorem{lemma}[theorem]{Lemma} 
+  \newtheorem{definition}[theorem]{Definition}
+
+
+\graphicspath{{plots}{images}}
+
+
+%% END MACROS SECTION
+
+
+\title{The Curse of Shared Knowledge: Recursive Belief Reasoning in a Coordination Game with Imperfect Information}
+
+% Title must be 250 characters or less.
+%\begin{flushleft}
+%{\Large
+%\textbf\newline{The Curse of Shared Knowledge: Recursive Belief Reasoning in a Coordination Game with Imperfect Information} % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
+%}
+%\newline
+% Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
+\author{Thomas Bolander\textsuperscript{1\Yinyang}, Robin Engelhardt\textsuperscript{2\Yinyang}, Thomas S. Nicolet\textsuperscript{3\Yinyang}} 
+%Thomas Bolander,
+%Robin Engelhardt\textsuperscript{2\Yinyang},
+%Thomas S. Nicolet\textsuperscript{3\Yinyang}
+%\\
+%\bigskip
+
+
+
+
+\begin{document}
+%\vspace*{0.2in}
+
+
+\begingroup
+\renewcommand\thefootnote{}\footnotetext{
+   \textbf{1} Department of Applied Mathematics and Computer Science, Technical University of Denmark, Richard Petersens Plads, building 324, DK-2800 Lyngby, Denmark
+
+\textbf{2} 
+Department of Food and Resource Economics, University of Copenhagen, Copenhagen, Denmark
+ %Affiliation Dept/Program/Center, Institution Name, City, State, Country
+ 
+\textbf{3}
+Center for Information and Bubble Studies, Department of Communication, University of Copenhagen, Copenhagen, Denmark.
+%Affiliation Dept/Program/Center, Institution Name, City, State, Country
+
+%\bigskip
+% Insert additional author notes using the symbols described below. Insert symbol callouts after author names as necessary.
+% 
+% Remove or comment out the author notes below if they aren't used.
+%
+% Primary Equal Contribution Note
+\Yinyang All authors contributed equally to this work.
+}%
+\addtocounter{footnote}{-1}%
+\endgroup
+
+% Additional Equal Contribution Note
+% Also use this double-dagger symbol for special authorship notes, such as senior authorship.
+%\ddag These authors also contributed equally to this work.
+
+% Current address notes
+%\textcurrency Current Address: Dept/Program/Center, Institution Name, City, State, Country % change symbol to "\textcurrency a" if more than one current address note
+% \textcurrency b Insert second current address 
+% \textcurrency c Insert third current address
+
+% Deceased author note
+%\dag Deceased
+
+% Group/Consortium Author Note
+%\textpilcrow Membership list can be found in the Acknowledgments section.
+
+% Use the asterisk to denote corresponding authorship and provide email address in note below.
+%* tobo@dtu.dk
+
+%\end{flushleft}
+% Please keep the abstract below 300 words
+
+
+
+\maketitle
+
+
+\begin{abstract}
+Common knowledge is crucial for safe group coordination. In its absence, %When common knowledge cannot be obtained, 
+humans must %are forced to 
+rely on shared knowledge, %only.
+which is inherently limited in depth and therefore prone to coordination failures,
+%humans rely on their ability to identify shared knowledge to distinguish who knows what.
+%When common knowledge can not be obtained, humans routinely use their ability to attribute beliefs and intentions \tobo{What does intentions have to do with it? Next sentence also says "*such* shared knowledge attributions", which in principle is neither about beliefs nor intentions.} \tsn {Maybe I misunderstand, but intentions are related due to the fact that coordination relies on being able to correctly attribute (predict) the intentions of others. But I find another issue: It might imply that people *only* attribute beliefs to others when common knowledge cannot be obtained. But every social action involves belief attribution (or attributing some mental state to others). So, could word it as something like "When common knowledge cannot be obtained, humans rely on their ability to identify shared knowledge to distinguish between who knows what" }  in order to infer what is known. 
+%But shared knowledge is limited in depth and therefore prone to coordination failures. %
+because any finite-order knowledge attribution allows for an even higher order attribution that may change what is known by whom. 
+In three separate experiments involving 802 participants, we investigate the extent to which humans %are able to recognize the difference 
+can differentiate between common knowledge and $n$th-order shared knowledge. We %have 
+designed a two-person coordination game with imperfect information to simplify the %that is able to cast the 
+recursive game structure  and higher-order uncertainties into a relatable everyday scenario. 
+In this game, coordination %to achieve 
+for the highest payoff requires a specific fact to be common knowledge between players. 
+However, this fact cannot become common knowledge %is impossible to achieve 
+in the game. The fact can at most be $n$th-order shared knowledge for some $n$.
+%only nth-order shared knowledge can be achieved for varying values of n.
+Our findings reveal that even at quite shallow depths of shared knowledge (low values of $n$), players behave as though they possess common knowledge, and %express 
+claim similar levels of certainty in their actions, %as if they had. 
+despite incurring significant penalties when falsely assuming guaranteed coordination.
+We term this phenomenon `the curse of shared knowledge'. It %occurs in spite of participants suffering huge payoff penalties when falsely assuming that coordination, and hence common knowledge, is guaranteed.
+  %\tsn{Måske korte lidt ned, eller hive lidt i land? Synes ikke vi konkluderer for stærkt her, udover måske "express certainty", som måske altid er lidt svært at rigtigt vide.} \add{
+ % We conjecture that this is 
+arises either from the players' %participants' 
+inability to distinguish between higher-order shared knowledge and common knowledge, or from their implicit assumption that their co-player cannot make this distinction.
+  
+%express to be completely certain about being coordinated and achieving the highest payoff,  
+% express to be as certain that they are coordinated and will achieve the highest payoff as if they indeed had common knowledge. 
+%Despite this, our results show that participants behave as if they had common knowledge, and for sufficiently large values of n, they claim to  
+% in self-assessing the certainty of receiving the 
+%their actions
+%claim their actions to be as certain as if they had common knowledge. 
+%It is impossible to achieve common knowl
+%
+%Our results show that participants have a very hard time accepting the fact that common knowledge is not reducible to shared knowledge.\tobo{Maybe too strong? Do our results really show that? They behave as if having common knowledge, but they might still be able to distinguish common knowledge achieved via public announcements from what they have in this game.} Instead, participants try to coordinate even at quite shallow depths of shared knowledge and in spite of huge payoff penalties. \tsn{With regards to Tobo's comments consider the following alternative: "Our results show that participants try to coordinate when the levels of shared knowledge gets sufficiently high. In other words, our participants behave as if they have common knowledge about facts that are only shared knowledge, and collectively suffer huge payoff penalties as a result."} \re{Yes too strong, i guess. Proposal, taget fra TOBO: "Our results show that participants behave as if they had common knowledge. Participants also claim to be certain about their actions as if they had common knowledge, even when common knowledge is not obtainable."}
+
+
+
+%\linenumbers
+
+% Use "Eq" instead of "Equation" for equation citations.
+%\section*{Introduction}
+
+
+% Results and Discussion can be combined.
+%\section*{Results}
+
+%PLOS does not support heading levels beyond the 3rd (no 4th level headings)
+\end{abstract}  
+
+
+
+\input{body}
+\input{supplementary} 
+
+
+
+
+
+\section*{Author Contributions and Acknowledgments}
+
+Thomas Bolander developed the game, made the theoretical analysis, and contributed as a lead author; Robin Engelhardt and Thomas S.\ Nicolet designed the experiment, analyzed the data, and contributed as lead authors. The authors declare no conflict of interest.
+
+Server infrastructure and devops was handled by Mikkel Birkegaard Andersen. The authors wish to thank Vincent F. Hendricks for enabling the project. This research was approved by the Institutional Review Board at the University of Copenhagen and included informed consent by all participants in the study. The authors gratefully acknowledge the support provided by The Carlsberg Foundation under grant number CF 15-0212.
+
+%All authors are furthermore grateful to the editor and anonymous reviewers for pointing to a number of weaknesses in the original manuscript. Those comments allowed us to make the paper significantly stronger and more coherent. 
+
+
+\bibliographystyle{plain}
+\bibliography{../cd} 
+
+
+
+
+\end{document}
+
