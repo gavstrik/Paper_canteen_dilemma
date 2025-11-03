@@ -3,7 +3,7 @@ Thank you for submitting your manuscript to PLOS ONE. After careful consideratio
 
 I have received reports from 2 expert reviewers. The reviewers are split in their recommendations, with Reviewer 1 recommending inviting a revision, while Reviewer 2 recommends rejection. Both reviewers raise some important issues about the 
 
-**precise and clear definitions of common knowledge and mutual knowledge**, THOMAS
+**precise and clear definitions of common knowledge and mutual knowledge**, TOBO
 
 as well as the matching protocol used in the experiment. Reviewer 1 also raises an 
 
@@ -72,7 +72,7 @@ Major comments
 Comment 1. Classification of private, mutual and common knowledge.
 One point I struggled with in the paper is how it uses the concepts of knowledge---private, mutual (shared), and common. 
 
-**In the introduction, knowledge is linked to a particular action (à la Rubinstein’s e-mail game).** THOMAS 
+**In the introduction, knowledge is linked to a particular action (à la Rubinstein’s e-mail game).** TOBO
 
  In the experimental design, however, knowledge is defined over the state of nature: the pair of arrival times for the two players.
 In the discussion section, the authors relate a state to the pair (t1,t2), where ti is the time (in 10-minute increments) at which player i=1,2 arrives: (8.00, 8.10), (8.10, 8.00), (8.10, 8.20),…, (9.00, 9.10). Each player thus considers 14 possible states.
@@ -82,18 +82,22 @@ In the discussion section, the authors relate a state to the pair (t1,t2), where
 Figure 7A provides some support for this assertion of mutual knowledge: most participants indicate that 8.40 will be the cut-off timing.
 Figure 3 also provides some support for this assertion of mutual knowledge: most participants coordinated on the canteen outcome from states (8.00,8.10) to (8.30, 8.40).
 
+**TOBO: I figur 6 viser vi at man netop skal ankomme senest 8:40 for at konstatere at der er shared knowledge til depth 1 (mutual knowledge). Jeg mener da også vi snakker en del om hvordan det relaterer sig til spillernes valg, men vi skal måske lige kigge teksten igennem igen. Under alle omstændigheder er det jo ikke noget der løser noget, så jeg ved ikke helt hvad revieweren forsøger at gøre her, andet end at prøve at forstå tingene i sin egen ramme.** 
+
+
+
 Comment 2:
 I find it challenging to connect to the introduction and abstract, especially on the theme of n-order shared knowledge, to the experiment. The experiment employs a coordination game in which strategic uncertainty—uncertainty about the other player’s behaviour—and the resulting higher-order beliefs (what I think you think I think …) are central. The equilibrium solution—everyone goes to the office—is obtained by iteratively eliminating weakly dominated strategies. 
 
-**THOMAS: No, that's not at all true. It's a misunderstanding of the game.** 
+**TOBO: No, that's not at all true. It's a misunderstanding of the game.** 
 
 That procedure implicitly assumes common knowledge of rationality: each player is rational, knows the other is rational, knows the other knows that, and so on ad infinitum. 
 
-**There is an extensive literature in experimental game theory that already shows that this assumption is unrealistic.** THOMAS: Write a bit more about assumptions about rationality. 
+**There is an extensive literature in experimental game theory that already shows that this assumption is unrealistic.** TOBO: Write a bit more about assumptions about rationality. 
 
 In the abstract, the notion of knowledge seems to relate to the common knowledge that players will choose a specific action (going to the office). However, my reading of the discussions in Section 6 (and that of Appendix C) is that the notion of n-order shared knowledge needs to anchor on same event/state. Is the notion of the n-order shared knowledge the states that are “reachable” given a specific true state?
 
-**It will be helpful to clarify what the nth order share knowledge relates to since this seems to be the main thrust of the paper.** THOMAS
+**It will be helpful to clarify what the nth order share knowledge relates to since this seems to be the main thrust of the paper.** TOBO
 
 Also, how are participants’ behaviour commenting on the notion of common knowledge?
 
@@ -103,7 +107,7 @@ Comment 3:
 Comment 4:
 Whilst the all-office strategy requires elimination of weakly dominated strategies, it is quite an unnatural approach (and in fact counter-intuitive) to consider in coordination games. Figures 1, 2, and 3 actually reveal that participants’ face little strategic uncertainties when the states are (8:00,8:10) , (8.10, 8.00), …, (8.30,8.40), and (8.40, 8.30), when it can be mutual knowledge that there “enough time for the canteen”---most participants coordinated on the canteen. Coordination fails at states (8.40, 8.50) or (8.50, 8.40) where there is a lot of strategic uncertainty.
 
-**THOMAS: Completely misunderstands the point of the game.**
+**TOBO: Completely misunderstands the point of the game.**
 
 
 Minor comments:
@@ -120,14 +124,14 @@ Paper summary
 The authors designed an experiment to investigate two research questions: (1) whether individuals can distinguish between n-th order shared knowledge and common knowledge, and (2) whether their behavior differs in environments where only n-th order shared knowledge is available instead of common knowledge. They find evidence suggesting negative answers to both questions.
 The experiment, referred to as the "Canteen Dilemma," involves two players who must coordinate their actions and indicate their certainty about the other player's decision. Before each round, Nature determines the payoff structure of the game. Each player's payoff depends on the combination of both players’ choices and their stated belief about the other player's action. The authors demonstrate that both an "all-office" strategy and cutoff strategies are equilibrium strategies in this game.
 
-**THOMAS: No, only one particular cutoff strategy is an equilibrium!**
+**TOBO: No, only one particular cutoff strategy is an equilibrium!**
 
 The experimental results show that the probability of choosing the canteen drops to around 50% when players arrive at 8:50, a time at which players also exhibit the highest uncertainty. Miscoordination peaks between 8:40 and 9:00. Prior to 8:50, players are more likely to coordinate on the canteen, while after 9:00, coordination shifts toward the office. Post-experiment surveys reveal that most participants do not clearly differentiate between common knowledge and n-th order shared knowledge, and that a majority identify 8:30–8:50 as a natural cutoff window for choosing the canteen.
 Although the authors aim to address an interesting and important question, I have serious reservations about their experimental design, the specific game they ask participants to play, and whether these are adequate to answer the research questions they pose. 
 
-**In particular, the paper would benefit from a clearer and more precise definition of common knowledge, a detailed account of what type of n-th order knowledge is being shared in the experimental environment, and a formal discussion of the expected behaviors under each informational condition.** THOMAS
+**In particular, the paper would benefit from a clearer and more precise definition of common knowledge, a detailed account of what type of n-th order knowledge is being shared in the experimental environment, and a formal discussion of the expected behaviors under each informational condition.** TOBO
 
-**THOMAS: We *do* define common knowledge.**
+**TOBO: We *do* define common knowledge.**
 
  Additionally, the authors should elaborate on how and why this particular experimental setup allows them to meaningfully distinguish between common knowledge and n-th order shared knowledge, as this connection currently feels underdeveloped.
 
@@ -149,7 +153,7 @@ Reviewer #2: Yes: Xinxin Lyu
 - - - - -
 For journal use only: PONEDEC3
 
-PDF review:
+--------PDF review-----
 
 **Given this structure, it is not immediately obvious why certain strategies (e.g. Office, Very
 Certain) should be optimal without a formal proof, nor why others (e.g. Office, Very
@@ -159,8 +163,14 @@ payoffs and equilibrium strategies.** ALL. I guess the point here is that only t
 
 ** It would be
 helpful to clarify this terminology to avoid confusion with standard game theoretic
-usage.** THOMAS add a sentence to clarify this
+usage.** TOBO add a sentence to clarify this
 
 ** Reporting whether coordination rates,
 payoff outcomes, or elicited beliefs converge or stabilize over time would provide
 valuable insight into dynamic strategic adjustments in this setting.** ROBIN. But we already do this, don't we?
+
+
+**Furthermore, the authors should be careful interpreting elicited beliefs, as existing
+literature has shown that incentive mechanisms for belief elicitation do not always induce
+truthful reporting (Andersen et al., 2009; Charness et al., 2021; Schlag et al., 2015;
+Schotter & Trevino, 2014)** NICOLET
