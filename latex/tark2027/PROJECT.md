@@ -65,3 +65,6 @@ Other versions may exist in parallel (co-author drafts, other models). We need *
 - Sharing: TSN emails co-authors about progress. `figures_comparison.pdf` (built by `scripts/comparison/build.sh`) shows the arXiv vs TARK figures. Goal: a TARK PDF that everyone can read.
 - Private process notes (not in repo): `~/dev/canteen-dilemma/notes/PRIVATE.md` on TSN's machine.
 - Prior reviews (Cognitive Science, PLOS ONE) exist in `../../reviewing/` but are **deliberately out of scope**: different audience. Don't use unless asked.
+
+## Next session (handoff, 2026-11-09)
+Start with `STATUS.md`. Open: author answers on the "What we need to check" list and on the options for the last ~1.8 pp (none approved yet). After every cut, run `build.sh` and `scripts/check_lost_sentences.py HEAD`; every listed sentence needs a CUTS row. Lesson from step 3.5: check words per section against the plan's budget (≈600 words/page) *before* writing; the first pass stayed too verbatim and needed a second pass.
