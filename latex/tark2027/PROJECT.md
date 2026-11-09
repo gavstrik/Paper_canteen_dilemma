@@ -37,15 +37,16 @@ Spirit: **be gentle with the paper.** It must survive as itself and fit TARK. No
 
 ## Workflow
 0. ✅ Port to EPTCS, zero content change. Baseline: main text ends p.23 (22.2 pp).
-1. ☐ Inputs from authors: editorial direction, core claim in 3–5 sentences.
-2. ☐ Argument map: claims → sections → dependencies. Page budget per section. **Human approves.**
+1. ◐ Inputs from authors: direction ✅, structure ✅, DTU rules ✅, core claim ☐.
+2. ✅ Argument map + Option B budget approved (2026-11-09). Next: regenerate figures on DTU+DIS data, then re-check the budget.
 3. ☐ Cut section by section (several internal iterations before co-authors see it).
 4. ☐ Retarget for TARK: related work toward epistemic logic / game theory; literature since 2019 (human-verified).
 5. ☐ AI disclosure paragraph (from ledger), final consistency pass, pdflatex cross-check, send to co-authors.
 
 ## Open inputs
 - [x] Editorial direction (2026-11-09): **cut the MTurk experiment.** Reasons: length, and common knowledge of the rules can't be assumed on MTurk (anonymous co-player, rules read individually). The paper's evidence must rest on settings where the rules are demonstrably common knowledge.
-- [ ] **Open question:** how were the rules presented in DTU1/DTU2? Publicly in class, or individually on screen? This decides whether the DTU data meets the same bar as DIS.
+- [x] DTU1/DTU2 rules (TSN, 2026-11-09): **shown on a common screen and read aloud to the students**, as at DIS. So the rules were common knowledge in all remaining experiments. **The arXiv text doesn't say this for DTU.** The TARK version must state it, sourced from the authors (ledger category `new`, validated by TSN).
+- [x] Structure (TSN, 2026-11-09): **Option B**, re-sequenced for a logic audience (see `ARGUMENT_MAP.md`). Keep the overall point (C0) unchanged. Don't fight the venue.
 - [ ] Core claim, 3–5 sentences.
 - Private process notes (not in repo): `~/dev/canteen-dilemma/notes/PRIVATE.md` on TSN's machine.
 - Prior reviews (Cognitive Science, PLOS ONE) exist in `../../reviewing/` but are **deliberately out of scope**: different audience. Don't use unless asked.

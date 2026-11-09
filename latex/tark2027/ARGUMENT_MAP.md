@@ -83,3 +83,7 @@ Reading: the effect survives and is **cleaner** without MTurk. MTurk carries noi
 - The argument that the rules are common knowledge (C7) becomes central. DIS is documented (projector, read aloud). **DTU presentation is unknown; ask the authors.**
 - The abstract's participant counts change: DTU1 80 + DTU2 42 + DIS 12 = 134.
 - Errata #3 (46 pairs) and #4 (MTurk payout) become moot.
+
+## Decision 2026-11-09
+- **Option B approved** (TSN). The overall point C0 stays.
+- DTU rules were shown on a common screen and read aloud (TSN), so C7 (rules are common knowledge) now holds for **every** remaining experiment. That answers the objection that led to cutting MTurk, and it should be stated explicitly in the new §3.
