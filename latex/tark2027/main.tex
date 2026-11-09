@@ -33,6 +33,12 @@
 \newcommand{\tmin}{t_{\min}}
 \newcommand{\tmax}{t_{\max}}
 
+% \modified{...} wraps text changed or added in the TARK version (not pure moves/deletions).
+% \showmodifiedtrue = red (for co-author review); \showmodifiedfalse = plain (for submission).
+\newif\ifshowmodified
+\showmodifiedtrue
+\newcommand{\modified}[1]{\ifshowmodified{\color{red}#1}\else#1\fi}
+
 % Author comment macros (must render nothing live in the submitted version)
 \newcommand{\re}[1]{{\color{brown} RE: #1}}
 \newcommand{\tobo}[1]{{\color{red} TOBO: #1}}

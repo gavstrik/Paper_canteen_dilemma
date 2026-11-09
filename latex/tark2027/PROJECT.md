@@ -27,6 +27,7 @@ Spirit: **be gentle with the paper.** It must survive as itself and fit TARK. No
 ## Rules for editing
 1. **Delete or move before rewriting.** Moving to appendix is preferred over deleting.
 2. **Keep the authors' voice and match the paper's tone** (measured, hedged, plain academic prose, first-person plural). When condensing, reuse the authors' own sentences and words. No new framing, no AI-flavoured prose ("delve", "crucially", "notably", "underscores", tricolons, em-dash chains).
+2b. **Mark changed or added text with `\modified{...}`** (macro in `main.tex`; `\showmodifiedtrue` renders it red, `\showmodifiedfalse` renders it plain for submission). Pure moves and deletions are not marked; `CUTS.md` covers those. Be pragmatic: wrap whole changed sentences, not single words. Some text will unavoidably be AI-written. That's accepted, as long as it's marked and logged.
 3. **No new citations** unless a human author verifies the source exists and says what it is claimed to say.
 4. **No change to claims, numbers, statistics, or formal results.** Condensing must not strengthen or weaken a claim.
 5. **One section per iteration.** Build, check page count, check refs, commit.
@@ -42,6 +43,13 @@ Spirit: **be gentle with the paper.** It must survive as itself and fit TARK. No
 3. ☐ Cut section by section (several internal iterations before co-authors see it).
 4. ☐ Retarget for TARK: related work toward epistemic logic / game theory; literature since 2019 (human-verified).
 5. ☐ AI disclosure paragraph (from ledger), final consistency pass, pdflatex cross-check, send to co-authors.
+
+## Goal clarification (TSN, 2026-11-09)
+Other versions may exist in parallel (co-author drafts, other models). We need **one good cut**, and this branch can be it.
+
+## Literature to check in the later lit pass (an author verifies each)
+- Pinker, *When Everyone Knows That Everyone Knows* (book, 2025). It cites our preprint and is directly relevant, since our core claim positions us against Thomas, De Freitas, Pinker et al.
+- Halpern & Moses (coordinated attack); Monderer & Samet 1989 (common $p$-belief); experimental studies of the e-mail game.
 
 ## Open inputs
 - [x] Editorial direction (2026-11-09): **cut the MTurk experiment.** Reasons: length, and common knowledge of the rules can't be assumed on MTurk (anonymous co-player, rules read individually). The paper's evidence must rest on settings where the rules are demonstrably common knowledge.
