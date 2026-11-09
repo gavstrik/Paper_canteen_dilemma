@@ -26,3 +26,6 @@ Severity: **A** = factual error in a number or claim · **B** = internal inconsi
 | 11 | C | various | Typos: whey, stil, loosing (×2), Betram, specfications, warrents, knowlege, getter, correponds, coffeee, "the the" (×2), "between between", miscoodination (×2), participantion, "theses questions". | — | Fix during cut. | open |
 
 Verified correct against data: all Table 1 values (N, n, average rounds, Ruin %, payoff %, average penalty) for MTurk, DTU1 and DTU2. Payoff arithmetic: \$9.80 all-office over 10 rounds; \$9.90; \$9.21 maximum penalty; ratio 921.
+
+## Sign-off (TSN, 2026-11-09)
+TSN approved fixing the errata in the TARK copy, on the condition that every fix is listed. **Each fix gets** status `TARK: fixed (commit <sha>)` in the table above, plus an AI_LEDGER `fix` row. In scope: 1, 6, 7 (done in step 3.3), 8 (done in step 3.3), 9, 10 (wording), 11 (typos), 17. **Not in scope:** 2 stays open until an author checks the oTree arrival-time generator. 3 and 4 are moot.
