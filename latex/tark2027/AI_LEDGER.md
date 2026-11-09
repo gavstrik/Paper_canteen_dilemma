@@ -16,3 +16,5 @@ Validation column: who checked it and how. `pending` until a human author has re
 | 6 | 2026-11-09 | infra | `build.sh`: tectonic compile, reports page on which main text ends, fails on >10 pages, live author comments (`\tobo` etc. rendering), undefined refs/cites. | build.sh | Run; baseline main text ends p.23 |
 | 7 | 2026-11-09 | infra | Committed compiled PDF snapshot `tark2027.pdf` (updated at milestones only); pushed branch `tark2027` to origin. | tark2027.pdf | — |
 | 8 | 2026-11-09 | infra | Repo is public: moved private process details out of `PROJECT.md` into a local-only notes file. | PROJECT.md | — |
+| 9 | 2026-11-09 | infra | Full read of main text and appendix. Recomputed Table 1 statistics and payoff arithmetic from `Data/*.csv`; compared the paper's text with the instructions screenshot. Findings in `ERRATA.md` (no text changed). | ERRATA.md | Table 1 reproduced exactly; discrepancies listed for author review |
+| 10 | 2026-11-09 | infra | Draft argument map, claims, dependencies and two restructuring options in `ARGUMENT_MAP.md`. Analysis only, no text changed. | ARGUMENT_MAP.md | pending author review |
