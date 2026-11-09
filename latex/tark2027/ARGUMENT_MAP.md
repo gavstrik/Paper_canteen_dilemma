@@ -104,7 +104,7 @@ Script: `scripts/make_figures.py`, a port of the notebooks that made the publish
 | Fig 6 | knowledge diagram + DTU logit | C1, C3 | 1.0 | ~200 pt | 55 pt (caption condensed from 9 lines to ~4) | 0.42 |
 | Fig 7 | post-game answers | C8 | 0.8 | 180 pt | 55 pt | 0.38 |
 
-### Proposal (Claude, not validated): 4 floats, about 1.6 pp
+### Proposal: 4 floats, about 1.6 pp (approved by TSN, 2026-11-09)
 1. **Fig 6 (diagram + logit) moves up to new §2.** It is the Kripke model of the game (C1) and carries the pooled choice curve (C3) on the same picture. This is the TARK figure.
 2. **Fig 1 + DIS (merged) in §4.** One float replaces Figs 1 and 5. It shows both DTU classes and the card version on one axis, which is the robustness claim C7 in a single image. Caveat: DIS has a different payoff (lose everything), and card 2 maps to 7:50, outside the canteen range. The caption must say so.
 3. **Fig 3 in §4.** The miscoordination at the critical pairs (C5) is the cost of the curse, and it isn't visible anywhere else.

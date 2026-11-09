@@ -475,7 +475,9 @@ def main():
 
     exps = ["DTU1", "DTU2"]
     df = load(exps)
-    dis = load_dis()
+    # Author decision (TSN, 2026-11-09): table 7 was played by an author (RE); excluded.
+    # This matches the arXiv text (12 students, n = 180); the arXiv figure wrongly used n = 210.
+    dis = load_dis(drop_table7=True)
     os.makedirs(OUT, exist_ok=True)
 
     t = table1(df, exps, {"DTU1": 30, "DTU2": 30})
@@ -491,12 +493,12 @@ def main():
     fig6_inset(df, exps, "tark_fig6_logit_inset", OUT)
     fig7(df, exps, "tark_fig7_postgame", OUT)
     rep = stats_report(df, exps, dis)
-    d6 = load_dis(drop_table7=True)
+    d6 = load_dis(drop_table7=False)
     _, b0, b1, x50 = logit_fit(d6.card, d6.choice)
     t6 = d6.groupby("card").choice.agg(["mean", "size"])
-    rep += (f"\n## DIS without table 7 ('Robins table'), n={len(d6)}\n"
-            f"DIS6    b0={b0:7.3f} b1={b1:8.4f}  50% at card {x50:4.2f}\n"
-            "DIS6 white by card: " + "  ".join(f"{c}: {100*r['mean']:.1f}% ({int(r['size'])})" for c, r in t6.iterrows()) + "\n")
+    rep += (f"\n## For reference: DIS incl. table 7 (author-played; used in the arXiv figure), n={len(d6)}\n"
+            f"DIS7    b0={b0:7.3f} b1={b1:8.4f}  50% at card {x50:4.2f}\n"
+            "DIS7 white by card: " + "  ".join(f"{c}: {100*r['mean']:.1f}% ({int(r['size'])})" for c, r in t6.iterrows()) + "\n")
     rep += "\n## Table 1\n" + t.to_string(index=False) + "\n"
     with open(os.path.join(OUT, "tark_stats.txt"), "w") as f:
         f.write(rep)
