@@ -1,0 +1,60 @@
+# Verification statistics, data = DTU1+DTU2 + DIS
+
+## Canteen choice by arrival time (% canteen, n)
+DTU1    8:00 100.0% (90)  8:10  99.6% (262)  8:20  99.4% (361)  8:30  99.2% (360)  8:40  86.8% (356)  8:50  43.4% (376)  9:00   3.7% (273)  9:10   0.0% (82)
+DTU2    8:00  97.7% (43)  8:10  99.2% (122)  8:20  99.4% (175)  8:30  98.8% (170)  8:40  95.0% (159)  8:50  64.1% (167)  9:00  10.1% (129)  9:10   0.0% (47)
+pooled  8:00  99.2% (133)  8:10  99.5% (384)  8:20  99.4% (536)  8:30  99.1% (530)  8:40  89.3% (515)  8:50  49.7% (543)  9:00   5.7% (402)  9:10   0.0% (129)
+
+## Logistic fit choice ~ minutes (0..70, 9:00 = 60); 50% point = -b0/b1
+DTU1    b0= 11.330 b1= -0.2343  50% at 48.35 min = 8:48.4
+DTU2    b0= 11.046 b1= -0.2129  50% at 51.89 min = 8:51.9
+pooled  b0= 11.008 b1= -0.2227  50% at 49.44 min = 8:49.4
+DIS     card scale: b0= 17.503 b1= -2.3436  50% at card 7.47 (= 8:44.7 on the canteen scale)
+DIS white by card: 2: 100.0% (13)  3: 100.0% (27)  4: 100.0% (32)  5: 100.0% (29)  6: 95.8% (24)  7: 76.9% (26)  8: 19.0% (21)  9: 4.3% (23)  10: 0.0% (15)
+
+DTU1 vs DTU2, GLM choice ~ m*exp: LR test vs pooled model chi2(2)=29.56, p=3.803e-07
+  coefficients: Intercept=11.3295 (p=3.35e-89), C(exp)[T.DTU2]=-0.2833 (p=0.775), m=-0.2343 (p=4.5e-89), m:C(exp)[T.DTU2]=0.0214 (p=0.278)
+  (pair-level clustering ignored, as in the original analysis)
+
+## Coordination by arrival pair (office / miscoordination / canteen, % of pair-rounds)
+8:00/8:10  N= 133  office   0.0  mis   2.3  canteen  97.7
+8:10/8:20  N= 251  office   0.0  mis   0.8  canteen  99.2
+8:20/8:30  N= 285  office   0.0  mis   1.1  canteen  98.9
+8:30/8:40  N= 245  office   0.8  mis   8.2  canteen  91.0
+8:40/8:50  N= 270  office   9.6  mis  41.1  canteen  49.3
+8:50/9:00  N= 273  office  50.5  mis  45.8  canteen   3.7
+9:00/9:10  N= 129  office  94.6  mis   5.4  canteen   0.0
+
+## Certainty: median and mean by arrival time
+DTU1    8:00 0.990/0.986  8:10 0.990/0.980  8:20 0.990/0.978  8:30 0.990/0.946  8:40 0.875/0.856  8:50 0.750/0.732  9:00 0.875/0.819  9:10 0.990/0.958
+DTU2    8:00 0.990/0.956  8:10 0.990/0.981  8:20 0.990/0.973  8:30 0.990/0.958  8:40 0.990/0.921  8:50 0.750/0.788  9:00 0.875/0.837  9:10 0.990/0.923
+pooled  8:00 0.990/0.976  8:10 0.990/0.981  8:20 0.990/0.977  8:30 0.990/0.950  8:40 0.875/0.876  8:50 0.750/0.749  9:00 0.875/0.825  9:10 0.990/0.945
+
+## Fig 4 WLS lines (freq ~ round, weights sqrt(n)): slope per round, value at round 1 and last round
+8:40  slope -0.0004/round  fit r1 0.899  fit r30 0.887  (rounds with data: 30)
+8:50  slope +0.0008/round  fit r1 0.487  fit r30 0.510  (rounds with data: 30)
+9:00  slope -0.0019/round  fit r1 0.081  fit r30 0.025  (rounds with data: 30)
+
+## Post-game answers
+DTU1    cutoff N=78: I don't know=1, There is no such time=12, 8:00=2, 8:10=0, 8:20=4, 8:30=13, 8:40=34, 8:50=10, 9:00=1, 9:10=1
+        safe cut-off 8:30-8:50: 57/78 = 73.1%;  'no such time': 12/78 = 15.4%
+        CK at 8:10 N=77: yes 67 (87.0%), no 4 (5.2%), don't know 6 (7.8%)
+DTU2    cutoff N=41: I don't know=1, There is no such time=1, 8:00=1, 8:10=0, 8:20=5, 8:30=5, 8:40=14, 8:50=11, 9:00=3, 9:10=0
+        safe cut-off 8:30-8:50: 30/41 = 73.2%;  'no such time': 1/41 = 2.4%
+        CK at 8:10 N=40: yes 36 (90.0%), no 2 (5.0%), don't know 2 (5.0%)
+pooled  cutoff N=119: I don't know=2, There is no such time=13, 8:00=3, 8:10=0, 8:20=9, 8:30=18, 8:40=48, 8:50=21, 9:00=4, 9:10=1
+        safe cut-off 8:30-8:50: 87/119 = 73.1%;  'no such time': 13/119 = 10.9%
+        CK at 8:10 N=117: yes 103 (88.0%), no 6 (5.1%), don't know 8 (6.8%)
+
+## Arrival-pair frequencies (unordered pairs, % of pair-rounds)
+DTU1    8:00/8:10 8.3%  8:10/8:20 15.9%  8:20/8:30 17.5%  8:30/8:40 15.8%  8:40/8:50 17.1%  8:50/9:00 17.7%  9:00/9:10 7.6%
+DTU2    8:00/8:10 8.5%  8:10/8:20 15.6%  8:20/8:30 19.0%  8:30/8:40 14.6%  8:40/8:50 16.8%  8:50/9:00 16.2%  9:00/9:10 9.3%
+
+## DIS without table 7 ('Robins table'), n=180
+DIS6    b0= 18.587 b1= -2.4778  50% at card 7.50
+DIS6 white by card: 2: 100.0% (10)  3: 100.0% (22)  4: 100.0% (29)  5: 100.0% (27)  6: 100.0% (21)  7: 75.0% (24)  8: 20.0% (20)  9: 5.9% (17)  10: 0.0% (10)
+
+## Table 1
+Treatment  N  MaxRounds  avg. rounds    n  Ruin  payoff  Avg penalty
+     DTU1 80         30         27.0 2160 17.50   27.03        -0.83
+     DTU2 42         30         24.1 1012 30.95   24.11        -0.98

@@ -87,3 +87,42 @@ Reading: the effect survives and is **cleaner** without MTurk. MTurk carries noi
 ## Decision 2026-11-09
 - **Option B approved** (TSN). The overall point C0 stays.
 - DTU rules were shown on a common screen and read aloud (TSN), so C7 (rules are common knowledge) now holds for **every** remaining experiment. That answers the objection that led to cutting MTurk, and it should be stated explicitly in the new §3.
+
+## Update 2026-11-09: figures regenerated on DTU1+DTU2 (+ DIS)
+Script: `scripts/make_figures.py`, a port of the notebooks that made the published figures. `--reproduce` runs the ports on the original MTurk+DTU selection and matches every stored notebook output and every paper number (Table 1, Fig 3 counts, Fig 4 tables, post-game %). Outputs: `plots/tark_*` (originals untouched). All numbers: `plots/tark_stats.txt`.
+
+### Float sizes in EPTCS (image height at the given width; text page = 623 pt ≈ 46 lines)
+| Float | Content | Claim | Width | Image | + caption ≈ | Share of a page |
+|---|---|---|---|---|---|---|
+| Table 1 | 2 rows (DTU1, DTU2) | C5 | — | ~80 pt | ~40 pt | 0.2 |
+| Fig 1 | choice curves DTU1, DTU2 | C3 | 0.6 | 179 pt | 40 pt | 0.37 |
+| Fig 1 + DIS (variant) | the same plus DIS on a shared axis (card c ↦ 9:00 + 0:10(c−9)) | C3, C7 | 0.6 | 179 pt | 55 pt | 0.40 |
+| Fig 2 | certainty violins, DTU1 vs DTU2 | C4 | 0.8 | 208 pt | 80 pt | 0.46 |
+| Fig 3 | coordination by arrival pair | C5 | 0.6 | 161 pt | 55 pt | 0.37 |
+| Fig 4 | canteen frequency by round | C6 | 0.8 | 225 pt | 55 pt | 0.46 |
+| Fig 5 | DIS logit | C7 | 0.6 | 179 pt | 40 pt | 0.35 |
+| Fig 6 | knowledge diagram + DTU logit | C1, C3 | 1.0 | ~200 pt | 55 pt (caption condensed from 9 lines to ~4) | 0.42 |
+| Fig 7 | post-game answers | C8 | 0.8 | 180 pt | 55 pt | 0.38 |
+
+### Proposal (Claude, not validated): 4 floats, about 1.6 pp
+1. **Fig 6 (diagram + logit) moves up to new §2.** It is the Kripke model of the game (C1) and carries the pooled choice curve (C3) on the same picture. This is the TARK figure.
+2. **Fig 1 + DIS (merged) in §4.** One float replaces Figs 1 and 5. It shows both DTU classes and the card version on one axis, which is the robustness claim C7 in a single image. Caveat: DIS has a different payoff (lose everything), and card 2 maps to 7:50, outside the canteen range. The caption must say so.
+3. **Fig 3 in §4.** The miscoordination at the critical pairs (C5) is the cost of the curse, and it isn't visible anywhere else.
+4. **Fig 7 in §4.** The most direct evidence for C0 (C8).
+- **To the appendix:** Table 1 (one sentence on payoffs and ruin rates in the text), Fig 2 (one sentence: median "very certain" up to 8:30, "somewhat certain" at 8:50), Fig 4 (one sentence: WLS slopes |b| ≤ 0.002 per round at 8:40/8:50/9:00, no convergence), Fig 5 (absorbed into the merged Fig 1).
+- **Cheaper fallback:** drop Fig 1 too (the Fig 6 inset already shows the curve) and put Figs 3 and 7 side by side, which leaves ~1.1 pp. Not recommended: DIS would then have no figure.
+
+### Text claims the DTU-only data changes (fix during the cut; numbers need an author's sign-off, rule 4)
+| Where | arXiv text | DTU1+DTU2 | Status |
+|---|---|---|---|
+| §6, post-game | "there is no such time" chosen by "less than 4%" | **10.9%** (DTU1 15.4%, DTU2 2.4%) | **changes.** The claim still holds (a small minority), but the number triples. |
+| §6, post-game | 8:30–8:50 "approximately 75%" | 73.1% | still holds |
+| §6, CK question | "yes" 89% | 88.0% | still holds |
+| §5, Fig 1 caption | MTurk vs DTU slope/intercept differ, $p<.0001$ | moot. DTU1 vs DTU2: neither the intercept nor the slope difference is significant on its own (p = .78, .28); the joint LR test p < .001 ignores pair clustering | drop the claim |
+| §5 | 50% point "close to 8:50 in all experiments" | DTU1 8:48, DTU2 8:52, DIS card 7.5 (≈ 8:45) | still holds |
+| §5, Fig 3 | canteen > 86% if both arrive before 8:50; miscoordination ≈ 50% at 8:40/8:50 and 8:50/9:00 | ≥ 91.0%; 41.1% / 45.8% | still holds |
+| §5, Fig 4 | 8:40 around 90%, 8:50 around 50%, no change over rounds | WLS 0.90→0.89 and 0.49→0.51 over 30 rounds | still holds |
+| §5, Fig 2 | ≤ 8:30 very high confidence; lower at 8:50 | median 0.99 up to 8:30, 0.75 at 8:50 | still holds |
+| §5, Fig 2 | DTU1 steepest profile, "most aware of the danger" | DTU1 mean certainty 0.73 at 8:50 vs DTU2 0.79; canteen at 8:50 is 43% vs 64% | still holds (DTU1 vs DTU2 only) |
+| Fig 6 caption | n = 7432, all three experiments | n = 3172, DTU1+DTU2 (and see ERRATA 12) | caption changes |
+| §5, MTurk paragraphs and Table 1 AMT row | — | — | leave with MTurk |
