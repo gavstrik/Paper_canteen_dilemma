@@ -5,7 +5,7 @@ Read this first in every session. Then `CFP.md`, `CUTS.md`, `AI_LEDGER.md`.
 ## Goal
 Cut "The Curse of Shared Knowledge" (Bolander, Engelhardt, Nicolet) from the arXiv/PLOS ONE version
 (~22 EPTCS pages main text, ~12k words) to **≤ 10 EPTCS pages excluding references** for TARK 2027
-(submission 19 March 2027). Suggested by Rineke Verbrugge. Venue shift: cog-sci → logic/rationality audience.
+(submission 19 March 2027). Venue shift: cog-sci → logic/rationality audience.
 
 Spirit: **be gentle with the paper.** It must survive as itself and fit TARK. No co-author constraints.
 
@@ -37,13 +37,14 @@ Spirit: **be gentle with the paper.** It must survive as itself and fit TARK. No
 
 ## Workflow
 0. ✅ Port to EPTCS, zero content change. Baseline: main text ends p.23 (22.2 pp).
-1. ☐ Inputs from authors: Rineke's suggestion (via T. Bolander), core claim in 3–5 sentences (TSN).
+1. ☐ Inputs from authors: editorial direction, core claim in 3–5 sentences.
 2. ☐ Argument map: claims → sections → dependencies. Page budget per section. **Human approves.**
 3. ☐ Cut section by section (several internal iterations before co-authors see it).
 4. ☐ Retarget for TARK: related work toward epistemic logic / game theory; literature since 2019 (human-verified).
 5. ☐ AI disclosure paragraph (from ledger), final consistency pass, pdflatex cross-check, send to co-authors.
 
 ## Open inputs
-- [ ] Rineke Verbrugge's suggestion, verbatim — TSN asking Thomas Bolander.
-- [ ] Core claim, 3–5 sentences — TSN.
+- [ ] Editorial direction for the cut-down.
+- [ ] Core claim, 3–5 sentences.
+- Private process notes (not in repo): `~/dev/canteen-dilemma/notes/PRIVATE.md` on TSN's machine.
 - Prior reviews (Cognitive Science, PLOS ONE) exist in `../../reviewing/` but are **deliberately out of scope**: different audience. Don't use unless asked.
