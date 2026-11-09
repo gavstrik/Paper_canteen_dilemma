@@ -28,7 +28,7 @@ echo "main text ends on p.  $MAINEND  (limit $LIMIT, refs/appendix excluded)"
 echo "last main page lines: ~$FILL / 46"
 if [ "$MAINEND" -gt "$LIMIT" ]; then echo "OVER BUDGET by $((MAINEND - LIMIT)) page(s)"; status=2; fi
 
-LIVE=$(pdftotext "$PDF" - | grep -nE 'TOBO:|TSN:|RE:|@@@Add' || true)
+LIVE=$(pdftotext "$PDF" - | grep -nE 'TOBO:|TSN:|RE:|@@@Add|XXXX' || true)
 if [ -n "$LIVE" ]; then echo "LIVE AUTHOR COMMENTS IN PDF:"; echo "$LIVE" | cut -c1-160; status=3; fi
 
 UNDEF=$(grep -E "(Reference|Citation) .* undefined" "$OUT/main.log" | sort -u || true)
