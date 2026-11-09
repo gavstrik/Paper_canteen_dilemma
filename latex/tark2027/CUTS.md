@@ -8,7 +8,7 @@ Destinations: `appendix` (moved to appendix of this submission) · `arxiv` (only
 | Section | arXiv baseline (EPTCS pp.) | Target pp. | Current pp. |
 |---|---|---|---|
 | _to be set in planning step_ | | | |
-| **Total main text** | **22.2** | **≤ 10.0** | **ends p.19** (after step 3.1–3.4) |
+| **Total main text** | **22.2** | **≤ 10.0** | **ends p.12** (after step 3.5, it. 12) |
 
 ## Cuts
 | # | Section | What (first words / label) | Size | Destination | Why |

@@ -154,3 +154,6 @@ Done: MTurk out of main text (abstract, §3, §4 payoffs restated for DTU, §5, 
 - Errata needing sign-off before the text is fixed: 1 (8:10 → 8:00), 2 (12 pairs, 1/6: check the oTree generator), 6 (cards 2–9 → 2–10), 17 (white ↔ office slip).
 - The appendix is still MTurk-heavy: App. A (design, \$4.17 payout, mixed-effects regression fitted on MTurk+DTU), App. B (\$2 fee, \$10 bonus), supplementary walkthrough titled MTurk, Table A1. Proposal: strip MTurk from the appendix (→ arxiv), retitle the walkthrough as the oTree interface used at DTU, and drop or refit the mixed-effects analysis on DTU only.
 - Decision (TSN, 2026-11-09): strip MTurk from the appendix **later**, not now.
+
+## Step 3.5 status (2026-11-09)
+Done in 12 iterations (6 planned + a second pass on each section); main text ends p.12. Remaining options for ~1.8 pp: `STATUS.md`.
