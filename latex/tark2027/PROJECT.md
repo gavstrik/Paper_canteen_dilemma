@@ -44,7 +44,8 @@ Spirit: **be gentle with the paper.** It must survive as itself and fit TARK. No
 5. ☐ AI disclosure paragraph (from ledger), final consistency pass, pdflatex cross-check, send to co-authors.
 
 ## Open inputs
-- [x] Editorial direction for the cut-down: none beyond "cut it down for TARK" (2026-11-09). The authors set the direction; see `ARGUMENT_MAP.md`.
+- [x] Editorial direction (2026-11-09): **cut the MTurk experiment.** Reasons: length, and common knowledge of the rules can't be assumed on MTurk (anonymous co-player, rules read individually). The paper's evidence must rest on settings where the rules are demonstrably common knowledge.
+- [ ] **Open question:** how were the rules presented in DTU1/DTU2? Publicly in class, or individually on screen? This decides whether the DTU data meets the same bar as DIS.
 - [ ] Core claim, 3–5 sentences.
 - Private process notes (not in repo): `~/dev/canteen-dilemma/notes/PRIVATE.md` on TSN's machine.
 - Prior reviews (Cognitive Science, PLOS ONE) exist in `../../reviewing/` but are **deliberately out of scope**: different audience. Don't use unless asked.

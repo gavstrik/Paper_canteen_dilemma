@@ -58,3 +58,28 @@ Draft by Claude, 2026-11-09, from a full read of body, appendix and supplementar
 | | **Total** | **10.0** |
 
 Claude's recommendation: **B**. It puts the epistemic-logic content (C1, C2) up front, where TARK reviewers will look first. That uses the venue shift rather than fighting it, and it still removes the most text by moving rather than deleting.
+
+## Update 2026-11-09: direction set, MTurk is cut
+Reason: length, and common knowledge of the rules can't be assumed on MTurk. Evidence must come from settings where the rules are common knowledge.
+
+**Does the effect survive without MTurk?** Recomputed from `Data/DTU{1,2}_anonymous.csv` (choice 1 = canteen; post-game `cutoff` 7.0 = "There is no such time"; `simple` 1.0 = "Yes, common knowledge"):
+
+| | MTurk | DTU1+2 |
+|---|---|---|
+| Canteen at 8:00–8:30 | ~92% | ~99% |
+| Canteen at 8:40 / 8:50 | 90% / 47% | 89% / 50% |
+| Canteen at ≥ 9:00 (forbidden) | 15% | ~3% |
+| Miscoordination, early pairs (8:00–8:30) | 10–15% | 1–2% |
+| Miscoordination, 8:40/8:50 and 8:50/9:00 | 50% / 45% | 41% / 46% |
+| Post-game: safe cut-off 8:30–8:50 | 76% | 73% |
+| Post-game: "There is no such time" | 2.4% | 10.9% (DTU1 15.4%, DTU2 2.4%) |
+| Post-game: common knowledge at 8:10 = yes | 89% | 87% |
+
+Reading: the effect survives and is **cleaner** without MTurk. MTurk carries noise (forbidden choices, early miscoordination) that is consistent with the rules not being common knowledge. In DTU the miscoordination sits only at the critical pairs. DTU1 students (AI and Multi-Agent Systems course) answer "no such time" more often, possibly from prior exposure, which is worth stating.
+
+**Consequences for the cut:**
+- §3: the MTurk design, recruitment, ethics and payout paragraphs leave the main text. The logarithmic scoring rule (payoffs) stays because it applies to DTU too.
+- Table 1, Figs 1–4 and 6 (logit) and Fig 7 have to be **regenerated from DTU data only** (the analysis code is in `python/`). Fig 5 (DIS) is unchanged.
+- The argument that the rules are common knowledge (C7) becomes central. DIS is documented (projector, read aloud). **DTU presentation is unknown; ask the authors.**
+- The abstract's participant counts change: DTU1 80 + DTU2 42 + DIS 12 = 134.
+- Errata #3 (46 pairs) and #4 (MTurk payout) become moot.
