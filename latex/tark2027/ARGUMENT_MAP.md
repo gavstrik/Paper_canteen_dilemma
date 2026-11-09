@@ -126,3 +126,30 @@ Script: `scripts/make_figures.py`, a port of the notebooks that made the publish
 | §5, Fig 2 | DTU1 steepest profile, "most aware of the danger" | DTU1 mean certainty 0.73 at 8:50 vs DTU2 0.79; canteen at 8:50 is 43% vs 64% | still holds (DTU1 vs DTU2 only) |
 | Fig 6 caption | n = 7432, all three experiments | n = 3172, DTU1+DTU2 (and see ERRATA 12) | caption changes |
 | §5, MTurk paragraphs and Table 1 AMT row | — | — | leave with MTurk |
+
+## Step 3 status (2026-11-09, end of session)
+Done: MTurk out of main text (abstract, §3, §4 payoffs restated for DTU, §5, §6); approved floats in place (merged Fig 1, Fig 3, Fig 6 with DTU inset, Fig 7); Table 1 and Figs 2, 4, 5 in new App. D. Main text ends **p.19** (from 23). Fig 6 is still in §6; it moves to the new §2 during re-sequencing.
+
+### Step 3.5 plan: re-sequence and condense (Option B), needs about −9 pp (≈ 4k words)
+| New § | Source | Action | Claim touched |
+|---|---|---|---|
+| 1 Intro | §1 ¶1–2 | keep | — |
+| | §1 trekking ¶3–5 (setup, depth conventions, message-by-message depths) | condense to one ¶; the depth-convention text already lives in App. `A:definitions` | **C1** (informal intro) |
+| | §1 footnote (informal impossibility proof, ~250 w) | move to appendix | **C1** |
+| | §1 questions A/B ¶ | keep | C0 |
+| | §1 ¶ "We have designed a coordination game…" + "Humans generally find…" + §2 ¶6 last part | condense to one contribution ¶ | C0, C10 |
+| 2 Canteen Dilemma | §3 game story quote + outcomes ¶ | move here | — |
+| | §6 ¶1–2 (knowledge structure) + Fig 6 | move here; condense the Fig 6 caption from 9 to about 4 lines | **C1** |
+| | §4 ¶1–3 (strategies, all-office only safe, no-cut-off footnote proof) | move here; condense ¶1–2; keep the footnote proof | **C2** |
+| | §4 ¶4 ("counter-intuitive… Agnes/Bertram") | cut → arxiv (overlaps the knowledge-structure ¶) | C2 (intuition only) |
+| | §4 ¶5–6 (canteen-before-9 arithmetic, theorem pointer) | condense; state Theorem (App. C) in the main text | **C2** |
+| 3 Experiments | §3 overview, payoffs ¶, DIS ¶ | condense; DIS rules quote → 2-sentence summary + App. `app:dis-rules-full` | C7 |
+| 4 Results | current §5 + post-game part of §6 (Fig 7, both questions, DIS interviews) | move together; light condense | C3–C8 |
+| 5 Discussion | §6 ¶3–5 (private vs shared; overload; beauty contest / mixed strategy) and the ¶ "Participants might of course not…" | condense | **C9** |
+| 6 Related work & conclusion | §2 ¶4–6 (Thomas, De Freitas; Rubinstein) + §7 | condense into ~1 pp | **C10** |
+| — | §2 ¶1–3 (ToM / cog-sci background, ~900 w) | cut → arxiv | none (motivation only) |
+| — | §7 "implications for multiple disciplines" ¶ | cut → arxiv | none |
+
+### Open items for authors (not blocking 3.5)
+- Errata needing sign-off before the text is fixed: 1 (8:10 → 8:00), 2 (12 pairs, 1/6: check the oTree generator), 6 (cards 2–9 → 2–10), 17 (white ↔ office slip).
+- The appendix is still MTurk-heavy: App. A (design, \$4.17 payout, mixed-effects regression fitted on MTurk+DTU), App. B (\$2 fee, \$10 bonus), supplementary walkthrough titled MTurk, Table A1. Proposal: strip MTurk from the appendix (→ arxiv), retitle the walkthrough as the oTree interface used at DTU, and drop or refit the mixed-effects analysis on DTU only.

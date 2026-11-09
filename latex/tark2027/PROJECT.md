@@ -40,7 +40,7 @@ Spirit: **be gentle with the paper.** It must survive as itself and fit TARK. No
 0. ✅ Port to EPTCS, zero content change. Baseline: main text ends p.23 (22.2 pp).
 1. ✅ Inputs from authors: direction, structure, DTU rules, core claim (2026-11-09).
 2. ✅ Argument map + Option B budget approved (2026-11-09). ✅ Figures regenerated on DTU1+DTU2 (+DIS), `plots/tark_*` via `scripts/make_figures.py`. Next: authors pick the figure set (ARGUMENT_MAP.md), then cut.
-3. ☐ Cut section by section (several internal iterations before co-authors see it).
+3. ◐ Cut section by section (several internal iterations before co-authors see it). 3.1–3.4 done (MTurk out, floats swapped; main text ends p.19). Next: 3.5 re-sequence + condense, plan in `ARGUMENT_MAP.md` (needs TSN approval for the claim-bearing cuts).
 4. ☐ Retarget for TARK: related work toward epistemic logic / game theory; literature since 2019 (human-verified).
 5. ☐ AI disclosure paragraph (from ledger), final consistency pass, pdflatex cross-check, send to co-authors.
 
