@@ -44,7 +44,7 @@ Spirit: **be gentle with the paper.** It must survive as itself and fit TARK. No
 5. ☐ AI disclosure paragraph (from ledger), final consistency pass, pdflatex cross-check, send to co-authors.
 
 ## Open inputs
-- [ ] Editorial direction for the cut-down.
+- [x] Editorial direction for the cut-down: none beyond "cut it down for TARK" (2026-11-09). The authors set the direction; see `ARGUMENT_MAP.md`.
 - [ ] Core claim, 3–5 sentences.
 - Private process notes (not in repo): `~/dev/canteen-dilemma/notes/PRIVATE.md` on TSN's machine.
 - Prior reviews (Cognitive Science, PLOS ONE) exist in `../../reviewing/` but are **deliberately out of scope**: different audience. Don't use unless asked.
