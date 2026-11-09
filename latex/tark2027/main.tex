@@ -1,0 +1,80 @@
+\documentclass[submission,copyright,creativecommons]{eptcs}
+\providecommand{\event}{TARK 2027}
+
+\usepackage{iftex}
+% EPTCS template logic, extended for XeTeX (tectonic): breakurl is dvips-only.
+\ifPDFTeX
+  \usepackage{underscore}
+  \usepackage[T1]{fontenc}
+\else\ifXeTeX
+  % no underscore pkg: it breaks labels containing '_' (e.g. sect:experimental_design)
+\else
+  \usepackage{breakurl}
+\fi\fi
+
+% --- Packages carried over from the arXiv (PLOS ONE) version -----------------
+\usepackage[caption=false]{subfig}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{changepage}
+\usepackage{textcomp,marvosym}
+\usepackage{nameref}
+\usepackage{microtype}
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+
+% --- Macros used in body / appendix ------------------------------------------
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\newcommand{\tmin}{t_{\min}}
+\newcommand{\tmax}{t_{\max}}
+
+% Author comment macros (must render nothing live in the submitted version)
+\newcommand{\re}[1]{{\color{brown} RE: #1}}
+\newcommand{\tobo}[1]{{\color{red} TOBO: #1}}
+\newcommand{\tsn}[1]{{\color{blue} TSN: #1}}
+\newcommand{\add}[1]{{@@@Add: #1}}
+
+\graphicspath{{plots/}{images/}}
+
+\title{The Curse of Shared Knowledge: Recursive Belief Reasoning in a Coordination Game with Imperfect Information}
+\author{Thomas Bolander
+\institute{DTU Compute\\Technical University of Denmark\\Lyngby, Denmark}
+\email{tobo@dtu.dk}
+\and
+Robin Engelhardt
+\institute{Department of Food and Resource Economics\\University of Copenhagen\\Copenhagen, Denmark}
+\and
+Thomas S.\ Nicolet
+\institute{Center for Information and Bubble Studies\\University of Copenhagen\\Copenhagen, Denmark}
+}
+\def\titlerunning{The Curse of Shared Knowledge}
+\def\authorrunning{T.\ Bolander, R.\ Engelhardt \& T.\ S.\ Nicolet}
+
+\begin{document}
+\maketitle
+
+\input{abstract}
+
+\input{body}
+
+\section*{Author Contributions and Acknowledgments}
+
+Thomas Bolander developed the game, made the theoretical analysis, and contributed as a lead author; Robin Engelhardt and Thomas S.\ Nicolet designed the experiment, analyzed the data, and contributed as lead authors. The authors declare no conflict of interest.
+
+Server infrastructure and devops was handled by Mikkel Birkegaard Andersen. The authors wish to thank Vincent F. Hendricks for enabling the project. This research was approved by the Institutional Review Board at the University of Copenhagen and included informed consent by all participants in the study. The authors gratefully acknowledge the support provided by The Carlsberg Foundation under grant number CF 15-0212.
+
+% Everything before this label counts toward the 10-page limit (build.sh reads it).
+\label{mainend}
+
+\bibliographystyle{eptcs}
+\bibliography{cd}
+
+\input{appendix}
+\input{supplementary}
+
+\end{document}

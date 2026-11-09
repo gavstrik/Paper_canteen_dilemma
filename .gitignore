@@ -36,3 +36,6 @@ latex/cd_sm.synctex.gz
 latex/cd_sm.pdf
 latex/cd.out
 latex/cd_sm.synctex.gz
+
+# TARK build output
+latex/tark2027/build/
