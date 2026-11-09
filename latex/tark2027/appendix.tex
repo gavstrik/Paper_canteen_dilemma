@@ -230,6 +230,41 @@ The theorem proves what was argued in the main text: There are only two candidat
 of course the optimal strategy would be played. And, as earlier mentioned, in our particular version of the game, the optimal strategy is the all-office strategy.
 
 
+\section{\modified{Additional results}} \label{app:tark-results}
+\modified{This appendix holds the table and figures that the TARK version moved out of the main text (Section~\ref{S:results}). All data are from DTU1 and DTU2, except Fig.~\ref{fig:dis} (DIS).}
+
+\begin{table}[htb]
+\caption{\modified{Aggregate statistics of the two DTU experiments. N = number of subjects; MaxRounds = maximum number of rounds; avg.\ rounds = average number of rounds played; n = number of choices; Ruin = percentage of participants losing all their bonus before (or in) the last round; payoff = average earnings (given as the retained percentage of the initial endowment); Avg penalty = average penalty per player per round (\$).}}
+\smallskip
+\centering
+\setlength{\arrayrulewidth}{1pt}
+\setlength{\tabcolsep}{4pt}
+\input{plots/tark_table1.tex}
+\label{table:1}
+\end{table}
+
+\begin{figure}[htb]
+\centering\includegraphics[width=0.8\linewidth]{tark_fig2_certainties}
+\caption{Violin plots of certainty estimates. In each round, participants were asked how certain they were of successful coordination with their colleague. \modified{Orange areas show the results from DTU1 ($\text{n}=2160$) and green areas the results from DTU2 ($\text{n}=1012$).} We predefined a five point likert scale of certainty estimates as: `very uncertain', `slightly certain, `somewhat certain', `quite certain', and `very certain', and translated them into the numerical values of probability estimates used in the payoff calculations (see Appendix~\ref{appendix:payoffs}). The white dots correspond to the median certainty estimate.}
+\label{fig:certain}
+\end{figure}
+
+The violin plots in Fig.~\ref{fig:certain} show the distribution of certainty estimates for each arrival time. In general, Fig.~\ref{fig:certain} shows that it is exceedingly rare for any of the participants to consider it problematic to go to the canteen when arriving early. Arriving at $8{:}30$ or earlier is deemed sufficiently early to visit the canteen with very high confidence. \modified{The DTU1 participants appear to be more aware of the danger of miscoordination than the DTU2 participants (mean certainty $0.73$ against $0.79$ at $8{:}50$), and they also choose the canteen less often at $8{:}50$ ($43\%$ against $64\%$, Fig.~\ref{fig:1}).} The differences between the experiments are however still relatively minor.
+
+\begin{figure}[htb]
+\centering\includegraphics[width=0.8\linewidth]{tark_fig4_timeseries}
+\caption{Mean frequencies of canteen choices for all possible arrival times as a function of the number of rounds played\modified{, DTU1 and DTU2 combined}. The three fitted horizontal lines, corresponding to arrival times $8{:}40$, $8{:}50$, and $9{:}00$ respectively, represent \modified{weighted least squares} (WLS) with the weights chosen to be the square root of the number of data points constituting the mean frequencies for each round, also shown by dot size.}
+\label{timeseries}
+\end{figure}
+Fig.~\ref{timeseries} shows the mean frequency of canteen choices as a function of rounds played \modified{for the two DTU experiments}. Each color corresponds to a certain arrival time. Clearly, the only arrival times that do not converge towards either the canteen or the office are the arrival times of $8{:}40$ and $8{:}50$, with the former fluctuating around $90\%$ canteen choices and the latter fluctuating around $50\%$ canteen choices. This indicates that there is no behavioral change during the game. Participants arriving at $8{:}40$ or $8{:}50$ do not feel incentivized to change their behavior significantly in subsequent rounds, even though there is a high risk of miscoordination. This is not to say that participants do not learn that canteen choices at $8{:}40$ or $8{:}50$ are dangerous. Partitioning the data from Fig.~\ref{fig:1} into two bins, corresponding to pairs having had no miscoordination and pairs having had one or more miscoordinations (see the supplementary data analysis in Appendix~\ref{app:supplementary-data-analysis}), shows somewhat decreasing certainty estimates around the critical arrival times. However, this does not affect their actual choices. So even though participants learn that their choices are risky, they do not see any way to improve their strategy (at least not in the short term).
+
+\begin{figure}[htb]
+  \centering\includegraphics[width=0.6\linewidth]{tark_fig5_DIS}
+  \caption{Logistic regression of the relationship between card number and choice of a white stone in the qualitative experiment at DIS. The resulting curve shows a very similar overall trend as in the main experiments shown in Fig.~\ref{fig:1}.} 
+  \label{fig:dis} 
+\end{figure}
+
+
 %\subsection{Conflict of Interest}
 %The authors declare no conflict of interest.
 
