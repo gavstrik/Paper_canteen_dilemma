@@ -1,0 +1,140 @@
+\documentclass[submission,copyright,creativecommons]{eptcs}
+\providecommand{\event}{TARK 2007} % Name of the event you are submitting to
+
+% revisions
+\newcommand{\modified}[1]{#1}
+\newcommand{\tobo}[1]{{\color{blue} TOBO: #1}}
+
+\usepackage{iftex}
+
+\usepackage{graphicx}
+\graphicspath{{plots}{images}}
+\usepackage[caption=false]{subfig}
+
+\usepackage{tikz}
+
+% Macros
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\newcommand{\at}{\makeatletter @\makeatother}
+\newcommand{\tmin}{t_{\min}}
+\newcommand{\tmax}{t_{\max}}
+
+ 
+% amsmath and amssymb packages, useful for mathematical formulas and symbols
+\usepackage{amsmath,amssymb}
+
+% theorem environments
+\usepackage{amsthm}
+  \newtheorem{theorem}{Theorem}
+  \newtheorem{lemma}[theorem]{Lemma} 
+  \newtheorem{definition}[theorem]{Definition}
+
+ 
+
+\ifpdf
+  \usepackage{underscore}         % Only needed if you use pdflatex.
+  \usepackage[T1]{fontenc}        % Recommended with pdflatex
+\else
+  \usepackage{breakurl}           % Not needed if you use pdflatex only.
+\fi
+
+\title{The Curse of Shared Knowledge: Recursive Belief Reasoning in a Coordination Game with Imperfect Information}
+\author{Thomas Bolander
+\institute{Technical University of Denmark \\
+Kgs.\ Lyngby, Denmark}
+\email{tobo@dtu.dk}
+\and
+Robin Engelhardt
+\and 
+Thomas S. Nicolet
+}
+\def\titlerunning{The Curse of Shared Knowledge}
+\def\authorrunning{T. Bolander, R. Engelhardt \& T.S. Nicolet}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Common knowledge is crucial for safe group coordination. In its absence, humans must rely on shared knowledge, 
+which is inherently limited in depth and therefore prone to coordination failures, because any finite-order knowledge attribution allows for an even higher order attribution that may change what is known by whom. In three separate experiments involving 134 participants, we investigate the extent to which humans can differentiate between common knowledge and $n$th-order shared knowledge. We designed a simple two-person normal-form coordination game with imperfect information reminiscent of Rubinstein's electronic mail game, but where the distinction between private knowledge, commmon knowledge and various levels of shared knowledge are already present in the initial state of the game. As in Rubinstein's game, coordination for the highest payoff requires a specific fact to be common knowledge between players. However, this fact cannot become common knowledge in our game. The fact can at most be $n$th-order shared knowledge for some $n$. Our findings reveal that even at quite shallow depths of shared knowledge (low values of $n$), players behave as though they possess common knowledge, and claim similar levels of certainty that their actions will guarantee coordination, despite this incurring significant penalties. This behaviour persists even in the repeated-game setting. Post-game questions and qualitative interviews further indicate that players generally falsely believe to have common knowledge when in reality they only have shared knowledge of low order.  We term this phenomenon `the curse of shared knowledge'.
+% It arises either from the players'  inability to distinguish between higher-order shared knowledge and common knowledge, or from their implicit assumption that their co-player cannot make this distinction.
+\end{abstract}
+
+\input{body}
+\input{supplementary}
+
+
+
+
+
+\section{Introduction}
+
+
+\section{Ancillary files}
+
+Authors may upload ancillary files to be linked alongside their paper.
+These can, for instance, contain raw data for tables and plots in the
+article or program code.  Ancillary files are included with an EPTCS
+submission by placing them in a directory \texttt{anc} next to the
+main latex file. See also \url{https://arxiv.org/help/ancillary_files}.
+Please add a file README in the directory \texttt{anc}, explaining the
+nature of the ancillary files, as in
+\url{http://eptcs.org/paper.cgi?226.21}.
+
+
+\paragraph{DOIs}
+
+
+{\bfseries EPTCS requires the inclusion of a DOI in each cited paper, when available.}
+
+DOIs of papers can often be found through
+\url{http://www.crossref.org/guestquery};\footnote{For papers that will appear
+  in EPTCS and use \href{http://eptcs.web.cse.unsw.edu.au/eptcs.bst}
+  {\ttfamily $\backslash$bibliographystyle$\{$eptcs$\}$} there is no need to
+  find DOIs on this website, as EPTCS will look them up for you
+  automatically upon submission of the first version of your paper;
+  these DOIs can then be incorporated into the final version, together
+  with the remaining DOIs that need to be found at DBLP or the publisher's web pages.}
+the second method {\itshape Search on article title}, only using the {\bfseries
+surname} of the first-listed author, works best.
+Other places to find DOIs are DBLP and the response pages for cited
+papers (maintained by their publishers).
+
+\paragraph{The bibtex fields {\ttfamily eprint} and {\ttfamily url}}
+
+Often an official publication is only available against payment. However,
+as a courtesy to readers that do not wish to pay, the authors also
+make the paper available free of charge at a repository such as
+\url{arXiv.org}. In such a case, it is recommended to also refer and
+link to the URL of the response page of the paper in such a
+repository.  This can be done using the bibtex fields {\ttfamily eprint}
+or {\ttfamily url}.  The latter field should \textbf{not} be used
+to duplicate information that is also provided through {\ttfamily doi} or {\ttfamily eprint}.
+You can find archival-quality URLs for most recently published papers
+in DBLP, but please suppress repetition of DOI or {\ttfamily eprint} information though {\ttfamily url}.
+In fact, it is often useful to check your references against DBLP records anyway,
+or just find them there in the first place.
+
+\paragraph{Typesetting DOIs and URLs}
+
+When using {\LaTeX} rather than {\ttfamily pdflatex} to typeset your paper, by
+default no line breaks within long URLs are allowed. This leads often
+to very ugly output, that moreover is different from the output
+generated when using {\ttfamily pdflatex}. This problem is repaired when
+invoking \href{http://eptcs.web.cse.unsw.edu.au/breakurl.sty}
+{\ttfamily $\backslash$usepackage$\{$breakurl$\}$}: it allows line breaks
+within links and yield the same output as obtained by default with
+{\ttfamily pdflatex}.
+When invoking {\ttfamily pdflatex}, the package {\ttfamily breakurl} is ignored.
+
+The package {\ttfamily $\backslash$usepackage$\{$underscore$\}$} is
+recommended to deal with underscores in DOIs. This is not needed when
+using {\ttfamily $\backslash$usepackage$\{$breakurl$\}$} and not {\ttfamily pdflatex}.
+
+
+\bibliographystyle{eptcs}
+\bibliography{../cd}
+
+
+%\nocite{*}
+%\bibliographystyle{eptcs}%\bibliography{generic}
+\end{document}
